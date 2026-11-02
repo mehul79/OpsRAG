@@ -1,0 +1,37 @@
+{"kind": "exact", "question": "What does CrashLoopBackOff mean and how do I debug it?", "expect": "k8s/(tasks/debug/debug-application/debug-pods|concepts/workloads/pods/pod-lifecycle)"}
+{"kind": "howto", "question": "How do I configure a liveness probe on a container?", "expect": "k8s/tasks/configure-pod-container/configure-liveness-readiness-startup-probes"}
+{"kind": "compare", "question": "What is the difference between a Deployment and a StatefulSet?", "expect": "k8s/concepts/workloads/controllers/(deployment|statefulset)"}
+{"kind": "howto", "question": "How do I create a Kubernetes Secret?", "expect": "k8s/(concepts/configuration/secret|tasks/configmap-secret/managing-secret)"}
+{"kind": "concept", "question": "How does a Kubernetes Service route traffic to pods?", "expect": "k8s/concepts/services-networking/service"}
+{"kind": "howto", "question": "How do I set CPU and memory requests and limits for a container?", "expect": "k8s/(concepts/configuration/manage-resources-containers|tasks/configure-pod-container/assign-(cpu|memory)-resource)"}
+{"kind": "concept", "question": "What is a PersistentVolumeClaim?", "expect": "k8s/concepts/storage/persistent-volumes"}
+{"kind": "howto", "question": "How do I roll back a Deployment after a bad rollout?", "expect": "k8s/concepts/workloads/controllers/deployment"}
+{"kind": "concept", "question": "How do taints and tolerations work?", "expect": "k8s/concepts/scheduling-eviction/taint-and-toleration"}
+{"kind": "exact", "question": "Pod stuck in ImagePullBackOff, why?", "expect": "k8s/(concepts/containers/images|tasks/debug/debug-application/debug-pods)"}
+{"kind": "howto", "question": "How do I write a multi-stage Dockerfile?", "expect": "docker/(manuals/build/building/multi-stage|guides/.*)"}
+{"kind": "howto", "question": "How do I persist data with Docker volumes?", "expect": "docker/manuals/engine/storage/volumes"}
+{"kind": "concept", "question": "What does depends_on do in Docker Compose?", "expect": "docker/(reference/compose-file/services|manuals/compose/how-tos/startup-order)"}
+{"kind": "howto", "question": "How do I limit the memory and CPU a Docker container can use?", "expect": "docker/manuals/engine/containers/resource_constraints"}
+{"kind": "concept", "question": "How does Docker bridge networking work?", "expect": "docker/manuals/engine/network/drivers/bridge"}
+{"kind": "concept", "question": "How does the Docker build cache work?", "expect": "docker/manuals/build/cache"}
+{"kind": "howto", "question": "How do I use for_each in Terraform?", "expect": "terraform/core/language/meta-arguments/for_each"}
+{"kind": "concept", "question": "What is Terraform state and why does it matter?", "expect": "terraform/core/language/state"}
+{"kind": "howto", "question": "How do I store Terraform state remotely in S3?", "expect": "terraform/core/language/(backend/s3|state/remote|backend)"}
+{"kind": "concept", "question": "How do Terraform modules work?", "expect": "terraform/core/language/modules"}
+{"kind": "concept", "question": "What does terraform plan do?", "expect": "terraform/core/cli/commands/plan"}
+{"kind": "exact", "question": "aws_iam_role_policy_attachment", "expect": "terraform/aws/r/iam_role_policy_attachment"}
+{"kind": "howto", "question": "How do I attach a managed policy to an IAM role in Terraform?", "expect": "terraform/aws/r/iam_role_policy_attachment"}
+{"kind": "exact", "question": "aws_s3_bucket_versioning", "expect": "terraform/aws/r/s3_bucket_versioning"}
+{"kind": "howto", "question": "How do I create an EKS cluster with Terraform?", "expect": "(terraform/aws/r/eks_cluster|aws/eks/.*(terraform|-tf))"}
+{"kind": "exact", "question": "aws_lb_listener_rule", "expect": "terraform/aws/r/lb_listener_rule"}
+{"kind": "concept", "question": "How do EC2 security groups work?", "expect": "aws/ec2/.*security-group"}
+{"kind": "compare", "question": "What is the difference between an ECS task role and the task execution role?", "expect": "aws/ecs/.*(task-iam-role|task_execution)"}
+{"kind": "howto", "question": "How do I give pods in EKS access to AWS services using IAM roles?", "expect": "aws/eks/.*(iam-roles-for-service-accounts|pod-identities)"}
+{"kind": "howto", "question": "How do I invalidate cached files in CloudFront?", "expect": "aws/cloudfront/.*[Ii]nvalidation"}
+{"kind": "concept", "question": "How does RDS Multi-AZ failover work?", "expect": "aws/rds/.*[Mm]ulti-?AZ"}
+{"kind": "compare", "question": "What is the difference between an Application Load Balancer and a Network Load Balancer?", "expect": "aws/elb/"}
+{"kind": "concept", "question": "How does IAM policy evaluation logic decide allow or deny?", "expect": "aws/iam/.*evaluation-logic"}
+{"kind": "vague", "question": "my pod keeps restarting after deploy", "expect": "k8s/(concepts/workloads/pods/pod-lifecycle|tasks/debug/debug-application)"}
+{"kind": "vague", "question": "terraform apply says the state is locked", "expect": "terraform/core/(language/state/locking|cli/commands/force-unlock)"}
+{"kind": "none", "question": "How do I make pizza dough?", "expect": null}
+{"kind": "none", "question": "What is the weather in Mumbai today?", "expect": null}

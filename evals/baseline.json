@@ -1,0 +1,22 @@
+{
+ "metrics": {
+  "n": 35,
+  "transform": false,
+  "recall@20": 1.0,
+  "recall@5": 0.971,
+  "precision@5": 0.514,
+  "ndcg@5": 0.543,
+  "mrr@5": 0.736,
+  "weak_flag_acc": 1.0,
+  "min_top1_answerable": 1.89,
+  "max_top1_unanswerable": -9.64,
+  "seconds": 102
+ },
+ "by_kind": {
+  "compare": 1.0,
+  "concept": 1.0,
+  "exact": 1.0,
+  "howto": 0.92,
+  "vague": 1.0
+ }
+}
