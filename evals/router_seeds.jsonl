@@ -1,0 +1,43 @@
+{"text": "hi", "label": "chitchat", "note": ""}
+{"text": "hello there!", "label": "chitchat", "note": ""}
+{"text": "how are you", "label": "chitchat", "note": ""}
+{"text": "hows you feeling today", "label": "chitchat", "note": ""}
+{"text": "thanks, that helped", "label": "chitchat", "note": ""}
+{"text": "ok cool", "label": "chitchat", "note": ""}
+{"text": "bye", "label": "chitchat", "note": ""}
+{"text": "asdfgh", "label": "chitchat", "note": "gibberish"}
+{"text": "???", "label": "chitchat", "note": "gibberish"}
+{"text": "what's up", "label": "chitchat", "note": ""}
+{"text": "what model are you using for generation", "label": "about_bot", "note": ""}
+{"text": "where are you deployed", "label": "about_bot", "note": "reply is a fixed 'no public deployment' line"}
+{"text": "how do you work?", "label": "about_bot", "note": ""}
+{"text": "what can you do", "label": "about_bot", "note": ""}
+{"text": "are you chatgpt", "label": "about_bot", "note": ""}
+{"text": "what docs do you search", "label": "about_bot", "note": ""}
+{"text": "who made you", "label": "about_bot", "note": "borderline: could be chitchat"}
+{"text": "do you store my questions", "label": "about_bot", "note": ""}
+{"text": "can you write code for me", "label": "about_bot", "note": "borderline: about_bot or out_of_scope?"}
+{"text": "which vector database do you use", "label": "about_bot", "note": ""}
+{"text": "what's the weather in Pune", "label": "out_of_scope", "note": ""}
+{"text": "how do I make biryani", "label": "out_of_scope", "note": ""}
+{"text": "who won the world cup in 2022", "label": "out_of_scope", "note": ""}
+{"text": "write me a poem about the sea", "label": "out_of_scope", "note": ""}
+{"text": "how do I reverse a list in python", "label": "out_of_scope", "note": "non-infra coding"}
+{"text": "explain react hooks", "label": "out_of_scope", "note": "non-infra coding"}
+{"text": "write a sql query to join two tables", "label": "out_of_scope", "note": "non-infra coding"}
+{"text": "what is machine learning", "label": "out_of_scope", "note": ""}
+{"text": "best stocks to buy right now", "label": "out_of_scope", "note": ""}
+{"text": "what is an API", "label": "out_of_scope", "note": "borderline: generic tech, not infra docs"}
+{"text": "What is Kubernetes?", "label": "retrieve", "note": "hard: short 'what is' question"}
+{"text": "ingress?", "label": "retrieve", "note": "hard: one word"}
+{"text": "aws_s3_bucket", "label": "retrieve", "note": "bare identifier"}
+{"text": "Error: error acquiring the state lock", "label": "retrieve", "note": "pasted error"}
+{"text": "hi, how do I restart a pod?", "label": "retrieve", "note": "greeting + real question: any infra request retrieves"}
+{"text": "my pod keeps dying", "label": "retrieve", "note": "vague symptom"}
+{"text": "kuberentes secrets", "label": "retrieve", "note": "typo"}
+{"text": "¿cómo reinicio un pod?", "label": "retrieve", "note": "non-English"}
+{"text": "how does kubernetes work", "label": "retrieve", "note": "sounds like about_bot but is about the technology"}
+{"text": "where is my terraform state stored", "label": "retrieve", "note": "sounds like about_bot but is about Terraform"}
+{"text": "what is docker hub pricing", "label": "retrieve", "note": "borderline: pricing may not be in the docs"}
+{"text": "how do I write a github action that deploys to ecs", "label": "retrieve", "note": "borderline: CI/CD adjacent, DevOps"}
+{"text": "linux file permissions in a container", "label": "retrieve", "note": "borderline: DevOps-adjacent"}

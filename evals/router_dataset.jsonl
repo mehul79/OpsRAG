@@ -1,0 +1,1082 @@
+{"text": "hi", "label": "chitchat", "group": "chitchat:hi", "kind": "reviewed", "split": "val"}
+{"text": "hello there!", "label": "chitchat", "group": "chitchat:hello there", "kind": "reviewed", "split": "val"}
+{"text": "hello there", "label": "chitchat", "group": "chitchat:hello there", "kind": "reviewed+variant", "split": "val"}
+{"text": "hlelo there!", "label": "chitchat", "group": "chitchat:hello there", "kind": "reviewed+variant", "split": "val"}
+{"text": "how are you", "label": "chitchat", "group": "chitchat:how are you", "kind": "reviewed", "split": "train"}
+{"text": "hows you feeling today", "label": "chitchat", "group": "chitchat:hows you feeling today", "kind": "reviewed", "split": "train"}
+{"text": "hows you feeling toady", "label": "chitchat", "group": "chitchat:hows you feeling today", "kind": "reviewed+variant", "split": "train"}
+{"text": "thanks, that helped", "label": "chitchat", "group": "chitchat:thanks that helped", "kind": "reviewed", "split": "train"}
+{"text": "thanks, that hepled", "label": "chitchat", "group": "chitchat:thanks that helped", "kind": "reviewed+variant", "split": "train"}
+{"text": "ok cool", "label": "chitchat", "group": "chitchat:ok cool", "kind": "reviewed", "split": "train"}
+{"text": "bye", "label": "chitchat", "group": "chitchat:bye", "kind": "reviewed", "split": "test"}
+{"text": "asdfgh", "label": "chitchat", "group": "chitchat:asdfgh", "kind": "reviewed", "split": "train"}
+{"text": "adsfgh", "label": "chitchat", "group": "chitchat:asdfgh", "kind": "reviewed+variant", "split": "train"}
+{"text": "???", "label": "chitchat", "group": "chitchat:", "kind": "reviewed", "split": "train"}
+{"text": "what's up", "label": "chitchat", "group": "chitchat:what s up", "kind": "reviewed", "split": "test"}
+{"text": "what model are you using for generation", "label": "about_bot", "group": "about_bot:what model are you using for generation", "kind": "reviewed", "split": "train"}
+{"text": "what model are you using for gneeration", "label": "about_bot", "group": "about_bot:what model are you using for generation", "kind": "reviewed+variant", "split": "train"}
+{"text": "where are you deployed", "label": "about_bot", "group": "about_bot:where are you deployed", "kind": "reviewed", "split": "train"}
+{"text": "whree are you deployed", "label": "about_bot", "group": "about_bot:where are you deployed", "kind": "reviewed+variant", "split": "train"}
+{"text": "how do you work?", "label": "about_bot", "group": "about_bot:how do you work", "kind": "reviewed", "split": "train"}
+{"text": "how do you work", "label": "about_bot", "group": "about_bot:how do you work", "kind": "reviewed+variant", "split": "train"}
+{"text": "what can you do", "label": "about_bot", "group": "about_bot:what can you do", "kind": "reviewed", "split": "train"}
+{"text": "are you chatgpt", "label": "about_bot", "group": "about_bot:are you chatgpt", "kind": "reviewed", "split": "val"}
+{"text": "are you chtagpt", "label": "about_bot", "group": "about_bot:are you chatgpt", "kind": "reviewed+variant", "split": "val"}
+{"text": "what docs do you search", "label": "about_bot", "group": "about_bot:what docs do you search", "kind": "reviewed", "split": "test"}
+{"text": "what docs do you serach", "label": "about_bot", "group": "about_bot:what docs do you search", "kind": "reviewed+variant", "split": "test"}
+{"text": "who made you", "label": "about_bot", "group": "about_bot:who made you", "kind": "reviewed", "split": "train"}
+{"text": "do you store my questions", "label": "about_bot", "group": "about_bot:do you store my questions", "kind": "reviewed", "split": "train"}
+{"text": "do you store my quesitons", "label": "about_bot", "group": "about_bot:do you store my questions", "kind": "reviewed+variant", "split": "train"}
+{"text": "can you write code for me", "label": "about_bot", "group": "about_bot:can you write code for me", "kind": "reviewed", "split": "train"}
+{"text": "can you wrtie code for me", "label": "about_bot", "group": "about_bot:can you write code for me", "kind": "reviewed+variant", "split": "train"}
+{"text": "which vector database do you use", "label": "about_bot", "group": "about_bot:which vector database do you use", "kind": "reviewed", "split": "train"}
+{"text": "which vector dtaabase do you use", "label": "about_bot", "group": "about_bot:which vector database do you use", "kind": "reviewed+variant", "split": "train"}
+{"text": "what's the weather in Pune", "label": "out_of_scope", "group": "out_of_scope:what s the weather in pune", "kind": "reviewed", "split": "train"}
+{"text": "what's the weather in pune", "label": "out_of_scope", "group": "out_of_scope:what s the weather in pune", "kind": "reviewed+variant", "split": "train"}
+{"text": "what's the waether in Pune", "label": "out_of_scope", "group": "out_of_scope:what s the weather in pune", "kind": "reviewed+variant", "split": "train"}
+{"text": "how do I make biryani", "label": "out_of_scope", "group": "out_of_scope:how do i make biryani", "kind": "reviewed", "split": "val"}
+{"text": "how do i make biryani", "label": "out_of_scope", "group": "out_of_scope:how do i make biryani", "kind": "reviewed+variant", "split": "val"}
+{"text": "how do I make biyrani", "label": "out_of_scope", "group": "out_of_scope:how do i make biryani", "kind": "reviewed+variant", "split": "val"}
+{"text": "who won the world cup in 2022", "label": "out_of_scope", "group": "out_of_scope:who won the world cup in 2022", "kind": "reviewed", "split": "train"}
+{"text": "who won the wrold cup in 2022", "label": "out_of_scope", "group": "out_of_scope:who won the world cup in 2022", "kind": "reviewed+variant", "split": "train"}
+{"text": "write me a poem about the sea", "label": "out_of_scope", "group": "out_of_scope:write me a poem about the sea", "kind": "reviewed", "split": "test"}
+{"text": "wirte me a poem about the sea", "label": "out_of_scope", "group": "out_of_scope:write me a poem about the sea", "kind": "reviewed+variant", "split": "test"}
+{"text": "how do I reverse a list in python", "label": "out_of_scope", "group": "out_of_scope:how do i reverse a list in python", "kind": "reviewed", "split": "train"}
+{"text": "how do i reverse a list in python", "label": "out_of_scope", "group": "out_of_scope:how do i reverse a list in python", "kind": "reviewed+variant", "split": "train"}
+{"text": "how do I rveerse a list in python", "label": "out_of_scope", "group": "out_of_scope:how do i reverse a list in python", "kind": "reviewed+variant", "split": "train"}
+{"text": "explain react hooks", "label": "out_of_scope", "group": "out_of_scope:explain react hooks", "kind": "reviewed", "split": "train"}
+{"text": "exlpain react hooks", "label": "out_of_scope", "group": "out_of_scope:explain react hooks", "kind": "reviewed+variant", "split": "train"}
+{"text": "write a sql query to join two tables", "label": "out_of_scope", "group": "out_of_scope:write a sql query to join two tables", "kind": "reviewed", "split": "test"}
+{"text": "write a sql query to join two tabels", "label": "out_of_scope", "group": "out_of_scope:write a sql query to join two tables", "kind": "reviewed+variant", "split": "test"}
+{"text": "what is machine learning", "label": "out_of_scope", "group": "out_of_scope:what is machine learning", "kind": "reviewed", "split": "train"}
+{"text": "what is machine leanring", "label": "out_of_scope", "group": "out_of_scope:what is machine learning", "kind": "reviewed+variant", "split": "train"}
+{"text": "best stocks to buy right now", "label": "out_of_scope", "group": "out_of_scope:best stocks to buy right now", "kind": "reviewed", "split": "train"}
+{"text": "best stocks to buy rihgt now", "label": "out_of_scope", "group": "out_of_scope:best stocks to buy right now", "kind": "reviewed+variant", "split": "train"}
+{"text": "what is an API", "label": "out_of_scope", "group": "out_of_scope:what is an api", "kind": "reviewed", "split": "test"}
+{"text": "what is an api", "label": "out_of_scope", "group": "out_of_scope:what is an api", "kind": "reviewed+variant", "split": "test"}
+{"text": "What is Kubernetes?", "label": "retrieve", "group": "retrieve:what is kubernetes", "kind": "reviewed", "split": "train"}
+{"text": "what is kubernetes?", "label": "retrieve", "group": "retrieve:what is kubernetes", "kind": "reviewed+variant", "split": "train"}
+{"text": "What is Kubernetes", "label": "retrieve", "group": "retrieve:what is kubernetes", "kind": "reviewed+variant", "split": "train"}
+{"text": "ingress?", "label": "retrieve", "group": "retrieve:ingress", "kind": "reviewed", "split": "train"}
+{"text": "ingress", "label": "retrieve", "group": "retrieve:ingress", "kind": "reviewed+variant", "split": "train"}
+{"text": "aws_s3_bucket", "label": "retrieve", "group": "retrieve:aws_s3_bucket", "kind": "reviewed", "split": "test"}
+{"text": "Error: error acquiring the state lock", "label": "retrieve", "group": "retrieve:error error acquiring the state lock", "kind": "reviewed", "split": "train"}
+{"text": "error: error acquiring the state lock", "label": "retrieve", "group": "retrieve:error error acquiring the state lock", "kind": "reviewed+variant", "split": "train"}
+{"text": "Error: error acquriing the state lock", "label": "retrieve", "group": "retrieve:error error acquiring the state lock", "kind": "reviewed+variant", "split": "train"}
+{"text": "hi, how do I restart a pod?", "label": "retrieve", "group": "retrieve:hi how do i restart a pod", "kind": "reviewed", "split": "test"}
+{"text": "hi, how do i restart a pod?", "label": "retrieve", "group": "retrieve:hi how do i restart a pod", "kind": "reviewed+variant", "split": "test"}
+{"text": "hi, how do I restart a pod", "label": "retrieve", "group": "retrieve:hi how do i restart a pod", "kind": "reviewed+variant", "split": "test"}
+{"text": "hi, how do I rsetart a pod?", "label": "retrieve", "group": "retrieve:hi how do i restart a pod", "kind": "reviewed+variant", "split": "test"}
+{"text": "my pod keeps dying", "label": "retrieve", "group": "retrieve:my pod keeps dying", "kind": "reviewed", "split": "test"}
+{"text": "kuberentes secrets", "label": "retrieve", "group": "retrieve:kuberentes secrets", "kind": "reviewed", "split": "val"}
+{"text": "kubreentes secrets", "label": "retrieve", "group": "retrieve:kuberentes secrets", "kind": "reviewed+variant", "split": "val"}
+{"text": "¿cómo reinicio un pod?", "label": "retrieve", "group": "retrieve:cómo reinicio un pod", "kind": "reviewed", "split": "test"}
+{"text": "¿cómo reinicio un pod", "label": "retrieve", "group": "retrieve:cómo reinicio un pod", "kind": "reviewed+variant", "split": "test"}
+{"text": "how does kubernetes work", "label": "retrieve", "group": "retrieve:how does kubernetes work", "kind": "reviewed", "split": "val"}
+{"text": "how does kubrenetes work", "label": "retrieve", "group": "retrieve:how does kubernetes work", "kind": "reviewed+variant", "split": "val"}
+{"text": "where is my terraform state stored", "label": "retrieve", "group": "retrieve:where is my terraform state stored", "kind": "reviewed", "split": "test"}
+{"text": "where is my terraform satte stored", "label": "retrieve", "group": "retrieve:where is my terraform state stored", "kind": "reviewed+variant", "split": "test"}
+{"text": "what is docker hub pricing", "label": "retrieve", "group": "retrieve:what is docker hub pricing", "kind": "reviewed", "split": "val"}
+{"text": "what is docker hub priicng", "label": "retrieve", "group": "retrieve:what is docker hub pricing", "kind": "reviewed+variant", "split": "val"}
+{"text": "how do I write a github action that deploys to ecs", "label": "retrieve", "group": "retrieve:how do i write a github action that deploys to ecs", "kind": "reviewed", "split": "train"}
+{"text": "how do i write a github action that deploys to ecs", "label": "retrieve", "group": "retrieve:how do i write a github action that deploys to ecs", "kind": "reviewed+variant", "split": "train"}
+{"text": "how do I write a github atcion that deploys to ecs", "label": "retrieve", "group": "retrieve:how do i write a github action that deploys to ecs", "kind": "reviewed+variant", "split": "train"}
+{"text": "linux file permissions in a container", "label": "retrieve", "group": "retrieve:linux file permissions in a container", "kind": "reviewed", "split": "train"}
+{"text": "linux file permissinos in a container", "label": "retrieve", "group": "retrieve:linux file permissions in a container", "kind": "reviewed+variant", "split": "train"}
+{"text": "helm", "label": "retrieve", "group": "retrieve:helm", "kind": "hard", "split": "train"}
+{"text": "what is docker", "label": "retrieve", "group": "retrieve:what is docker", "kind": "hard", "split": "test"}
+{"text": "what is dokcer", "label": "retrieve", "group": "retrieve:what is docker", "kind": "hard+variant", "split": "test"}
+{"text": "terraform state", "label": "retrieve", "group": "retrieve:terraform state", "kind": "hard", "split": "val"}
+{"text": "terraform sttae", "label": "retrieve", "group": "retrieve:terraform state", "kind": "hard+variant", "split": "val"}
+{"text": "kubectl", "label": "retrieve", "group": "retrieve:kubectl", "kind": "hard", "split": "train"}
+{"text": "kuebctl", "label": "retrieve", "group": "retrieve:kubectl", "kind": "hard+variant", "split": "train"}
+{"text": "pods", "label": "retrieve", "group": "retrieve:pods", "kind": "hard", "split": "val"}
+{"text": "what is a pod", "label": "retrieve", "group": "retrieve:what is a pod", "kind": "hard", "split": "train"}
+{"text": "docker compose", "label": "retrieve", "group": "retrieve:docker compose", "kind": "hard", "split": "train"}
+{"text": "docker comopse", "label": "retrieve", "group": "retrieve:docker compose", "kind": "hard+variant", "split": "train"}
+{"text": "iam roles", "label": "retrieve", "group": "retrieve:iam roles", "kind": "hard", "split": "train"}
+{"text": "iam roels", "label": "retrieve", "group": "retrieve:iam roles", "kind": "hard+variant", "split": "train"}
+{"text": "s3 bucket policy", "label": "retrieve", "group": "retrieve:s3 bucket policy", "kind": "hard", "split": "val"}
+{"text": "s3 bukcet policy", "label": "retrieve", "group": "retrieve:s3 bucket policy", "kind": "hard+variant", "split": "val"}
+{"text": "what is eks", "label": "retrieve", "group": "retrieve:what is eks", "kind": "hard", "split": "train"}
+{"text": "ecs vs eks", "label": "retrieve", "group": "retrieve:ecs vs eks", "kind": "hard", "split": "train"}
+{"text": "alb vs nlb", "label": "retrieve", "group": "retrieve:alb vs nlb", "kind": "hard", "split": "train"}
+{"text": "cloudfront cache", "label": "retrieve", "group": "retrieve:cloudfront cache", "kind": "hard", "split": "train"}
+{"text": "cloudfrnot cache", "label": "retrieve", "group": "retrieve:cloudfront cache", "kind": "hard+variant", "split": "train"}
+{"text": "rds backup", "label": "retrieve", "group": "retrieve:rds backup", "kind": "hard", "split": "train"}
+{"text": "rds bcakup", "label": "retrieve", "group": "retrieve:rds backup", "kind": "hard+variant", "split": "train"}
+{"text": "vpc peering", "label": "retrieve", "group": "retrieve:vpc peering", "kind": "hard", "split": "train"}
+{"text": "vpc peeirng", "label": "retrieve", "group": "retrieve:vpc peering", "kind": "hard+variant", "split": "train"}
+{"text": "security groups", "label": "retrieve", "group": "retrieve:security groups", "kind": "hard", "split": "val"}
+{"text": "security gropus", "label": "retrieve", "group": "retrieve:security groups", "kind": "hard+variant", "split": "val"}
+{"text": "what's a daemonset", "label": "retrieve", "group": "retrieve:what s a daemonset", "kind": "hard", "split": "train"}
+{"text": "what's a daemonest", "label": "retrieve", "group": "retrieve:what s a daemonset", "kind": "hard+variant", "split": "train"}
+{"text": "configmap", "label": "retrieve", "group": "retrieve:configmap", "kind": "hard", "split": "train"}
+{"text": "cnofigmap", "label": "retrieve", "group": "retrieve:configmap", "kind": "hard+variant", "split": "train"}
+{"text": "taints", "label": "retrieve", "group": "retrieve:taints", "kind": "hard", "split": "val"}
+{"text": "tanits", "label": "retrieve", "group": "retrieve:taints", "kind": "hard+variant", "split": "val"}
+{"text": "dockerfile cmd vs entrypoint", "label": "retrieve", "group": "retrieve:dockerfile cmd vs entrypoint", "kind": "hard", "split": "train"}
+{"text": "dockerfile cmd vs entrypiont", "label": "retrieve", "group": "retrieve:dockerfile cmd vs entrypoint", "kind": "hard+variant", "split": "train"}
+{"text": "terraform import", "label": "retrieve", "group": "retrieve:terraform import", "kind": "hard", "split": "val"}
+{"text": "terraform imoprt", "label": "retrieve", "group": "retrieve:terraform import", "kind": "hard+variant", "split": "val"}
+{"text": "terraform workspace", "label": "retrieve", "group": "retrieve:terraform workspace", "kind": "hard", "split": "train"}
+{"text": "terraform worksapce", "label": "retrieve", "group": "retrieve:terraform workspace", "kind": "hard+variant", "split": "train"}
+{"text": "docker volume", "label": "retrieve", "group": "retrieve:docker volume", "kind": "hard", "split": "train"}
+{"text": "docker vloume", "label": "retrieve", "group": "retrieve:docker volume", "kind": "hard+variant", "split": "train"}
+{"text": "depends_on", "label": "retrieve", "group": "retrieve:depends_on", "kind": "hard", "split": "train"}
+{"text": "for_each", "label": "retrieve", "group": "retrieve:for_each", "kind": "hard", "split": "val"}
+{"text": "service accounts", "label": "retrieve", "group": "retrieve:service accounts", "kind": "hard", "split": "train"}
+{"text": "service accoutns", "label": "retrieve", "group": "retrieve:service accounts", "kind": "hard+variant", "split": "train"}
+{"text": "what is a statefulset", "label": "retrieve", "group": "retrieve:what is a statefulset", "kind": "hard", "split": "train"}
+{"text": "what is a statfeulset", "label": "retrieve", "group": "retrieve:what is a statefulset", "kind": "hard+variant", "split": "train"}
+{"text": "cidr blocks", "label": "retrieve", "group": "retrieve:cidr blocks", "kind": "hard", "split": "test"}
+{"text": "cidr blokcs", "label": "retrieve", "group": "retrieve:cidr blocks", "kind": "hard+variant", "split": "test"}
+{"text": "CrashLoopBackOff", "label": "retrieve", "group": "retrieve:crashloopbackoff", "kind": "error", "split": "train"}
+{"text": "crashloopbackoff", "label": "retrieve", "group": "retrieve:crashloopbackoff", "kind": "error+variant", "split": "train"}
+{"text": "CrahsLoopBackOff", "label": "retrieve", "group": "retrieve:crashloopbackoff", "kind": "error+variant", "split": "train"}
+{"text": "OOMKilled", "label": "retrieve", "group": "retrieve:oomkilled", "kind": "error", "split": "train"}
+{"text": "oomkilled", "label": "retrieve", "group": "retrieve:oomkilled", "kind": "error+variant", "split": "train"}
+{"text": "ImagePullBackOff", "label": "retrieve", "group": "retrieve:imagepullbackoff", "kind": "error", "split": "test"}
+{"text": "imagepullbackoff", "label": "retrieve", "group": "retrieve:imagepullbackoff", "kind": "error+variant", "split": "test"}
+{"text": "ImageuPllBackOff", "label": "retrieve", "group": "retrieve:imagepullbackoff", "kind": "error+variant", "split": "test"}
+{"text": "ErrImagePull", "label": "retrieve", "group": "retrieve:errimagepull", "kind": "error", "split": "test"}
+{"text": "errimagepull", "label": "retrieve", "group": "retrieve:errimagepull", "kind": "error+variant", "split": "test"}
+{"text": "ErrImgaePull", "label": "retrieve", "group": "retrieve:errimagepull", "kind": "error+variant", "split": "test"}
+{"text": "Back-off restarting failed container", "label": "retrieve", "group": "retrieve:back off restarting failed container", "kind": "error", "split": "train"}
+{"text": "back-off restarting failed container", "label": "retrieve", "group": "retrieve:back off restarting failed container", "kind": "error+variant", "split": "train"}
+{"text": "Back-off restartnig failed container", "label": "retrieve", "group": "retrieve:back off restarting failed container", "kind": "error+variant", "split": "train"}
+{"text": "exec format error", "label": "retrieve", "group": "retrieve:exec format error", "kind": "error", "split": "train"}
+{"text": "exec format erorr", "label": "retrieve", "group": "retrieve:exec format error", "kind": "error+variant", "split": "train"}
+{"text": "Error: Invalid provider configuration", "label": "retrieve", "group": "retrieve:error invalid provider configuration", "kind": "error", "split": "train"}
+{"text": "error: invalid provider configuration", "label": "retrieve", "group": "retrieve:error invalid provider configuration", "kind": "error+variant", "split": "train"}
+{"text": "Error: Invalid provider confgiuration", "label": "retrieve", "group": "retrieve:error invalid provider configuration", "kind": "error+variant", "split": "train"}
+{"text": "pull access denied for myimage, repository does not exist", "label": "retrieve", "group": "retrieve:pull access denied for myimage repository does not exist", "kind": "error", "split": "test"}
+{"text": "pull acecss denied for myimage, repository does not exist", "label": "retrieve", "group": "retrieve:pull access denied for myimage repository does not exist", "kind": "error+variant", "split": "test"}
+{"text": "The connection to the server localhost:8080 was refused", "label": "retrieve", "group": "retrieve:the connection to the server localhost 8080 was refused", "kind": "error", "split": "train"}
+{"text": "the connection to the server localhost:8080 was refused", "label": "retrieve", "group": "retrieve:the connection to the server localhost 8080 was refused", "kind": "error+variant", "split": "train"}
+{"text": "The connetcion to the server localhost:8080 was refused", "label": "retrieve", "group": "retrieve:the connection to the server localhost 8080 was refused", "kind": "error+variant", "split": "train"}
+{"text": "Error from server (Forbidden): pods is forbidden", "label": "retrieve", "group": "retrieve:error from server forbidden pods is forbidden", "kind": "error", "split": "test"}
+{"text": "error from server (forbidden): pods is forbidden", "label": "retrieve", "group": "retrieve:error from server forbidden pods is forbidden", "kind": "error+variant", "split": "test"}
+{"text": "0/3 nodes are available: 3 Insufficient cpu", "label": "retrieve", "group": "retrieve:0 3 nodes are available 3 insufficient cpu", "kind": "error", "split": "train"}
+{"text": "0/3 nodes are available: 3 insufficient cpu", "label": "retrieve", "group": "retrieve:0 3 nodes are available 3 insufficient cpu", "kind": "error+variant", "split": "train"}
+{"text": "0/3 noeds are available: 3 Insufficient cpu", "label": "retrieve", "group": "retrieve:0 3 nodes are available 3 insufficient cpu", "kind": "error+variant", "split": "train"}
+{"text": "Error: creating EC2 Instance: UnauthorizedOperation", "label": "retrieve", "group": "retrieve:error creating ec2 instance unauthorizedoperation", "kind": "error", "split": "val"}
+{"text": "error: creating ec2 instance: unauthorizedoperation", "label": "retrieve", "group": "retrieve:error creating ec2 instance unauthorizedoperation", "kind": "error+variant", "split": "val"}
+{"text": "Error: creatnig EC2 Instance: UnauthorizedOperation", "label": "retrieve", "group": "retrieve:error creating ec2 instance unauthorizedoperation", "kind": "error+variant", "split": "val"}
+{"text": "An error occurred (AccessDenied) when calling the PutObject operation", "label": "retrieve", "group": "retrieve:an error occurred accessdenied when calling the putobject operation", "kind": "error", "split": "train"}
+{"text": "an error occurred (accessdenied) when calling the putobject operation", "label": "retrieve", "group": "retrieve:an error occurred accessdenied when calling the putobject operation", "kind": "error+variant", "split": "train"}
+{"text": "An error occurerd (AccessDenied) when calling the PutObject operation", "label": "retrieve", "group": "retrieve:an error occurred accessdenied when calling the putobject operation", "kind": "error+variant", "split": "train"}
+{"text": "Got permission denied while trying to connect to the Docker daemon socket", "label": "retrieve", "group": "retrieve:got permission denied while trying to connect to the docker daemon socket", "kind": "error", "split": "train"}
+{"text": "got permission denied while trying to connect to the docker daemon socket", "label": "retrieve", "group": "retrieve:got permission denied while trying to connect to the docker daemon socket", "kind": "error+variant", "split": "train"}
+{"text": "Got permission denied while trynig to connect to the Docker daemon socket", "label": "retrieve", "group": "retrieve:got permission denied while trying to connect to the docker daemon socket", "kind": "error+variant", "split": "train"}
+{"text": "no space left on device docker", "label": "retrieve", "group": "retrieve:no space left on device docker", "kind": "error", "split": "train"}
+{"text": "no space left on devcie docker", "label": "retrieve", "group": "retrieve:no space left on device docker", "kind": "error+variant", "split": "train"}
+{"text": "OCI runtime create failed: container_linux.go", "label": "retrieve", "group": "retrieve:oci runtime create failed container_linux go", "kind": "error", "split": "train"}
+{"text": "oci runtime create failed: container_linux.go", "label": "retrieve", "group": "retrieve:oci runtime create failed container_linux go", "kind": "error+variant", "split": "train"}
+{"text": "OCI runtime craete failed: container_linux.go", "label": "retrieve", "group": "retrieve:oci runtime create failed container_linux go", "kind": "error+variant", "split": "train"}
+{"text": "Error: Cycle: aws_security_group.a, aws_security_group.b", "label": "retrieve", "group": "retrieve:error cycle aws_security_group a aws_security_group b", "kind": "error", "split": "train"}
+{"text": "error: cycle: aws_security_group.a, aws_security_group.b", "label": "retrieve", "group": "retrieve:error cycle aws_security_group a aws_security_group b", "kind": "error+variant", "split": "train"}
+{"text": "failed to solve: process did not complete successfully: exit code: 1", "label": "retrieve", "group": "retrieve:failed to solve process did not complete successfully exit code 1", "kind": "error", "split": "train"}
+{"text": "faield to solve: process did not complete successfully: exit code: 1", "label": "retrieve", "group": "retrieve:failed to solve process did not complete successfully exit code 1", "kind": "error+variant", "split": "train"}
+{"text": "my container exits with code 137", "label": "retrieve", "group": "retrieve:my container exits with code 137", "kind": "error", "split": "train"}
+{"text": "my container eixts with code 137", "label": "retrieve", "group": "retrieve:my container exits with code 137", "kind": "error+variant", "split": "train"}
+{"text": "pod stuck in Pending", "label": "retrieve", "group": "retrieve:pod stuck in pending", "kind": "error", "split": "train"}
+{"text": "pod stuck in pending", "label": "retrieve", "group": "retrieve:pod stuck in pending", "kind": "error+variant", "split": "train"}
+{"text": "pod stcuk in Pending", "label": "retrieve", "group": "retrieve:pod stuck in pending", "kind": "error+variant", "split": "train"}
+{"text": "node NotReady", "label": "retrieve", "group": "retrieve:node notready", "kind": "error", "split": "train"}
+{"text": "node notready", "label": "retrieve", "group": "retrieve:node notready", "kind": "error+variant", "split": "train"}
+{"text": "node NoRteady", "label": "retrieve", "group": "retrieve:node notready", "kind": "error+variant", "split": "train"}
+{"text": "503 Service Temporarily Unavailable ingress", "label": "retrieve", "group": "retrieve:503 service temporarily unavailable ingress", "kind": "error", "split": "val"}
+{"text": "503 service temporarily unavailable ingress", "label": "retrieve", "group": "retrieve:503 service temporarily unavailable ingress", "kind": "error+variant", "split": "val"}
+{"text": "503 Service Temporarily Unavialable ingress", "label": "retrieve", "group": "retrieve:503 service temporarily unavailable ingress", "kind": "error+variant", "split": "val"}
+{"text": "Error: Unsupported argument", "label": "retrieve", "group": "retrieve:error unsupported argument", "kind": "error", "split": "test"}
+{"text": "error: unsupported argument", "label": "retrieve", "group": "retrieve:error unsupported argument", "kind": "error+variant", "split": "test"}
+{"text": "Error: Unsupported argumnet", "label": "retrieve", "group": "retrieve:error unsupported argument", "kind": "error+variant", "split": "test"}
+{"text": "kubectl get pods shows Evicted", "label": "retrieve", "group": "retrieve:kubectl get pods shows evicted", "kind": "error", "split": "train"}
+{"text": "kubectl get pods shows evicted", "label": "retrieve", "group": "retrieve:kubectl get pods shows evicted", "kind": "error+variant", "split": "train"}
+{"text": "kubectl get pods sohws Evicted", "label": "retrieve", "group": "retrieve:kubectl get pods shows evicted", "kind": "error+variant", "split": "train"}
+{"text": "ELB health checks failing", "label": "retrieve", "group": "retrieve:elb health checks failing", "kind": "error", "split": "test"}
+{"text": "elb health checks failing", "label": "retrieve", "group": "retrieve:elb health checks failing", "kind": "error+variant", "split": "test"}
+{"text": "ELB helath checks failing", "label": "retrieve", "group": "retrieve:elb health checks failing", "kind": "error+variant", "split": "test"}
+{"text": "Error: Failed to query available provider packages", "label": "retrieve", "group": "retrieve:error failed to query available provider packages", "kind": "error", "split": "test"}
+{"text": "error: failed to query available provider packages", "label": "retrieve", "group": "retrieve:error failed to query available provider packages", "kind": "error+variant", "split": "test"}
+{"text": "Error: Failed to query available provdier packages", "label": "retrieve", "group": "retrieve:error failed to query available provider packages", "kind": "error+variant", "split": "test"}
+{"text": "x509: certificate signed by unknown authority", "label": "retrieve", "group": "retrieve:x509 certificate signed by unknown authority", "kind": "error", "split": "train"}
+{"text": "x509: cretificate signed by unknown authority", "label": "retrieve", "group": "retrieve:x509 certificate signed by unknown authority", "kind": "error+variant", "split": "train"}
+{"text": "app is slow after deploy", "label": "retrieve", "group": "retrieve:app is slow after deploy", "kind": "vague", "split": "test"}
+{"text": "app is slow afetr deploy", "label": "retrieve", "group": "retrieve:app is slow after deploy", "kind": "vague+variant", "split": "test"}
+{"text": "why can't my container reach the internet", "label": "retrieve", "group": "retrieve:why can t my container reach the internet", "kind": "vague", "split": "test"}
+{"text": "why can't my container recah the internet", "label": "retrieve", "group": "retrieve:why can t my container reach the internet", "kind": "vague+variant", "split": "test"}
+{"text": "service not reachable from outside the cluster", "label": "retrieve", "group": "retrieve:service not reachable from outside the cluster", "kind": "vague", "split": "train"}
+{"text": "service not reachable from otuside the cluster", "label": "retrieve", "group": "retrieve:service not reachable from outside the cluster", "kind": "vague+variant", "split": "train"}
+{"text": "can't connect to rds from my laptop", "label": "retrieve", "group": "retrieve:can t connect to rds from my laptop", "kind": "vague", "split": "val"}
+{"text": "can't cnonect to rds from my laptop", "label": "retrieve", "group": "retrieve:can t connect to rds from my laptop", "kind": "vague+variant", "split": "val"}
+{"text": "terraform wants to destroy everything", "label": "retrieve", "group": "retrieve:terraform wants to destroy everything", "kind": "vague", "split": "test"}
+{"text": "terraform wnats to destroy everything", "label": "retrieve", "group": "retrieve:terraform wants to destroy everything", "kind": "vague+variant", "split": "test"}
+{"text": "docker build is really slow", "label": "retrieve", "group": "retrieve:docker build is really slow", "kind": "vague", "split": "test"}
+{"text": "dokcer build is really slow", "label": "retrieve", "group": "retrieve:docker build is really slow", "kind": "vague+variant", "split": "test"}
+{"text": "cluster costs too much", "label": "retrieve", "group": "retrieve:cluster costs too much", "kind": "vague", "split": "train"}
+{"text": "clsuter costs too much", "label": "retrieve", "group": "retrieve:cluster costs too much", "kind": "vague+variant", "split": "train"}
+{"text": "pods won't schedule", "label": "retrieve", "group": "retrieve:pods won t schedule", "kind": "vague", "split": "train"}
+{"text": "pods won't schedlue", "label": "retrieve", "group": "retrieve:pods won t schedule", "kind": "vague+variant", "split": "train"}
+{"text": "my deployment is stuck", "label": "retrieve", "group": "retrieve:my deployment is stuck", "kind": "vague", "split": "train"}
+{"text": "my deployment is sutck", "label": "retrieve", "group": "retrieve:my deployment is stuck", "kind": "vague+variant", "split": "train"}
+{"text": "terraform apply hangs", "label": "retrieve", "group": "retrieve:terraform apply hangs", "kind": "vague", "split": "train"}
+{"text": "terraform aplpy hangs", "label": "retrieve", "group": "retrieve:terraform apply hangs", "kind": "vague+variant", "split": "train"}
+{"text": "ec2 instance not reachable by ssh", "label": "retrieve", "group": "retrieve:ec2 instance not reachable by ssh", "kind": "vague", "split": "train"}
+{"text": "ec2 instance not reachalbe by ssh", "label": "retrieve", "group": "retrieve:ec2 instance not reachable by ssh", "kind": "vague+variant", "split": "train"}
+{"text": "load balancer returns 502", "label": "retrieve", "group": "retrieve:load balancer returns 502", "kind": "vague", "split": "train"}
+{"text": "load balancer rteurns 502", "label": "retrieve", "group": "retrieve:load balancer returns 502", "kind": "vague+variant", "split": "train"}
+{"text": "container keeps restarting", "label": "retrieve", "group": "retrieve:container keeps restarting", "kind": "vague", "split": "train"}
+{"text": "container kepes restarting", "label": "retrieve", "group": "retrieve:container keeps restarting", "kind": "vague+variant", "split": "train"}
+{"text": "thanks! also how do I scale a deployment", "label": "retrieve", "group": "retrieve:thanks also how do i scale a deployment", "kind": "multi", "split": "val"}
+{"text": "thanks! also how do i scale a deployment", "label": "retrieve", "group": "retrieve:thanks also how do i scale a deployment", "kind": "multi+variant", "split": "val"}
+{"text": "thanks! also how do I sclae a deployment", "label": "retrieve", "group": "retrieve:thanks also how do i scale a deployment", "kind": "multi+variant", "split": "val"}
+{"text": "hello can you explain terraform modules", "label": "retrieve", "group": "retrieve:hello can you explain terraform modules", "kind": "multi", "split": "train"}
+{"text": "hello can you explain terraform modlues", "label": "retrieve", "group": "retrieve:hello can you explain terraform modules", "kind": "multi+variant", "split": "train"}
+{"text": "hey whats the difference between a pod and a deployment", "label": "retrieve", "group": "retrieve:hey whats the difference between a pod and a deployment", "kind": "multi", "split": "val"}
+{"text": "hey whats the difference betewen a pod and a deployment", "label": "retrieve", "group": "retrieve:hey whats the difference between a pod and a deployment", "kind": "multi+variant", "split": "val"}
+{"text": "ok cool, now how do I roll back", "label": "retrieve", "group": "retrieve:ok cool now how do i roll back", "kind": "multi", "split": "train"}
+{"text": "ok cool, now how do i roll back", "label": "retrieve", "group": "retrieve:ok cool now how do i roll back", "kind": "multi+variant", "split": "train"}
+{"text": "good morning, my pod is in CrashLoopBackOff", "label": "retrieve", "group": "retrieve:good morning my pod is in crashloopbackoff", "kind": "multi", "split": "train"}
+{"text": "good morning, my pod is in crashloopbackoff", "label": "retrieve", "group": "retrieve:good morning my pod is in crashloopbackoff", "kind": "multi+variant", "split": "train"}
+{"text": "good morning, my pod is in CrashLoopaBckOff", "label": "retrieve", "group": "retrieve:good morning my pod is in crashloopbackoff", "kind": "multi+variant", "split": "train"}
+{"text": "thank you. one more thing: how do I set resource limits", "label": "retrieve", "group": "retrieve:thank you one more thing how do i set resource limits", "kind": "multi", "split": "train"}
+{"text": "thank you. one more thing: how do i set resource limits", "label": "retrieve", "group": "retrieve:thank you one more thing how do i set resource limits", "kind": "multi+variant", "split": "train"}
+{"text": "thank you. one more thing: how do I set resource liimts", "label": "retrieve", "group": "retrieve:thank you one more thing how do i set resource limits", "kind": "multi+variant", "split": "train"}
+{"text": "hi! what is an IAM role", "label": "retrieve", "group": "retrieve:hi what is an iam role", "kind": "multi", "split": "train"}
+{"text": "hi! what is an iam role", "label": "retrieve", "group": "retrieve:hi what is an iam role", "kind": "multi+variant", "split": "train"}
+{"text": "yo how do i expose a service in k8s", "label": "retrieve", "group": "retrieve:yo how do i expose a service in k8s", "kind": "multi", "split": "test"}
+{"text": "yo how do i expose a servcie in k8s", "label": "retrieve", "group": "retrieve:yo how do i expose a service in k8s", "kind": "multi+variant", "split": "test"}
+{"text": "how are you? I need help with a docker build error", "label": "retrieve", "group": "retrieve:how are you i need help with a docker build error", "kind": "multi", "split": "train"}
+{"text": "how are you? i need help with a docker build error", "label": "retrieve", "group": "retrieve:how are you i need help with a docker build error", "kind": "multi+variant", "split": "train"}
+{"text": "how are you? I need help with a dokcer build error", "label": "retrieve", "group": "retrieve:how are you i need help with a docker build error", "kind": "multi+variant", "split": "train"}
+{"text": "hey, quick question about security groups", "label": "retrieve", "group": "retrieve:hey quick question about security groups", "kind": "multi", "split": "test"}
+{"text": "hey, qucik question about security groups", "label": "retrieve", "group": "retrieve:hey quick question about security groups", "kind": "multi+variant", "split": "test"}
+{"text": "terrafrom plan not working", "label": "retrieve", "group": "retrieve:terrafrom plan not working", "kind": "typo", "split": "train"}
+{"text": "trerafrom plan not working", "label": "retrieve", "group": "retrieve:terrafrom plan not working", "kind": "typo+variant", "split": "train"}
+{"text": "dockr compose up", "label": "retrieve", "group": "retrieve:dockr compose up", "kind": "typo", "split": "test"}
+{"text": "dokcr compose up", "label": "retrieve", "group": "retrieve:dockr compose up", "kind": "typo+variant", "split": "test"}
+{"text": "TERRAFORM PLAN", "label": "retrieve", "group": "retrieve:terraform plan", "kind": "typo", "split": "test"}
+{"text": "terraform plan", "label": "retrieve", "group": "retrieve:terraform plan", "kind": "typo+variant", "split": "test"}
+{"text": "TERRAOFRM PLAN", "label": "retrieve", "group": "retrieve:terraform plan", "kind": "typo+variant", "split": "test"}
+{"text": "KUBECTL GET PODS", "label": "retrieve", "group": "retrieve:kubectl get pods", "kind": "typo", "split": "train"}
+{"text": "kubectl get pods", "label": "retrieve", "group": "retrieve:kubectl get pods", "kind": "typo+variant", "split": "train"}
+{"text": "KUBCETL GET PODS", "label": "retrieve", "group": "retrieve:kubectl get pods", "kind": "typo+variant", "split": "train"}
+{"text": "how do i creat an s3 bukcet in terraform", "label": "retrieve", "group": "retrieve:how do i creat an s3 bukcet in terraform", "kind": "typo", "split": "train"}
+{"text": "how do i creat an s3 bucket in terraform", "label": "retrieve", "group": "retrieve:how do i creat an s3 bukcet in terraform", "kind": "typo+variant", "split": "train"}
+{"text": "k8s ingres controller", "label": "retrieve", "group": "retrieve:k8s ingres controller", "kind": "typo", "split": "train"}
+{"text": "k8s ingres cotnroller", "label": "retrieve", "group": "retrieve:k8s ingres controller", "kind": "typo+variant", "split": "train"}
+{"text": "dockerfle multi stage", "label": "retrieve", "group": "retrieve:dockerfle multi stage", "kind": "typo", "split": "val"}
+{"text": "dockerfle mutli stage", "label": "retrieve", "group": "retrieve:dockerfle multi stage", "kind": "typo+variant", "split": "val"}
+{"text": "comment créer un bucket s3 avec terraform", "label": "retrieve", "group": "retrieve:comment créer un bucket s3 avec terraform", "kind": "nonenglish", "split": "train"}
+{"text": "wie erstelle ich ein Dockerfile", "label": "retrieve", "group": "retrieve:wie erstelle ich ein dockerfile", "kind": "nonenglish", "split": "test"}
+{"text": "wie erstelle ich ein dockerfile", "label": "retrieve", "group": "retrieve:wie erstelle ich ein dockerfile", "kind": "nonenglish+variant", "split": "test"}
+{"text": "wie ersetlle ich ein Dockerfile", "label": "retrieve", "group": "retrieve:wie erstelle ich ein dockerfile", "kind": "nonenglish+variant", "split": "test"}
+{"text": "kubernetes में pod कैसे restart करें", "label": "retrieve", "group": "retrieve:kubernetes म pod क स restart कर", "kind": "nonenglish", "split": "val"}
+{"text": "como configurar um security group na aws", "label": "retrieve", "group": "retrieve:como configurar um security group na aws", "kind": "nonenglish", "split": "train"}
+{"text": "como configurar um secruity group na aws", "label": "retrieve", "group": "retrieve:como configurar um security group na aws", "kind": "nonenglish+variant", "split": "train"}
+{"text": "¿qué es un deployment en kubernetes?", "label": "retrieve", "group": "retrieve:qué es un deployment en kubernetes", "kind": "nonenglish", "split": "test"}
+{"text": "¿qué es un deployment en kubernetes", "label": "retrieve", "group": "retrieve:qué es un deployment en kubernetes", "kind": "nonenglish+variant", "split": "test"}
+{"text": "what model does EKS use for the node AMI", "label": "retrieve", "group": "retrieve:what model does eks use for the node ami", "kind": "hard", "split": "train"}
+{"text": "what model does eks use for the node ami", "label": "retrieve", "group": "retrieve:what model does eks use for the node ami", "kind": "hard+variant", "split": "train"}
+{"text": "what mdoel does EKS use for the node AMI", "label": "retrieve", "group": "retrieve:what model does eks use for the node ami", "kind": "hard+variant", "split": "train"}
+{"text": "how do I deploy a container on ECS", "label": "retrieve", "group": "retrieve:how do i deploy a container on ecs", "kind": "hard", "split": "train"}
+{"text": "how do i deploy a container on ecs", "label": "retrieve", "group": "retrieve:how do i deploy a container on ecs", "kind": "hard+variant", "split": "train"}
+{"text": "how do I dpeloy a container on ECS", "label": "retrieve", "group": "retrieve:how do i deploy a container on ecs", "kind": "hard+variant", "split": "train"}
+{"text": "which docs explain IAM", "label": "retrieve", "group": "retrieve:which docs explain iam", "kind": "hard", "split": "test"}
+{"text": "which docs explain iam", "label": "retrieve", "group": "retrieve:which docs explain iam", "kind": "hard+variant", "split": "test"}
+{"text": "which docs exlpain IAM", "label": "retrieve", "group": "retrieve:which docs explain iam", "kind": "hard+variant", "split": "test"}
+{"text": "what gets deployed when I create an EKS cluster", "label": "retrieve", "group": "retrieve:what gets deployed when i create an eks cluster", "kind": "hard", "split": "train"}
+{"text": "what gets deployed when i create an eks cluster", "label": "retrieve", "group": "retrieve:what gets deployed when i create an eks cluster", "kind": "hard+variant", "split": "train"}
+{"text": "what gets deplyoed when I create an EKS cluster", "label": "retrieve", "group": "retrieve:what gets deployed when i create an eks cluster", "kind": "hard+variant", "split": "train"}
+{"text": "where are docker images stored", "label": "retrieve", "group": "retrieve:where are docker images stored", "kind": "hard", "split": "train"}
+{"text": "wehre are docker images stored", "label": "retrieve", "group": "retrieve:where are docker images stored", "kind": "hard+variant", "split": "train"}
+{"text": "what can I use for container orchestration", "label": "retrieve", "group": "retrieve:what can i use for container orchestration", "kind": "hard", "split": "val"}
+{"text": "what can i use for container orchestration", "label": "retrieve", "group": "retrieve:what can i use for container orchestration", "kind": "hard+variant", "split": "val"}
+{"text": "what can I use for container orcehstration", "label": "retrieve", "group": "retrieve:what can i use for container orchestration", "kind": "hard+variant", "split": "val"}
+{"text": "is docker hub free", "label": "retrieve", "group": "retrieve:is docker hub free", "kind": "hard", "split": "train"}
+{"text": "is docekr hub free", "label": "retrieve", "group": "retrieve:is docker hub free", "kind": "hard+variant", "split": "train"}
+{"text": "python docker sdk", "label": "retrieve", "group": "retrieve:python docker sdk", "kind": "hard", "split": "val"}
+{"text": "python dcoker sdk", "label": "retrieve", "group": "retrieve:python docker sdk", "kind": "hard+variant", "split": "val"}
+{"text": "how do I set up ci/cd for terraform", "label": "retrieve", "group": "retrieve:how do i set up ci cd for terraform", "kind": "hard", "split": "train"}
+{"text": "how do i set up ci/cd for terraform", "label": "retrieve", "group": "retrieve:how do i set up ci cd for terraform", "kind": "hard+variant", "split": "train"}
+{"text": "how do I set up ci/cd for terarform", "label": "retrieve", "group": "retrieve:how do i set up ci cd for terraform", "kind": "hard+variant", "split": "train"}
+{"text": "how do I check which port a service is listening on", "label": "retrieve", "group": "retrieve:how do i check which port a service is listening on", "kind": "hard", "split": "train"}
+{"text": "how do i check which port a service is listening on", "label": "retrieve", "group": "retrieve:how do i check which port a service is listening on", "kind": "hard+variant", "split": "train"}
+{"text": "how do I check which port a service is listennig on", "label": "retrieve", "group": "retrieve:how do i check which port a service is listening on", "kind": "hard+variant", "split": "train"}
+{"text": "dns not resolving inside a pod", "label": "retrieve", "group": "retrieve:dns not resolving inside a pod", "kind": "hard", "split": "val"}
+{"text": "dns not resolving isnide a pod", "label": "retrieve", "group": "retrieve:dns not resolving inside a pod", "kind": "hard+variant", "split": "val"}
+{"text": "what's the difference between a vm and a container", "label": "retrieve", "group": "retrieve:what s the difference between a vm and a container", "kind": "hard", "split": "train"}
+{"text": "which cloud region should I pick for latency", "label": "retrieve", "group": "retrieve:which cloud region should i pick for latency", "kind": "hard", "split": "train"}
+{"text": "which cloud region should i pick for latency", "label": "retrieve", "group": "retrieve:which cloud region should i pick for latency", "kind": "hard+variant", "split": "train"}
+{"text": "which cloud region sholud I pick for latency", "label": "retrieve", "group": "retrieve:which cloud region should i pick for latency", "kind": "hard+variant", "split": "train"}
+{"text": "Request certificates for your CloudFront distribution tenant", "label": "retrieve", "group": "retrieve:request certificates for your cloudfront distribution tenant", "kind": "heading", "split": "val"}
+{"text": "request certificates for your cloudfront distribution tenant", "label": "retrieve", "group": "retrieve:request certificates for your cloudfront distribution tenant", "kind": "heading+variant", "split": "val"}
+{"text": "Request certificates for your CluodFront distribution tenant", "label": "retrieve", "group": "retrieve:request certificates for your cloudfront distribution tenant", "kind": "heading+variant", "split": "val"}
+{"text": "Map non-NVMe disks to volumes", "label": "retrieve", "group": "retrieve:map non nvme disks to volumes", "kind": "heading", "split": "train"}
+{"text": "map non-nvme disks to volumes", "label": "retrieve", "group": "retrieve:map non nvme disks to volumes", "kind": "heading+variant", "split": "train"}
+{"text": "Map non-NVMe disks to voluems", "label": "retrieve", "group": "retrieve:map non nvme disks to volumes", "kind": "heading+variant", "split": "train"}
+{"text": "Terminology and components", "label": "retrieve", "group": "retrieve:terminology and components", "kind": "heading", "split": "val"}
+{"text": "terminology and components", "label": "retrieve", "group": "retrieve:terminology and components", "kind": "heading+variant", "split": "val"}
+{"text": "Terminology and comopnents", "label": "retrieve", "group": "retrieve:terminology and components", "kind": "heading+variant", "split": "val"}
+{"text": "Default envelope encryption for all Kubernetes API Data", "label": "retrieve", "group": "retrieve:default envelope encryption for all kubernetes api data", "kind": "heading", "split": "val"}
+{"text": "default envelope encryption for all kubernetes api data", "label": "retrieve", "group": "retrieve:default envelope encryption for all kubernetes api data", "kind": "heading+variant", "split": "val"}
+{"text": "Default envelope encryption for all Kubrenetes API Data", "label": "retrieve", "group": "retrieve:default envelope encryption for all kubernetes api data", "kind": "heading+variant", "split": "val"}
+{"text": "Register instances with your Classic Load Balancer", "label": "retrieve", "group": "retrieve:register instances with your classic load balancer", "kind": "heading", "split": "train"}
+{"text": "register instances with your classic load balancer", "label": "retrieve", "group": "retrieve:register instances with your classic load balancer", "kind": "heading+variant", "split": "train"}
+{"text": "Register instances with your Classic Load Blaancer", "label": "retrieve", "group": "retrieve:register instances with your classic load balancer", "kind": "heading+variant", "split": "train"}
+{"text": "Using IAM with Amazon EC2", "label": "retrieve", "group": "retrieve:using iam with amazon ec2", "kind": "heading", "split": "test"}
+{"text": "using iam with amazon ec2", "label": "retrieve", "group": "retrieve:using iam with amazon ec2", "kind": "heading+variant", "split": "test"}
+{"text": "Usnig IAM with Amazon EC2", "label": "retrieve", "group": "retrieve:using iam with amazon ec2", "kind": "heading+variant", "split": "test"}
+{"text": "Copying an option group", "label": "retrieve", "group": "retrieve:copying an option group", "kind": "heading", "split": "test"}
+{"text": "copying an option group", "label": "retrieve", "group": "retrieve:copying an option group", "kind": "heading+variant", "split": "test"}
+{"text": "Copying an option gorup", "label": "retrieve", "group": "retrieve:copying an option group", "kind": "heading+variant", "split": "test"}
+{"text": "Small writes", "label": "retrieve", "group": "retrieve:small writes", "kind": "heading", "split": "train"}
+{"text": "small writes", "label": "retrieve", "group": "retrieve:small writes", "kind": "heading+variant", "split": "train"}
+{"text": "Small wrties", "label": "retrieve", "group": "retrieve:small writes", "kind": "heading+variant", "split": "train"}
+{"text": "Use foreground cascading deletion", "label": "retrieve", "group": "retrieve:use foreground cascading deletion", "kind": "heading", "split": "train"}
+{"text": "use foreground cascading deletion", "label": "retrieve", "group": "retrieve:use foreground cascading deletion", "kind": "heading+variant", "split": "train"}
+{"text": "Use foreground csacading deletion", "label": "retrieve", "group": "retrieve:use foreground cascading deletion", "kind": "heading+variant", "split": "train"}
+{"text": "Share Layer with Organization", "label": "retrieve", "group": "retrieve:share layer with organization", "kind": "heading", "split": "train"}
+{"text": "share layer with organization", "label": "retrieve", "group": "retrieve:share layer with organization", "kind": "heading+variant", "split": "train"}
+{"text": "Share Lyaer with Organization", "label": "retrieve", "group": "retrieve:share layer with organization", "kind": "heading+variant", "split": "train"}
+{"text": "Custom Condition Checks", "label": "retrieve", "group": "retrieve:custom condition checks", "kind": "heading", "split": "train"}
+{"text": "custom condition checks", "label": "retrieve", "group": "retrieve:custom condition checks", "kind": "heading+variant", "split": "train"}
+{"text": "Csutom Condition Checks", "label": "retrieve", "group": "retrieve:custom condition checks", "kind": "heading+variant", "split": "train"}
+{"text": "Choose how to serve certificate validation tokens", "label": "retrieve", "group": "retrieve:choose how to serve certificate validation tokens", "kind": "heading", "split": "test"}
+{"text": "choose how to serve certificate validation tokens", "label": "retrieve", "group": "retrieve:choose how to serve certificate validation tokens", "kind": "heading+variant", "split": "test"}
+{"text": "Choose how to serve certificate validation toknes", "label": "retrieve", "group": "retrieve:choose how to serve certificate validation tokens", "kind": "heading+variant", "split": "test"}
+{"text": "Spot Instance interruption notices", "label": "retrieve", "group": "retrieve:spot instance interruption notices", "kind": "heading", "split": "test"}
+{"text": "spot instance interruption notices", "label": "retrieve", "group": "retrieve:spot instance interruption notices", "kind": "heading+variant", "split": "test"}
+{"text": "Spot Instnace interruption notices", "label": "retrieve", "group": "retrieve:spot instance interruption notices", "kind": "heading+variant", "split": "test"}
+{"text": "Create minimal or use distroless images", "label": "retrieve", "group": "retrieve:create minimal or use distroless images", "kind": "heading", "split": "train"}
+{"text": "create minimal or use distroless images", "label": "retrieve", "group": "retrieve:create minimal or use distroless images", "kind": "heading+variant", "split": "train"}
+{"text": "Create minimal or use distroelss images", "label": "retrieve", "group": "retrieve:create minimal or use distroless images", "kind": "heading+variant", "split": "train"}
+{"text": "Create a NodePool", "label": "retrieve", "group": "retrieve:create a nodepool", "kind": "heading", "split": "train"}
+{"text": "create a nodepool", "label": "retrieve", "group": "retrieve:create a nodepool", "kind": "heading+variant", "split": "train"}
+{"text": "Cretae a NodePool", "label": "retrieve", "group": "retrieve:create a nodepool", "kind": "heading+variant", "split": "train"}
+{"text": "Load Balancer Capacity Units", "label": "retrieve", "group": "retrieve:load balancer capacity units", "kind": "heading", "split": "test"}
+{"text": "load balancer capacity units", "label": "retrieve", "group": "retrieve:load balancer capacity units", "kind": "heading+variant", "split": "test"}
+{"text": "Load Balancer Capactiy Units", "label": "retrieve", "group": "retrieve:load balancer capacity units", "kind": "heading+variant", "split": "test"}
+{"text": "Preview access to your Amazon S3 bucket", "label": "retrieve", "group": "retrieve:preview access to your amazon s3 bucket", "kind": "heading", "split": "val"}
+{"text": "preview access to your amazon s3 bucket", "label": "retrieve", "group": "retrieve:preview access to your amazon s3 bucket", "kind": "heading+variant", "split": "val"}
+{"text": "Preview access to your Amazon S3 bucekt", "label": "retrieve", "group": "retrieve:preview access to your amazon s3 bucket", "kind": "heading+variant", "split": "val"}
+{"text": "Additional prerequisites", "label": "retrieve", "group": "retrieve:additional prerequisites", "kind": "heading", "split": "test"}
+{"text": "additional prerequisites", "label": "retrieve", "group": "retrieve:additional prerequisites", "kind": "heading+variant", "split": "test"}
+{"text": "Addiitonal prerequisites", "label": "retrieve", "group": "retrieve:additional prerequisites", "kind": "heading+variant", "split": "test"}
+{"text": "Install Docker Desktop", "label": "retrieve", "group": "retrieve:install docker desktop", "kind": "heading", "split": "train"}
+{"text": "install docker desktop", "label": "retrieve", "group": "retrieve:install docker desktop", "kind": "heading+variant", "split": "train"}
+{"text": "Install Docker Destkop", "label": "retrieve", "group": "retrieve:install docker desktop", "kind": "heading+variant", "split": "train"}
+{"text": "Assign an extended resource to a Pod", "label": "retrieve", "group": "retrieve:assign an extended resource to a pod", "kind": "heading", "split": "test"}
+{"text": "assign an extended resource to a pod", "label": "retrieve", "group": "retrieve:assign an extended resource to a pod", "kind": "heading+variant", "split": "test"}
+{"text": "Assign an exetnded resource to a Pod", "label": "retrieve", "group": "retrieve:assign an extended resource to a pod", "kind": "heading+variant", "split": "test"}
+{"text": "X-Ray Trace Delivery", "label": "retrieve", "group": "retrieve:x ray trace delivery", "kind": "heading", "split": "train"}
+{"text": "x-ray trace delivery", "label": "retrieve", "group": "retrieve:x ray trace delivery", "kind": "heading+variant", "split": "train"}
+{"text": "X-Ray Trcae Delivery", "label": "retrieve", "group": "retrieve:x ray trace delivery", "kind": "heading+variant", "split": "train"}
+{"text": "how do I run commands on a remote resource", "label": "retrieve", "group": "retrieve:how do i run commands on a remote resource", "kind": "heading", "split": "val"}
+{"text": "how do i run commands on a remote resource", "label": "retrieve", "group": "retrieve:how do i run commands on a remote resource", "kind": "heading+variant", "split": "val"}
+{"text": "how do I run commands on a remote resuorce", "label": "retrieve", "group": "retrieve:how do i run commands on a remote resource", "kind": "heading+variant", "split": "val"}
+{"text": "how do I add a domain to your CloudFront standard distribution", "label": "retrieve", "group": "retrieve:how do i add a domain to your cloudfront standard distribution", "kind": "heading", "split": "test"}
+{"text": "how do i add a domain to your cloudfront standard distribution", "label": "retrieve", "group": "retrieve:how do i add a domain to your cloudfront standard distribution", "kind": "heading+variant", "split": "test"}
+{"text": "how do I add a domain to your CloudFront satndard distribution", "label": "retrieve", "group": "retrieve:how do i add a domain to your cloudfront standard distribution", "kind": "heading+variant", "split": "test"}
+{"text": "Hibernated instances", "label": "retrieve", "group": "retrieve:hibernated instances", "kind": "heading", "split": "test"}
+{"text": "hibernated instances", "label": "retrieve", "group": "retrieve:hibernated instances", "kind": "heading+variant", "split": "test"}
+{"text": "Hibenrated instances", "label": "retrieve", "group": "retrieve:hibernated instances", "kind": "heading+variant", "split": "test"}
+{"text": "Amazon ECS cluster capacity", "label": "retrieve", "group": "retrieve:amazon ecs cluster capacity", "kind": "heading", "split": "train"}
+{"text": "amazon ecs cluster capacity", "label": "retrieve", "group": "retrieve:amazon ecs cluster capacity", "kind": "heading+variant", "split": "train"}
+{"text": "Amazon ECS cluster capaicty", "label": "retrieve", "group": "retrieve:amazon ecs cluster capacity", "kind": "heading+variant", "split": "train"}
+{"text": "Authentication methods", "label": "retrieve", "group": "retrieve:authentication methods", "kind": "heading", "split": "test"}
+{"text": "authentication methods", "label": "retrieve", "group": "retrieve:authentication methods", "kind": "heading+variant", "split": "test"}
+{"text": "Authentication metohds", "label": "retrieve", "group": "retrieve:authentication methods", "kind": "heading+variant", "split": "test"}
+{"text": "how do I configure access logs", "label": "retrieve", "group": "retrieve:how do i configure access logs", "kind": "heading", "split": "train"}
+{"text": "how do i configure access logs", "label": "retrieve", "group": "retrieve:how do i configure access logs", "kind": "heading+variant", "split": "train"}
+{"text": "how do I cofnigure access logs", "label": "retrieve", "group": "retrieve:how do i configure access logs", "kind": "heading+variant", "split": "train"}
+{"text": "Using AWS STS with AWS Regions", "label": "retrieve", "group": "retrieve:using aws sts with aws regions", "kind": "heading", "split": "val"}
+{"text": "using aws sts with aws regions", "label": "retrieve", "group": "retrieve:using aws sts with aws regions", "kind": "heading+variant", "split": "val"}
+{"text": "Uisng AWS STS with AWS Regions", "label": "retrieve", "group": "retrieve:using aws sts with aws regions", "kind": "heading+variant", "split": "val"}
+{"text": "Retrieving the DB load average for top wait events", "label": "retrieve", "group": "retrieve:retrieving the db load average for top wait events", "kind": "heading", "split": "val"}
+{"text": "retrieving the db load average for top wait events", "label": "retrieve", "group": "retrieve:retrieving the db load average for top wait events", "kind": "heading+variant", "split": "val"}
+{"text": "Retrieving the DB load avergae for top wait events", "label": "retrieve", "group": "retrieve:retrieving the db load average for top wait events", "kind": "heading+variant", "split": "val"}
+{"text": "Continuous Integration", "label": "retrieve", "group": "retrieve:continuous integration", "kind": "heading", "split": "test"}
+{"text": "continuous integration", "label": "retrieve", "group": "retrieve:continuous integration", "kind": "heading+variant", "split": "test"}
+{"text": "Continuous Integratoin", "label": "retrieve", "group": "retrieve:continuous integration", "kind": "heading+variant", "split": "test"}
+{"text": "Creating and exploring an nginx deployment", "label": "retrieve", "group": "retrieve:creating and exploring an nginx deployment", "kind": "heading", "split": "test"}
+{"text": "creating and exploring an nginx deployment", "label": "retrieve", "group": "retrieve:creating and exploring an nginx deployment", "kind": "heading+variant", "split": "test"}
+{"text": "Creating and exploring an nignx deployment", "label": "retrieve", "group": "retrieve:creating and exploring an nginx deployment", "kind": "heading+variant", "split": "test"}
+{"text": "Enable audit mode with specific account IDs", "label": "retrieve", "group": "retrieve:enable audit mode with specific account ids", "kind": "heading", "split": "test"}
+{"text": "enable audit mode with specific account ids", "label": "retrieve", "group": "retrieve:enable audit mode with specific account ids", "kind": "heading+variant", "split": "test"}
+{"text": "Eanble audit mode with specific account IDs", "label": "retrieve", "group": "retrieve:enable audit mode with specific account ids", "kind": "heading+variant", "split": "test"}
+{"text": "Create Credentials Helpers", "label": "retrieve", "group": "retrieve:create credentials helpers", "kind": "heading", "split": "train"}
+{"text": "create credentials helpers", "label": "retrieve", "group": "retrieve:create credentials helpers", "kind": "heading+variant", "split": "train"}
+{"text": "Cerate Credentials Helpers", "label": "retrieve", "group": "retrieve:create credentials helpers", "kind": "heading+variant", "split": "train"}
+{"text": "Store objects and custom error pages in different locations", "label": "retrieve", "group": "retrieve:store objects and custom error pages in different locations", "kind": "heading", "split": "train"}
+{"text": "store objects and custom error pages in different locations", "label": "retrieve", "group": "retrieve:store objects and custom error pages in different locations", "kind": "heading+variant", "split": "train"}
+{"text": "Store objects and custom error pgaes in different locations", "label": "retrieve", "group": "retrieve:store objects and custom error pages in different locations", "kind": "heading+variant", "split": "train"}
+{"text": "Onboard your address range for use in Amazon EC2", "label": "retrieve", "group": "retrieve:onboard your address range for use in amazon ec2", "kind": "heading", "split": "train"}
+{"text": "onboard your address range for use in amazon ec2", "label": "retrieve", "group": "retrieve:onboard your address range for use in amazon ec2", "kind": "heading+variant", "split": "train"}
+{"text": "Example Amazon ECS task placement constraints", "label": "retrieve", "group": "retrieve:example amazon ecs task placement constraints", "kind": "heading", "split": "train"}
+{"text": "example amazon ecs task placement constraints", "label": "retrieve", "group": "retrieve:example amazon ecs task placement constraints", "kind": "heading+variant", "split": "train"}
+{"text": "Exapmle Amazon ECS task placement constraints", "label": "retrieve", "group": "retrieve:example amazon ecs task placement constraints", "kind": "heading+variant", "split": "train"}
+{"text": "Amazon EKS Auto Mode node IAM role", "label": "retrieve", "group": "retrieve:amazon eks auto mode node iam role", "kind": "heading", "split": "test"}
+{"text": "amazon eks auto mode node iam role", "label": "retrieve", "group": "retrieve:amazon eks auto mode node iam role", "kind": "heading+variant", "split": "test"}
+{"text": "Amzaon EKS Auto Mode node IAM role", "label": "retrieve", "group": "retrieve:amazon eks auto mode node iam role", "kind": "heading+variant", "split": "test"}
+{"text": "Troubleshoot health checks", "label": "retrieve", "group": "retrieve:troubleshoot health checks", "kind": "heading", "split": "train"}
+{"text": "troubleshoot health checks", "label": "retrieve", "group": "retrieve:troubleshoot health checks", "kind": "heading+variant", "split": "train"}
+{"text": "Troublsehoot health checks", "label": "retrieve", "group": "retrieve:troubleshoot health checks", "kind": "heading+variant", "split": "train"}
+{"text": "External access error findings", "label": "retrieve", "group": "retrieve:external access error findings", "kind": "heading", "split": "test"}
+{"text": "external access error findings", "label": "retrieve", "group": "retrieve:external access error findings", "kind": "heading+variant", "split": "test"}
+{"text": "External access erorr findings", "label": "retrieve", "group": "retrieve:external access error findings", "kind": "heading+variant", "split": "test"}
+{"text": "Parameter groups for Multi-AZ DB clusters", "label": "retrieve", "group": "retrieve:parameter groups for multi az db clusters", "kind": "heading", "split": "train"}
+{"text": "parameter groups for multi-az db clusters", "label": "retrieve", "group": "retrieve:parameter groups for multi az db clusters", "kind": "heading+variant", "split": "train"}
+{"text": "Parameter gorups for Multi-AZ DB clusters", "label": "retrieve", "group": "retrieve:parameter groups for multi az db clusters", "kind": "heading+variant", "split": "train"}
+{"text": "Disable for all unassociated machines", "label": "retrieve", "group": "retrieve:disable for all unassociated machines", "kind": "heading", "split": "test"}
+{"text": "disable for all unassociated machines", "label": "retrieve", "group": "retrieve:disable for all unassociated machines", "kind": "heading+variant", "split": "test"}
+{"text": "Disbale for all unassociated machines", "label": "retrieve", "group": "retrieve:disable for all unassociated machines", "kind": "heading+variant", "split": "test"}
+{"text": "Declared features", "label": "retrieve", "group": "retrieve:declared features", "kind": "heading", "split": "val"}
+{"text": "declared features", "label": "retrieve", "group": "retrieve:declared features", "kind": "heading+variant", "split": "val"}
+{"text": "Declared feautres", "label": "retrieve", "group": "retrieve:declared features", "kind": "heading+variant", "split": "val"}
+{"text": "Repository Filter Usage", "label": "retrieve", "group": "retrieve:repository filter usage", "kind": "heading", "split": "val"}
+{"text": "repository filter usage", "label": "retrieve", "group": "retrieve:repository filter usage", "kind": "heading+variant", "split": "val"}
+{"text": "Repository Fitler Usage", "label": "retrieve", "group": "retrieve:repository filter usage", "kind": "heading+variant", "split": "val"}
+{"text": "Import a single resource", "label": "retrieve", "group": "retrieve:import a single resource", "kind": "heading", "split": "val"}
+{"text": "import a single resource", "label": "retrieve", "group": "retrieve:import a single resource", "kind": "heading+variant", "split": "val"}
+{"text": "Import a snigle resource", "label": "retrieve", "group": "retrieve:import a single resource", "kind": "heading+variant", "split": "val"}
+{"text": "how do I delete a trust store", "label": "retrieve", "group": "retrieve:how do i delete a trust store", "kind": "heading", "split": "val"}
+{"text": "how do i delete a trust store", "label": "retrieve", "group": "retrieve:how do i delete a trust store", "kind": "heading+variant", "split": "val"}
+{"text": "how do I delete a trust sotre", "label": "retrieve", "group": "retrieve:how do i delete a trust store", "kind": "heading+variant", "split": "val"}
+{"text": "Network interface concepts", "label": "retrieve", "group": "retrieve:network interface concepts", "kind": "heading", "split": "train"}
+{"text": "network interface concepts", "label": "retrieve", "group": "retrieve:network interface concepts", "kind": "heading+variant", "split": "train"}
+{"text": "Network interface cocnepts", "label": "retrieve", "group": "retrieve:network interface concepts", "kind": "heading+variant", "split": "train"}
+{"text": "Mismatch between Service Connect and the deployment controller", "label": "retrieve", "group": "retrieve:mismatch between service connect and the deployment controller", "kind": "heading", "split": "test"}
+{"text": "mismatch between service connect and the deployment controller", "label": "retrieve", "group": "retrieve:mismatch between service connect and the deployment controller", "kind": "heading+variant", "split": "test"}
+{"text": "Mismtach between Service Connect and the deployment controller", "label": "retrieve", "group": "retrieve:mismatch between service connect and the deployment controller", "kind": "heading+variant", "split": "test"}
+{"text": "Fargate Comparison Table", "label": "retrieve", "group": "retrieve:fargate comparison table", "kind": "heading", "split": "train"}
+{"text": "fargate comparison table", "label": "retrieve", "group": "retrieve:fargate comparison table", "kind": "heading+variant", "split": "train"}
+{"text": "Fargate Compariosn Table", "label": "retrieve", "group": "retrieve:fargate comparison table", "kind": "heading+variant", "split": "train"}
+{"text": "Recommended rules for load balancer security groups", "label": "retrieve", "group": "retrieve:recommended rules for load balancer security groups", "kind": "heading", "split": "val"}
+{"text": "recommended rules for load balancer security groups", "label": "retrieve", "group": "retrieve:recommended rules for load balancer security groups", "kind": "heading+variant", "split": "val"}
+{"text": "Recommended rules for load balanecr security groups", "label": "retrieve", "group": "retrieve:recommended rules for load balancer security groups", "kind": "heading+variant", "split": "val"}
+{"text": "Centralize root access for member accounts", "label": "retrieve", "group": "retrieve:centralize root access for member accounts", "kind": "heading", "split": "train"}
+{"text": "centralize root access for member accounts", "label": "retrieve", "group": "retrieve:centralize root access for member accounts", "kind": "heading+variant", "split": "train"}
+{"text": "Creating an IAM policy for end-to-end IAM authentication", "label": "retrieve", "group": "retrieve:creating an iam policy for end to end iam authentication", "kind": "heading", "split": "train"}
+{"text": "creating an iam policy for end-to-end iam authentication", "label": "retrieve", "group": "retrieve:creating an iam policy for end to end iam authentication", "kind": "heading+variant", "split": "train"}
+{"text": "Creating an IAM poilcy for end-to-end IAM authentication", "label": "retrieve", "group": "retrieve:creating an iam policy for end to end iam authentication", "kind": "heading+variant", "split": "train"}
+{"text": "Rebuild your images often", "label": "retrieve", "group": "retrieve:rebuild your images often", "kind": "heading", "split": "train"}
+{"text": "rebuild your images often", "label": "retrieve", "group": "retrieve:rebuild your images often", "kind": "heading+variant", "split": "train"}
+{"text": "Rebuild your imgaes often", "label": "retrieve", "group": "retrieve:rebuild your images often", "kind": "heading+variant", "split": "train"}
+{"text": "Metadata schema", "label": "retrieve", "group": "retrieve:metadata schema", "kind": "heading", "split": "train"}
+{"text": "metadata schema", "label": "retrieve", "group": "retrieve:metadata schema", "kind": "heading+variant", "split": "train"}
+{"text": "Mteadata schema", "label": "retrieve", "group": "retrieve:metadata schema", "kind": "heading+variant", "split": "train"}
+{"text": "Headers Config", "label": "retrieve", "group": "retrieve:headers config", "kind": "heading", "split": "test"}
+{"text": "headers config", "label": "retrieve", "group": "retrieve:headers config", "kind": "heading+variant", "split": "test"}
+{"text": "Hedaers Config", "label": "retrieve", "group": "retrieve:headers config", "kind": "heading+variant", "split": "test"}
+{"text": "terraform_remote_state Data Source", "label": "retrieve", "group": "retrieve:terraform_remote_state data source", "kind": "heading", "split": "val"}
+{"text": "terraform_remote_state data source", "label": "retrieve", "group": "retrieve:terraform_remote_state data source", "kind": "heading+variant", "split": "val"}
+{"text": "terraform_remote_state Data Soruce", "label": "retrieve", "group": "retrieve:terraform_remote_state data source", "kind": "heading+variant", "split": "val"}
+{"text": "Custom headers", "label": "retrieve", "group": "retrieve:custom headers", "kind": "heading", "split": "train"}
+{"text": "custom headers", "label": "retrieve", "group": "retrieve:custom headers", "kind": "heading+variant", "split": "train"}
+{"text": "Cutsom headers", "label": "retrieve", "group": "retrieve:custom headers", "kind": "heading+variant", "split": "train"}
+{"text": "Subscribe to macOS AMI notifications", "label": "retrieve", "group": "retrieve:subscribe to macos ami notifications", "kind": "heading", "split": "val"}
+{"text": "subscribe to macos ami notifications", "label": "retrieve", "group": "retrieve:subscribe to macos ami notifications", "kind": "heading+variant", "split": "val"}
+{"text": "Subscribe to macOS AMI noitfications", "label": "retrieve", "group": "retrieve:subscribe to macos ami notifications", "kind": "heading+variant", "split": "val"}
+{"text": "Using CloudWatch Container Insights", "label": "retrieve", "group": "retrieve:using cloudwatch container insights", "kind": "heading", "split": "val"}
+{"text": "using cloudwatch container insights", "label": "retrieve", "group": "retrieve:using cloudwatch container insights", "kind": "heading+variant", "split": "val"}
+{"text": "Using CluodWatch Container Insights", "label": "retrieve", "group": "retrieve:using cloudwatch container insights", "kind": "heading+variant", "split": "val"}
+{"text": "OIDC provider configuration", "label": "retrieve", "group": "retrieve:oidc provider configuration", "kind": "heading", "split": "train"}
+{"text": "oidc provider configuration", "label": "retrieve", "group": "retrieve:oidc provider configuration", "kind": "heading+variant", "split": "train"}
+{"text": "OIDC provider configuratoin", "label": "retrieve", "group": "retrieve:oidc provider configuration", "kind": "heading+variant", "split": "train"}
+{"text": "Connection logs for your Application Load Balancer", "label": "retrieve", "group": "retrieve:connection logs for your application load balancer", "kind": "heading", "split": "test"}
+{"text": "connection logs for your application load balancer", "label": "retrieve", "group": "retrieve:connection logs for your application load balancer", "kind": "heading+variant", "split": "test"}
+{"text": "Connection logs for your Aplpication Load Balancer", "label": "retrieve", "group": "retrieve:connection logs for your application load balancer", "kind": "heading+variant", "split": "test"}
+{"text": "Manage IAM user access keys properly", "label": "retrieve", "group": "retrieve:manage iam user access keys properly", "kind": "heading", "split": "train"}
+{"text": "manage iam user access keys properly", "label": "retrieve", "group": "retrieve:manage iam user access keys properly", "kind": "heading+variant", "split": "train"}
+{"text": "Manage IAM user accses keys properly", "label": "retrieve", "group": "retrieve:manage iam user access keys properly", "kind": "heading+variant", "split": "train"}
+{"text": "Manually constructing an IAM authentication token", "label": "retrieve", "group": "retrieve:manually constructing an iam authentication token", "kind": "heading", "split": "train"}
+{"text": "manually constructing an iam authentication token", "label": "retrieve", "group": "retrieve:manually constructing an iam authentication token", "kind": "heading+variant", "split": "train"}
+{"text": "Manulaly constructing an IAM authentication token", "label": "retrieve", "group": "retrieve:manually constructing an iam authentication token", "kind": "heading+variant", "split": "train"}
+{"text": "Kubernetes settings", "label": "retrieve", "group": "retrieve:kubernetes settings", "kind": "heading", "split": "val"}
+{"text": "kubernetes settings", "label": "retrieve", "group": "retrieve:kubernetes settings", "kind": "heading+variant", "split": "val"}
+{"text": "Kubernetes settnigs", "label": "retrieve", "group": "retrieve:kubernetes settings", "kind": "heading+variant", "split": "val"}
+{"text": "how do I use of a dedicated disk for swap", "label": "retrieve", "group": "retrieve:how do i use of a dedicated disk for swap", "kind": "heading", "split": "train"}
+{"text": "how do i use of a dedicated disk for swap", "label": "retrieve", "group": "retrieve:how do i use of a dedicated disk for swap", "kind": "heading+variant", "split": "train"}
+{"text": "how do I use of a ddeicated disk for swap", "label": "retrieve", "group": "retrieve:how do i use of a dedicated disk for swap", "kind": "heading+variant", "split": "train"}
+{"text": "Propagating Tags to All Resources", "label": "retrieve", "group": "retrieve:propagating tags to all resources", "kind": "heading", "split": "train"}
+{"text": "propagating tags to all resources", "label": "retrieve", "group": "retrieve:propagating tags to all resources", "kind": "heading+variant", "split": "train"}
+{"text": "Propagating Tags to All Resoucres", "label": "retrieve", "group": "retrieve:propagating tags to all resources", "kind": "heading+variant", "split": "train"}
+{"text": "Splat Expressions", "label": "retrieve", "group": "retrieve:splat expressions", "kind": "heading", "split": "test"}
+{"text": "splat expressions", "label": "retrieve", "group": "retrieve:splat expressions", "kind": "heading+variant", "split": "test"}
+{"text": "Spalt Expressions", "label": "retrieve", "group": "retrieve:splat expressions", "kind": "heading+variant", "split": "test"}
+{"text": "how do I create functions", "label": "retrieve", "group": "retrieve:how do i create functions", "kind": "heading", "split": "train"}
+{"text": "how do i create functions", "label": "retrieve", "group": "retrieve:how do i create functions", "kind": "heading+variant", "split": "train"}
+{"text": "how do I create funtcions", "label": "retrieve", "group": "retrieve:how do i create functions", "kind": "heading+variant", "split": "train"}
+{"text": "Performance status checks", "label": "retrieve", "group": "retrieve:performance status checks", "kind": "heading", "split": "train"}
+{"text": "performance status checks", "label": "retrieve", "group": "retrieve:performance status checks", "kind": "heading+variant", "split": "train"}
+{"text": "Performance status cehcks", "label": "retrieve", "group": "retrieve:performance status checks", "kind": "heading+variant", "split": "train"}
+{"text": "Useful CloudWatch Logs Insights queries", "label": "retrieve", "group": "retrieve:useful cloudwatch logs insights queries", "kind": "heading", "split": "train"}
+{"text": "useful cloudwatch logs insights queries", "label": "retrieve", "group": "retrieve:useful cloudwatch logs insights queries", "kind": "heading+variant", "split": "train"}
+{"text": "Useful CloudWatch Logs Insihgts queries", "label": "retrieve", "group": "retrieve:useful cloudwatch logs insights queries", "kind": "heading+variant", "split": "train"}
+{"text": "NACLs blocking webhook or control plane traffic", "label": "retrieve", "group": "retrieve:nacls blocking webhook or control plane traffic", "kind": "heading", "split": "train"}
+{"text": "nacls blocking webhook or control plane traffic", "label": "retrieve", "group": "retrieve:nacls blocking webhook or control plane traffic", "kind": "heading+variant", "split": "train"}
+{"text": "NACLs blocknig webhook or control plane traffic", "label": "retrieve", "group": "retrieve:nacls blocking webhook or control plane traffic", "kind": "heading+variant", "split": "train"}
+{"text": "Responses with multi-value headers", "label": "retrieve", "group": "retrieve:responses with multi value headers", "kind": "heading", "split": "train"}
+{"text": "responses with multi-value headers", "label": "retrieve", "group": "retrieve:responses with multi value headers", "kind": "heading+variant", "split": "train"}
+{"text": "Resopnses with multi-value headers", "label": "retrieve", "group": "retrieve:responses with multi value headers", "kind": "heading+variant", "split": "train"}
+{"text": "Standard claims", "label": "retrieve", "group": "retrieve:standard claims", "kind": "heading", "split": "train"}
+{"text": "standard claims", "label": "retrieve", "group": "retrieve:standard claims", "kind": "heading+variant", "split": "train"}
+{"text": "Stnadard claims", "label": "retrieve", "group": "retrieve:standard claims", "kind": "heading+variant", "split": "train"}
+{"text": "Generating trace files and tracing a session", "label": "retrieve", "group": "retrieve:generating trace files and tracing a session", "kind": "heading", "split": "train"}
+{"text": "generating trace files and tracing a session", "label": "retrieve", "group": "retrieve:generating trace files and tracing a session", "kind": "heading+variant", "split": "train"}
+{"text": "Generating trace files and tarcing a session", "label": "retrieve", "group": "retrieve:generating trace files and tracing a session", "kind": "heading+variant", "split": "train"}
+{"text": "Keep WSL up to date", "label": "retrieve", "group": "retrieve:keep wsl up to date", "kind": "heading", "split": "test"}
+{"text": "keep wsl up to date", "label": "retrieve", "group": "retrieve:keep wsl up to date", "kind": "heading+variant", "split": "test"}
+{"text": "kubectl apply", "label": "retrieve", "group": "retrieve:kubectl apply", "kind": "heading", "split": "train"}
+{"text": "kubetcl apply", "label": "retrieve", "group": "retrieve:kubectl apply", "kind": "heading+variant", "split": "train"}
+{"text": "Caching Read Results", "label": "retrieve", "group": "retrieve:caching read results", "kind": "heading", "split": "train"}
+{"text": "caching read results", "label": "retrieve", "group": "retrieve:caching read results", "kind": "heading+variant", "split": "train"}
+{"text": "Caching Read Resutls", "label": "retrieve", "group": "retrieve:caching read results", "kind": "heading+variant", "split": "train"}
+{"text": "Provider Plugin Cache", "label": "retrieve", "group": "retrieve:provider plugin cache", "kind": "heading", "split": "train"}
+{"text": "provider plugin cache", "label": "retrieve", "group": "retrieve:provider plugin cache", "kind": "heading+variant", "split": "train"}
+{"text": "Prvoider Plugin Cache", "label": "retrieve", "group": "retrieve:provider plugin cache", "kind": "heading+variant", "split": "train"}
+{"text": "CloudFront origin failover", "label": "retrieve", "group": "retrieve:cloudfront origin failover", "kind": "heading", "split": "val"}
+{"text": "cloudfront origin failover", "label": "retrieve", "group": "retrieve:cloudfront origin failover", "kind": "heading+variant", "split": "val"}
+{"text": "CloudFront origin fialover", "label": "retrieve", "group": "retrieve:cloudfront origin failover", "kind": "heading+variant", "split": "val"}
+{"text": "Create a network interface for your EC2 instance", "label": "retrieve", "group": "retrieve:create a network interface for your ec2 instance", "kind": "heading", "split": "train"}
+{"text": "create a network interface for your ec2 instance", "label": "retrieve", "group": "retrieve:create a network interface for your ec2 instance", "kind": "heading+variant", "split": "train"}
+{"text": "Create a netowrk interface for your EC2 instance", "label": "retrieve", "group": "retrieve:create a network interface for your ec2 instance", "kind": "heading+variant", "split": "train"}
+{"text": "Amazon ECS MCP Server Tool Configurations", "label": "retrieve", "group": "retrieve:amazon ecs mcp server tool configurations", "kind": "heading", "split": "val"}
+{"text": "amazon ecs mcp server tool configurations", "label": "retrieve", "group": "retrieve:amazon ecs mcp server tool configurations", "kind": "heading+variant", "split": "val"}
+{"text": "Aamzon ECS MCP Server Tool Configurations", "label": "retrieve", "group": "retrieve:amazon ecs mcp server tool configurations", "kind": "heading+variant", "split": "val"}
+{"text": "Verify the reservation is gone", "label": "retrieve", "group": "retrieve:verify the reservation is gone", "kind": "heading", "split": "train"}
+{"text": "verify the reservation is gone", "label": "retrieve", "group": "retrieve:verify the reservation is gone", "kind": "heading+variant", "split": "train"}
+{"text": "Veirfy the reservation is gone", "label": "retrieve", "group": "retrieve:verify the reservation is gone", "kind": "heading+variant", "split": "train"}
+{"text": "SSL negotiation configurations for Classic Load Balancers", "label": "retrieve", "group": "retrieve:ssl negotiation configurations for classic load balancers", "kind": "heading", "split": "train"}
+{"text": "ssl negotiation configurations for classic load balancers", "label": "retrieve", "group": "retrieve:ssl negotiation configurations for classic load balancers", "kind": "heading+variant", "split": "train"}
+{"text": "SSL negotiation confiugrations for Classic Load Balancers", "label": "retrieve", "group": "retrieve:ssl negotiation configurations for classic load balancers", "kind": "heading+variant", "split": "train"}
+{"text": "Deleting inline policies (console)", "label": "retrieve", "group": "retrieve:deleting inline policies console", "kind": "heading", "split": "train"}
+{"text": "deleting inline policies (console)", "label": "retrieve", "group": "retrieve:deleting inline policies console", "kind": "heading+variant", "split": "train"}
+{"text": "Deleting inilne policies (console)", "label": "retrieve", "group": "retrieve:deleting inline policies console", "kind": "heading+variant", "split": "train"}
+{"text": "Audit log contents and examples for database activity streams", "label": "retrieve", "group": "retrieve:audit log contents and examples for database activity streams", "kind": "heading", "split": "val"}
+{"text": "audit log contents and examples for database activity streams", "label": "retrieve", "group": "retrieve:audit log contents and examples for database activity streams", "kind": "heading+variant", "split": "val"}
+{"text": "Audit log contents and examples for datbaase activity streams", "label": "retrieve", "group": "retrieve:audit log contents and examples for database activity streams", "kind": "heading+variant", "split": "val"}
+{"text": "Limit CPU and memory usage", "label": "retrieve", "group": "retrieve:limit cpu and memory usage", "kind": "heading", "split": "train"}
+{"text": "limit cpu and memory usage", "label": "retrieve", "group": "retrieve:limit cpu and memory usage", "kind": "heading+variant", "split": "train"}
+{"text": "Liimt CPU and memory usage", "label": "retrieve", "group": "retrieve:limit cpu and memory usage", "kind": "heading+variant", "split": "train"}
+{"text": "Welcome view", "label": "retrieve", "group": "retrieve:welcome view", "kind": "heading", "split": "train"}
+{"text": "welcome view", "label": "retrieve", "group": "retrieve:welcome view", "kind": "heading+variant", "split": "train"}
+{"text": "Weclome view", "label": "retrieve", "group": "retrieve:welcome view", "kind": "heading+variant", "split": "train"}
+{"text": "Using Availability Zone ID", "label": "retrieve", "group": "retrieve:using availability zone id", "kind": "heading", "split": "train"}
+{"text": "using availability zone id", "label": "retrieve", "group": "retrieve:using availability zone id", "kind": "heading+variant", "split": "train"}
+{"text": "Using Availbaility Zone ID", "label": "retrieve", "group": "retrieve:using availability zone id", "kind": "heading+variant", "split": "train"}
+{"text": "How to Find Providers", "label": "retrieve", "group": "retrieve:how to find providers", "kind": "heading", "split": "train"}
+{"text": "how to find providers", "label": "retrieve", "group": "retrieve:how to find providers", "kind": "heading+variant", "split": "train"}
+{"text": "How to Find Proivders", "label": "retrieve", "group": "retrieve:how to find providers", "kind": "heading+variant", "split": "train"}
+{"text": "Stacked distributions cause a 403 error", "label": "retrieve", "group": "retrieve:stacked distributions cause a 403 error", "kind": "heading", "split": "train"}
+{"text": "stacked distributions cause a 403 error", "label": "retrieve", "group": "retrieve:stacked distributions cause a 403 error", "kind": "heading+variant", "split": "train"}
+{"text": "Stacked distribtuions cause a 403 error", "label": "retrieve", "group": "retrieve:stacked distributions cause a 403 error", "kind": "heading+variant", "split": "train"}
+{"text": "Status checks for Amazon EC2 instances", "label": "retrieve", "group": "retrieve:status checks for amazon ec2 instances", "kind": "heading", "split": "train"}
+{"text": "status checks for amazon ec2 instances", "label": "retrieve", "group": "retrieve:status checks for amazon ec2 instances", "kind": "heading+variant", "split": "train"}
+{"text": "Status chceks for Amazon EC2 instances", "label": "retrieve", "group": "retrieve:status checks for amazon ec2 instances", "kind": "heading+variant", "split": "train"}
+{"text": "Amazon ECS service event messages", "label": "retrieve", "group": "retrieve:amazon ecs service event messages", "kind": "heading", "split": "test"}
+{"text": "amazon ecs service event messages", "label": "retrieve", "group": "retrieve:amazon ecs service event messages", "kind": "heading+variant", "split": "test"}
+{"text": "Amazon ECS serivce event messages", "label": "retrieve", "group": "retrieve:amazon ecs service event messages", "kind": "heading+variant", "split": "test"}
+{"text": "Labels that describe devices", "label": "retrieve", "group": "retrieve:labels that describe devices", "kind": "heading", "split": "val"}
+{"text": "labels that describe devices", "label": "retrieve", "group": "retrieve:labels that describe devices", "kind": "heading+variant", "split": "val"}
+{"text": "Lbaels that describe devices", "label": "retrieve", "group": "retrieve:labels that describe devices", "kind": "heading+variant", "split": "val"}
+{"text": "Metric dimensions for Application Load Balancers", "label": "retrieve", "group": "retrieve:metric dimensions for application load balancers", "kind": "heading", "split": "train"}
+{"text": "metric dimensions for application load balancers", "label": "retrieve", "group": "retrieve:metric dimensions for application load balancers", "kind": "heading+variant", "split": "train"}
+{"text": "Metirc dimensions for Application Load Balancers", "label": "retrieve", "group": "retrieve:metric dimensions for application load balancers", "kind": "heading+variant", "split": "train"}
+{"text": "Switch from a user to an IAM role (console)", "label": "retrieve", "group": "retrieve:switch from a user to an iam role console", "kind": "heading", "split": "train"}
+{"text": "switch from a user to an iam role (console)", "label": "retrieve", "group": "retrieve:switch from a user to an iam role console", "kind": "heading+variant", "split": "train"}
+{"text": "Siwtch from a user to an IAM role (console)", "label": "retrieve", "group": "retrieve:switch from a user to an iam role console", "kind": "heading+variant", "split": "train"}
+{"text": "Supported DB engines for compute-optimized instance classes", "label": "retrieve", "group": "retrieve:supported db engines for compute optimized instance classes", "kind": "heading", "split": "train"}
+{"text": "supported db engines for compute-optimized instance classes", "label": "retrieve", "group": "retrieve:supported db engines for compute optimized instance classes", "kind": "heading+variant", "split": "train"}
+{"text": "Supported DB engines for compute-optimized instance clsases", "label": "retrieve", "group": "retrieve:supported db engines for compute optimized instance classes", "kind": "heading+variant", "split": "train"}
+{"text": "Deactivate or delete a connection", "label": "retrieve", "group": "retrieve:deactivate or delete a connection", "kind": "heading", "split": "val"}
+{"text": "deactivate or delete a connection", "label": "retrieve", "group": "retrieve:deactivate or delete a connection", "kind": "heading+variant", "split": "val"}
+{"text": "Deactivate or dleete a connection", "label": "retrieve", "group": "retrieve:deactivate or delete a connection", "kind": "heading+variant", "split": "val"}
+{"text": "Windows support", "label": "retrieve", "group": "retrieve:windows support", "kind": "heading", "split": "train"}
+{"text": "windows support", "label": "retrieve", "group": "retrieve:windows support", "kind": "heading+variant", "split": "train"}
+{"text": "Wnidows support", "label": "retrieve", "group": "retrieve:windows support", "kind": "heading+variant", "split": "train"}
+{"text": "Kinesis Usage", "label": "retrieve", "group": "retrieve:kinesis usage", "kind": "heading", "split": "val"}
+{"text": "kinesis usage", "label": "retrieve", "group": "retrieve:kinesis usage", "kind": "heading+variant", "split": "val"}
+{"text": "Kinesis Usgae", "label": "retrieve", "group": "retrieve:kinesis usage", "kind": "heading+variant", "split": "val"}
+{"text": "Module Versions", "label": "retrieve", "group": "retrieve:module versions", "kind": "heading", "split": "val"}
+{"text": "module versions", "label": "retrieve", "group": "retrieve:module versions", "kind": "heading+variant", "split": "val"}
+{"text": "Module Versoins", "label": "retrieve", "group": "retrieve:module versions", "kind": "heading+variant", "split": "val"}
+{"text": "Certificate revocation with CloudFront Functions and KeyValueStore", "label": "retrieve", "group": "retrieve:certificate revocation with cloudfront functions and keyvaluestore", "kind": "heading", "split": "train"}
+{"text": "certificate revocation with cloudfront functions and keyvaluestore", "label": "retrieve", "group": "retrieve:certificate revocation with cloudfront functions and keyvaluestore", "kind": "heading+variant", "split": "train"}
+{"text": "Certificate revocation with ClouFdront Functions and KeyValueStore", "label": "retrieve", "group": "retrieve:certificate revocation with cloudfront functions and keyvaluestore", "kind": "heading+variant", "split": "train"}
+{"text": "Launch instances into interruptible reservations", "label": "retrieve", "group": "retrieve:launch instances into interruptible reservations", "kind": "heading", "split": "train"}
+{"text": "launch instances into interruptible reservations", "label": "retrieve", "group": "retrieve:launch instances into interruptible reservations", "kind": "heading+variant", "split": "train"}
+{"text": "Laucnh instances into interruptible reservations", "label": "retrieve", "group": "retrieve:launch instances into interruptible reservations", "kind": "heading+variant", "split": "train"}
+{"text": "how do I create a virtual private cloud", "label": "retrieve", "group": "retrieve:how do i create a virtual private cloud", "kind": "heading", "split": "train"}
+{"text": "how do i create a virtual private cloud", "label": "retrieve", "group": "retrieve:how do i create a virtual private cloud", "kind": "heading+variant", "split": "train"}
+{"text": "how do I create a virtaul private cloud", "label": "retrieve", "group": "retrieve:how do i create a virtual private cloud", "kind": "heading+variant", "split": "train"}
+{"text": "CloudWatch Log Insights", "label": "retrieve", "group": "retrieve:cloudwatch log insights", "kind": "heading", "split": "train"}
+{"text": "cloudwatch log insights", "label": "retrieve", "group": "retrieve:cloudwatch log insights", "kind": "heading+variant", "split": "train"}
+{"text": "CloudWatch Log Inisghts", "label": "retrieve", "group": "retrieve:cloudwatch log insights", "kind": "heading+variant", "split": "train"}
+{"text": "Start a zonal shift for your Network Load Balancer", "label": "retrieve", "group": "retrieve:start a zonal shift for your network load balancer", "kind": "heading", "split": "test"}
+{"text": "start a zonal shift for your network load balancer", "label": "retrieve", "group": "retrieve:start a zonal shift for your network load balancer", "kind": "heading+variant", "split": "test"}
+{"text": "Satrt a zonal shift for your Network Load Balancer", "label": "retrieve", "group": "retrieve:start a zonal shift for your network load balancer", "kind": "heading+variant", "split": "test"}
+{"text": "Using information to refine permissions for an organizational unit", "label": "retrieve", "group": "retrieve:using information to refine permissions for an organizational unit", "kind": "heading", "split": "train"}
+{"text": "using information to refine permissions for an organizational unit", "label": "retrieve", "group": "retrieve:using information to refine permissions for an organizational unit", "kind": "heading+variant", "split": "train"}
+{"text": "Using information to refnie permissions for an organizational unit", "label": "retrieve", "group": "retrieve:using information to refine permissions for an organizational unit", "kind": "heading+variant", "split": "train"}
+{"text": "Multi-AZ DB instances", "label": "retrieve", "group": "retrieve:multi az db instances", "kind": "heading", "split": "test"}
+{"text": "multi-az db instances", "label": "retrieve", "group": "retrieve:multi az db instances", "kind": "heading+variant", "split": "test"}
+{"text": "Multi-AZ DB instnaces", "label": "retrieve", "group": "retrieve:multi az db instances", "kind": "heading+variant", "split": "test"}
+{"text": "Merging rules", "label": "retrieve", "group": "retrieve:merging rules", "kind": "heading", "split": "val"}
+{"text": "merging rules", "label": "retrieve", "group": "retrieve:merging rules", "kind": "heading+variant", "split": "val"}
+{"text": "Mergnig rules", "label": "retrieve", "group": "retrieve:merging rules", "kind": "heading+variant", "split": "val"}
+{"text": "Using Pod failure policy to ignore Pod disruptions", "label": "retrieve", "group": "retrieve:using pod failure policy to ignore pod disruptions", "kind": "heading", "split": "test"}
+{"text": "using pod failure policy to ignore pod disruptions", "label": "retrieve", "group": "retrieve:using pod failure policy to ignore pod disruptions", "kind": "heading+variant", "split": "test"}
+{"text": "Uisng Pod failure policy to ignore Pod disruptions", "label": "retrieve", "group": "retrieve:using pod failure policy to ignore pod disruptions", "kind": "heading+variant", "split": "test"}
+{"text": "Basic Example", "label": "retrieve", "group": "retrieve:basic example", "kind": "heading", "split": "train"}
+{"text": "basic example", "label": "retrieve", "group": "retrieve:basic example", "kind": "heading+variant", "split": "train"}
+{"text": "Baisc Example", "label": "retrieve", "group": "retrieve:basic example", "kind": "heading+variant", "split": "train"}
+{"text": "Specify triggers that replace resources", "label": "retrieve", "group": "retrieve:specify triggers that replace resources", "kind": "heading", "split": "val"}
+{"text": "specify triggers that replace resources", "label": "retrieve", "group": "retrieve:specify triggers that replace resources", "kind": "heading+variant", "split": "val"}
+{"text": "Specify trgigers that replace resources", "label": "retrieve", "group": "retrieve:specify triggers that replace resources", "kind": "heading+variant", "split": "val"}
+{"text": "Restrict viewer access (use signed URLs or signed cookies)", "label": "retrieve", "group": "retrieve:restrict viewer access use signed urls or signed cookies", "kind": "heading", "split": "train"}
+{"text": "restrict viewer access (use signed urls or signed cookies)", "label": "retrieve", "group": "retrieve:restrict viewer access use signed urls or signed cookies", "kind": "heading+variant", "split": "train"}
+{"text": "Restirct viewer access (use signed URLs or signed cookies)", "label": "retrieve", "group": "retrieve:restrict viewer access use signed urls or signed cookies", "kind": "heading+variant", "split": "train"}
+{"text": "Find AMIs that are allowed", "label": "retrieve", "group": "retrieve:find amis that are allowed", "kind": "heading", "split": "train"}
+{"text": "find amis that are allowed", "label": "retrieve", "group": "retrieve:find amis that are allowed", "kind": "heading+variant", "split": "train"}
+{"text": "Find AMIs that are alloewd", "label": "retrieve", "group": "retrieve:find amis that are allowed", "kind": "heading+variant", "split": "train"}
+{"text": "how do I use CloudWatch to monitor throttling", "label": "retrieve", "group": "retrieve:how do i use cloudwatch to monitor throttling", "kind": "heading", "split": "train"}
+{"text": "how do i use cloudwatch to monitor throttling", "label": "retrieve", "group": "retrieve:how do i use cloudwatch to monitor throttling", "kind": "heading+variant", "split": "train"}
+{"text": "how do I use CloudWatch to monitor thorttling", "label": "retrieve", "group": "retrieve:how do i use cloudwatch to monitor throttling", "kind": "heading+variant", "split": "train"}
+{"text": "Amazon EKS MCP Server Configuration Reference", "label": "retrieve", "group": "retrieve:amazon eks mcp server configuration reference", "kind": "heading", "split": "train"}
+{"text": "amazon eks mcp server configuration reference", "label": "retrieve", "group": "retrieve:amazon eks mcp server configuration reference", "kind": "heading+variant", "split": "train"}
+{"text": "Amaozn EKS MCP Server Configuration Reference", "label": "retrieve", "group": "retrieve:amazon eks mcp server configuration reference", "kind": "heading+variant", "split": "train"}
+{"text": "Update the associated security groups", "label": "retrieve", "group": "retrieve:update the associated security groups", "kind": "heading", "split": "train"}
+{"text": "update the associated security groups", "label": "retrieve", "group": "retrieve:update the associated security groups", "kind": "heading+variant", "split": "train"}
+{"text": "Udpate the associated security groups", "label": "retrieve", "group": "retrieve:update the associated security groups", "kind": "heading+variant", "split": "train"}
+{"text": "how do I configure SAML assertions for the authentication response", "label": "retrieve", "group": "retrieve:how do i configure saml assertions for the authentication response", "kind": "heading", "split": "train"}
+{"text": "how do i configure saml assertions for the authentication response", "label": "retrieve", "group": "retrieve:how do i configure saml assertions for the authentication response", "kind": "heading+variant", "split": "train"}
+{"text": "how do I configure SAML assertions for the authentication resposne", "label": "retrieve", "group": "retrieve:how do i configure saml assertions for the authentication response", "kind": "heading+variant", "split": "train"}
+{"text": "Publishing MariaDB logs to Amazon CloudWatch Logs", "label": "retrieve", "group": "retrieve:publishing mariadb logs to amazon cloudwatch logs", "kind": "heading", "split": "test"}
+{"text": "publishing mariadb logs to amazon cloudwatch logs", "label": "retrieve", "group": "retrieve:publishing mariadb logs to amazon cloudwatch logs", "kind": "heading+variant", "split": "test"}
+{"text": "Publishing MariaDB logs to Amazon CloudWtach Logs", "label": "retrieve", "group": "retrieve:publishing mariadb logs to amazon cloudwatch logs", "kind": "heading+variant", "split": "test"}
+{"text": "how do I enable debugging", "label": "retrieve", "group": "retrieve:how do i enable debugging", "kind": "heading", "split": "train"}
+{"text": "how do i enable debugging", "label": "retrieve", "group": "retrieve:how do i enable debugging", "kind": "heading+variant", "split": "train"}
+{"text": "how do I enable debugigng", "label": "retrieve", "group": "retrieve:how do i enable debugging", "kind": "heading+variant", "split": "train"}
+{"text": "Pod backoff failure policy", "label": "retrieve", "group": "retrieve:pod backoff failure policy", "kind": "heading", "split": "val"}
+{"text": "pod backoff failure policy", "label": "retrieve", "group": "retrieve:pod backoff failure policy", "kind": "heading+variant", "split": "val"}
+{"text": "Pod backoff failure poilcy", "label": "retrieve", "group": "retrieve:pod backoff failure policy", "kind": "heading+variant", "split": "val"}
+{"text": "With Publish Enabled", "label": "retrieve", "group": "retrieve:with publish enabled", "kind": "heading", "split": "test"}
+{"text": "with publish enabled", "label": "retrieve", "group": "retrieve:with publish enabled", "kind": "heading+variant", "split": "test"}
+{"text": "With Publsih Enabled", "label": "retrieve", "group": "retrieve:with publish enabled", "kind": "heading+variant", "split": "test"}
+{"text": "Where Providers Come From", "label": "retrieve", "group": "retrieve:where providers come from", "kind": "heading", "split": "train"}
+{"text": "where providers come from", "label": "retrieve", "group": "retrieve:where providers come from", "kind": "heading+variant", "split": "train"}
+{"text": "Where Proivders Come From", "label": "retrieve", "group": "retrieve:where providers come from", "kind": "heading+variant", "split": "train"}
+{"text": "Status code and body", "label": "retrieve", "group": "retrieve:status code and body", "kind": "heading", "split": "train"}
+{"text": "status code and body", "label": "retrieve", "group": "retrieve:status code and body", "kind": "heading+variant", "split": "train"}
+{"text": "Sattus code and body", "label": "retrieve", "group": "retrieve:status code and body", "kind": "heading+variant", "split": "train"}
+{"text": "IPv6-only subnets", "label": "retrieve", "group": "retrieve:ipv6 only subnets", "kind": "heading", "split": "val"}
+{"text": "ipv6-only subnets", "label": "retrieve", "group": "retrieve:ipv6 only subnets", "kind": "heading+variant", "split": "val"}
+{"text": "IPv6-only subntes", "label": "retrieve", "group": "retrieve:ipv6 only subnets", "kind": "heading+variant", "split": "val"}
+{"text": "Troubleshooting Amazon Elastic Container Service identity and access", "label": "retrieve", "group": "retrieve:troubleshooting amazon elastic container service identity and access", "kind": "heading", "split": "train"}
+{"text": "troubleshooting amazon elastic container service identity and access", "label": "retrieve", "group": "retrieve:troubleshooting amazon elastic container service identity and access", "kind": "heading+variant", "split": "train"}
+{"text": "Troubleshooting Amazon Elastic Container Service identity and accses", "label": "retrieve", "group": "retrieve:troubleshooting amazon elastic container service identity and access", "kind": "heading+variant", "split": "train"}
+{"text": "EKS v1.34 and later", "label": "retrieve", "group": "retrieve:eks v1 34 and later", "kind": "heading", "split": "test"}
+{"text": "eks v1.34 and later", "label": "retrieve", "group": "retrieve:eks v1 34 and later", "kind": "heading+variant", "split": "test"}
+{"text": "EKS v1.34 and ltaer", "label": "retrieve", "group": "retrieve:eks v1 34 and later", "kind": "heading+variant", "split": "test"}
+{"text": "Statistics for Classic Load Balancer metrics", "label": "retrieve", "group": "retrieve:statistics for classic load balancer metrics", "kind": "heading", "split": "train"}
+{"text": "statistics for classic load balancer metrics", "label": "retrieve", "group": "retrieve:statistics for classic load balancer metrics", "kind": "heading+variant", "split": "train"}
+{"text": "Sttaistics for Classic Load Balancer metrics", "label": "retrieve", "group": "retrieve:statistics for classic load balancer metrics", "kind": "heading+variant", "split": "train"}
+{"text": "View service summaries", "label": "retrieve", "group": "retrieve:view service summaries", "kind": "heading", "split": "train"}
+{"text": "view service summaries", "label": "retrieve", "group": "retrieve:view service summaries", "kind": "heading+variant", "split": "train"}
+{"text": "View servcie summaries", "label": "retrieve", "group": "retrieve:view service summaries", "kind": "heading+variant", "split": "train"}
+{"text": "Deleting a DB snapshot for Amazon RDS", "label": "retrieve", "group": "retrieve:deleting a db snapshot for amazon rds", "kind": "heading", "split": "train"}
+{"text": "deleting a db snapshot for amazon rds", "label": "retrieve", "group": "retrieve:deleting a db snapshot for amazon rds", "kind": "heading+variant", "split": "train"}
+{"text": "Deleting a DB snapshot for Aamzon RDS", "label": "retrieve", "group": "retrieve:deleting a db snapshot for amazon rds", "kind": "heading+variant", "split": "train"}
+{"text": "Starting the example app", "label": "retrieve", "group": "retrieve:starting the example app", "kind": "heading", "split": "test"}
+{"text": "starting the example app", "label": "retrieve", "group": "retrieve:starting the example app", "kind": "heading+variant", "split": "test"}
+{"text": "Statring the example app", "label": "retrieve", "group": "retrieve:starting the example app", "kind": "heading+variant", "split": "test"}
+{"text": "Periodic review", "label": "retrieve", "group": "retrieve:periodic review", "kind": "heading", "split": "test"}
+{"text": "periodic review", "label": "retrieve", "group": "retrieve:periodic review", "kind": "heading+variant", "split": "test"}
+{"text": "Periodic rveiew", "label": "retrieve", "group": "retrieve:periodic review", "kind": "heading+variant", "split": "test"}
+{"text": "Blackhole Routing", "label": "retrieve", "group": "retrieve:blackhole routing", "kind": "heading", "split": "train"}
+{"text": "blackhole routing", "label": "retrieve", "group": "retrieve:blackhole routing", "kind": "heading+variant", "split": "train"}
+{"text": "Blachkole Routing", "label": "retrieve", "group": "retrieve:blackhole routing", "kind": "heading+variant", "split": "train"}
+{"text": "Trigger an action when applying a configuration", "label": "retrieve", "group": "retrieve:trigger an action when applying a configuration", "kind": "heading", "split": "train"}
+{"text": "trigger an action when applying a configuration", "label": "retrieve", "group": "retrieve:trigger an action when applying a configuration", "kind": "heading+variant", "split": "train"}
+{"text": "Trigger an action when aplpying a configuration", "label": "retrieve", "group": "retrieve:trigger an action when applying a configuration", "kind": "heading+variant", "split": "train"}
+{"text": "aws_ec2_client_vpn_endpoint", "label": "retrieve", "group": "retrieve:aws_ec2_client_vpn_endpoint", "kind": "identifier", "split": "train"}
+{"text": "aws_vpc_encryption_control", "label": "retrieve", "group": "retrieve:aws_vpc_encryption_control", "kind": "identifier", "split": "train"}
+{"text": "aws_ecs_express_gateway_service", "label": "retrieve", "group": "retrieve:aws_ecs_express_gateway_service", "kind": "identifier", "split": "test"}
+{"text": "aws_ec2_traffic_mirror_filter", "label": "retrieve", "group": "retrieve:aws_ec2_traffic_mirror_filter", "kind": "identifier", "split": "train"}
+{"text": "aws_ecr_pull_through_cache_rule", "label": "retrieve", "group": "retrieve:aws_ecr_pull_through_cache_rule", "kind": "identifier", "split": "train"}
+{"text": "aws_vpc_endpoint_service_private_dns_verification", "label": "retrieve", "group": "retrieve:aws_vpc_endpoint_service_private_dns_verification", "kind": "identifier", "split": "val"}
+{"text": "aws_rds_instance_state", "label": "retrieve", "group": "retrieve:aws_rds_instance_state", "kind": "identifier", "split": "train"}
+{"text": "aws_lambda_function_recursion_config", "label": "retrieve", "group": "retrieve:aws_lambda_function_recursion_config", "kind": "identifier", "split": "train"}
+{"text": "aws_s3_bucket_cors_configuration", "label": "retrieve", "group": "retrieve:aws_s3_bucket_cors_configuration", "kind": "identifier", "split": "train"}
+{"text": "aws_autoscaling_policy", "label": "retrieve", "group": "retrieve:aws_autoscaling_policy", "kind": "identifier", "split": "train"}
+{"text": "aws_secretsmanager_secret_policy", "label": "retrieve", "group": "retrieve:aws_secretsmanager_secret_policy", "kind": "identifier", "split": "val"}
+{"text": "aws_ebs_volume", "label": "retrieve", "group": "retrieve:aws_ebs_volume", "kind": "identifier", "split": "val"}
+{"text": "aws_kms_custom_key_store", "label": "retrieve", "group": "retrieve:aws_kms_custom_key_store", "kind": "identifier", "split": "train"}
+{"text": "aws_s3_bucket_notification", "label": "retrieve", "group": "retrieve:aws_s3_bucket_notification", "kind": "identifier", "split": "train"}
+{"text": "aws_ec2_fleet", "label": "retrieve", "group": "retrieve:aws_ec2_fleet", "kind": "identifier", "split": "val"}
+{"text": "aws_cloudfront_field_level_encryption_profile", "label": "retrieve", "group": "retrieve:aws_cloudfront_field_level_encryption_profile", "kind": "identifier", "split": "train"}
+{"text": "aws_lambda_permission", "label": "retrieve", "group": "retrieve:aws_lambda_permission", "kind": "identifier", "split": "train"}
+{"text": "aws_iam_account_alias", "label": "retrieve", "group": "retrieve:aws_iam_account_alias", "kind": "identifier", "split": "test"}
+{"text": "aws_cloudfront_connection_function", "label": "retrieve", "group": "retrieve:aws_cloudfront_connection_function", "kind": "identifier", "split": "train"}
+{"text": "aws_ecs_account_setting_default", "label": "retrieve", "group": "retrieve:aws_ecs_account_setting_default", "kind": "identifier", "split": "train"}
+{"text": "aws_ec2_network_insights_access_scope", "label": "retrieve", "group": "retrieve:aws_ec2_network_insights_access_scope", "kind": "identifier", "split": "test"}
+{"text": "aws_ec2_transit_gateway_default_route_table_association", "label": "retrieve", "group": "retrieve:aws_ec2_transit_gateway_default_route_table_association", "kind": "identifier", "split": "test"}
+{"text": "aws_cloudfront_vpc_origin", "label": "retrieve", "group": "retrieve:aws_cloudfront_vpc_origin", "kind": "identifier", "split": "val"}
+{"text": "aws_ecs_service", "label": "retrieve", "group": "retrieve:aws_ecs_service", "kind": "identifier", "split": "train"}
+{"text": "aws_autoscaling_group", "label": "retrieve", "group": "retrieve:aws_autoscaling_group", "kind": "identifier", "split": "train"}
+{"text": "aws_ec2_capacity_block_reservation", "label": "retrieve", "group": "retrieve:aws_ec2_capacity_block_reservation", "kind": "identifier", "split": "train"}
+{"text": "aws_ec2_transit_gateway_route_table", "label": "retrieve", "group": "retrieve:aws_ec2_transit_gateway_route_table", "kind": "identifier", "split": "val"}
+{"text": "aws_autoscaling_attachment", "label": "retrieve", "group": "retrieve:aws_autoscaling_attachment", "kind": "identifier", "split": "train"}
+{"text": "how do I use aws_s3_access_point", "label": "retrieve", "group": "retrieve:how do i use aws_s3_access_point", "kind": "identifier", "split": "train"}
+{"text": "how do i use aws_s3_access_point", "label": "retrieve", "group": "retrieve:how do i use aws_s3_access_point", "kind": "identifier+variant", "split": "train"}
+{"text": "how do I use aws_cloudfront_origin_request_policy", "label": "retrieve", "group": "retrieve:how do i use aws_cloudfront_origin_request_policy", "kind": "identifier", "split": "train"}
+{"text": "how do i use aws_cloudfront_origin_request_policy", "label": "retrieve", "group": "retrieve:how do i use aws_cloudfront_origin_request_policy", "kind": "identifier+variant", "split": "train"}
+{"text": "how do I use aws_instance", "label": "retrieve", "group": "retrieve:how do i use aws_instance", "kind": "identifier", "split": "train"}
+{"text": "how do i use aws_instance", "label": "retrieve", "group": "retrieve:how do i use aws_instance", "kind": "identifier+variant", "split": "train"}
+{"text": "how do I use aws_kms_replica_key", "label": "retrieve", "group": "retrieve:how do i use aws_kms_replica_key", "kind": "identifier", "split": "val"}
+{"text": "how do i use aws_kms_replica_key", "label": "retrieve", "group": "retrieve:how do i use aws_kms_replica_key", "kind": "identifier+variant", "split": "val"}
+{"text": "how do I use aws_vpc_peering_connection", "label": "retrieve", "group": "retrieve:how do i use aws_vpc_peering_connection", "kind": "identifier", "split": "train"}
+{"text": "how do i use aws_vpc_peering_connection", "label": "retrieve", "group": "retrieve:how do i use aws_vpc_peering_connection", "kind": "identifier+variant", "split": "train"}
+{"text": "how do I use aws_ecs_cluster", "label": "retrieve", "group": "retrieve:how do i use aws_ecs_cluster", "kind": "identifier", "split": "test"}
+{"text": "how do i use aws_ecs_cluster", "label": "retrieve", "group": "retrieve:how do i use aws_ecs_cluster", "kind": "identifier+variant", "split": "test"}
+{"text": "how do I use aws_network_interface_attachment", "label": "retrieve", "group": "retrieve:how do i use aws_network_interface_attachment", "kind": "identifier", "split": "train"}
+{"text": "how do i use aws_network_interface_attachment", "label": "retrieve", "group": "retrieve:how do i use aws_network_interface_attachment", "kind": "identifier+variant", "split": "train"}
+{"text": "how do I use aws_vpc_ipam", "label": "retrieve", "group": "retrieve:how do i use aws_vpc_ipam", "kind": "identifier", "split": "train"}
+{"text": "how do i use aws_vpc_ipam", "label": "retrieve", "group": "retrieve:how do i use aws_vpc_ipam", "kind": "identifier+variant", "split": "train"}
+{"text": "how do I use aws_ec2_local_gateway_route", "label": "retrieve", "group": "retrieve:how do i use aws_ec2_local_gateway_route", "kind": "identifier", "split": "val"}
+{"text": "how do i use aws_ec2_local_gateway_route", "label": "retrieve", "group": "retrieve:how do i use aws_ec2_local_gateway_route", "kind": "identifier+variant", "split": "val"}
+{"text": "how do I use aws_vpc_route_server", "label": "retrieve", "group": "retrieve:how do i use aws_vpc_route_server", "kind": "identifier", "split": "test"}
+{"text": "how do i use aws_vpc_route_server", "label": "retrieve", "group": "retrieve:how do i use aws_vpc_route_server", "kind": "identifier+variant", "split": "test"}
+{"text": "how do I use aws_cloudfront_response_headers_policy", "label": "retrieve", "group": "retrieve:how do i use aws_cloudfront_response_headers_policy", "kind": "identifier", "split": "train"}
+{"text": "how do i use aws_cloudfront_response_headers_policy", "label": "retrieve", "group": "retrieve:how do i use aws_cloudfront_response_headers_policy", "kind": "identifier+variant", "split": "train"}
+{"text": "how do I use aws_cloudfront_public_key", "label": "retrieve", "group": "retrieve:how do i use aws_cloudfront_public_key", "kind": "identifier", "split": "train"}
+{"text": "how do i use aws_cloudfront_public_key", "label": "retrieve", "group": "retrieve:how do i use aws_cloudfront_public_key", "kind": "identifier+variant", "split": "train"}
+{"text": "hello", "label": "chitchat", "group": "chitchat:hello", "kind": "plain", "split": "train"}
+{"text": "hey", "label": "chitchat", "group": "chitchat:hey", "kind": "plain", "split": "train"}
+{"text": "good morning", "label": "chitchat", "group": "chitchat:good morning", "kind": "plain", "split": "train"}
+{"text": "good mroning", "label": "chitchat", "group": "chitchat:good morning", "kind": "plain+variant", "split": "train"}
+{"text": "good evening", "label": "chitchat", "group": "chitchat:good evening", "kind": "plain", "split": "val"}
+{"text": "good eevning", "label": "chitchat", "group": "chitchat:good evening", "kind": "plain+variant", "split": "val"}
+{"text": "yo", "label": "chitchat", "group": "chitchat:yo", "kind": "plain", "split": "train"}
+{"text": "sup", "label": "chitchat", "group": "chitchat:sup", "kind": "plain", "split": "train"}
+{"text": "howdy", "label": "chitchat", "group": "chitchat:howdy", "kind": "plain", "split": "test"}
+{"text": "hwody", "label": "chitchat", "group": "chitchat:howdy", "kind": "plain+variant", "split": "test"}
+{"text": "how are you doing", "label": "chitchat", "group": "chitchat:how are you doing", "kind": "plain", "split": "train"}
+{"text": "how are you donig", "label": "chitchat", "group": "chitchat:how are you doing", "kind": "plain+variant", "split": "train"}
+{"text": "how's it going", "label": "chitchat", "group": "chitchat:how s it going", "kind": "plain", "split": "train"}
+{"text": "how's it giong", "label": "chitchat", "group": "chitchat:how s it going", "kind": "plain+variant", "split": "train"}
+{"text": "how do you feel today", "label": "chitchat", "group": "chitchat:how do you feel today", "kind": "plain", "split": "train"}
+{"text": "how do you feel tdoay", "label": "chitchat", "group": "chitchat:how do you feel today", "kind": "plain+variant", "split": "train"}
+{"text": "how is your day going", "label": "chitchat", "group": "chitchat:how is your day going", "kind": "plain", "split": "train"}
+{"text": "how is your day gonig", "label": "chitchat", "group": "chitchat:how is your day going", "kind": "plain+variant", "split": "train"}
+{"text": "are you ok", "label": "chitchat", "group": "chitchat:are you ok", "kind": "plain", "split": "train"}
+{"text": "whats good", "label": "chitchat", "group": "chitchat:whats good", "kind": "plain", "split": "train"}
+{"text": "wahts good", "label": "chitchat", "group": "chitchat:whats good", "kind": "plain+variant", "split": "train"}
+{"text": "nice to meet you", "label": "chitchat", "group": "chitchat:nice to meet you", "kind": "plain", "split": "test"}
+{"text": "long time no see", "label": "chitchat", "group": "chitchat:long time no see", "kind": "plain", "split": "val"}
+{"text": "happy friday", "label": "chitchat", "group": "chitchat:happy friday", "kind": "plain", "split": "train"}
+{"text": "happy firday", "label": "chitchat", "group": "chitchat:happy friday", "kind": "plain+variant", "split": "train"}
+{"text": "how have you been", "label": "chitchat", "group": "chitchat:how have you been", "kind": "plain", "split": "train"}
+{"text": "thanks", "label": "chitchat", "group": "chitchat:thanks", "kind": "plain", "split": "val"}
+{"text": "tahnks", "label": "chitchat", "group": "chitchat:thanks", "kind": "plain+variant", "split": "val"}
+{"text": "thank you", "label": "chitchat", "group": "chitchat:thank you", "kind": "plain", "split": "train"}
+{"text": "thnak you", "label": "chitchat", "group": "chitchat:thank you", "kind": "plain+variant", "split": "train"}
+{"text": "thank you so much!!", "label": "chitchat", "group": "chitchat:thank you so much", "kind": "plain", "split": "train"}
+{"text": "thank you so much", "label": "chitchat", "group": "chitchat:thank you so much", "kind": "plain+variant", "split": "train"}
+{"text": "tahnk you so much!!", "label": "chitchat", "group": "chitchat:thank you so much", "kind": "plain+variant", "split": "train"}
+{"text": "thx", "label": "chitchat", "group": "chitchat:thx", "kind": "plain", "split": "train"}
+{"text": "ty", "label": "chitchat", "group": "chitchat:ty", "kind": "plain", "split": "train"}
+{"text": "cheers", "label": "chitchat", "group": "chitchat:cheers", "kind": "plain", "split": "test"}
+{"text": "cheres", "label": "chitchat", "group": "chitchat:cheers", "kind": "plain+variant", "split": "test"}
+{"text": "appreciate it", "label": "chitchat", "group": "chitchat:appreciate it", "kind": "plain", "split": "val"}
+{"text": "apprecitae it", "label": "chitchat", "group": "chitchat:appreciate it", "kind": "plain+variant", "split": "val"}
+{"text": "great", "label": "chitchat", "group": "chitchat:great", "kind": "plain", "split": "train"}
+{"text": "graet", "label": "chitchat", "group": "chitchat:great", "kind": "plain+variant", "split": "train"}
+{"text": "awesome", "label": "chitchat", "group": "chitchat:awesome", "kind": "plain", "split": "train"}
+{"text": "awesmoe", "label": "chitchat", "group": "chitchat:awesome", "kind": "plain+variant", "split": "train"}
+{"text": "perfect", "label": "chitchat", "group": "chitchat:perfect", "kind": "plain", "split": "train"}
+{"text": "pefrect", "label": "chitchat", "group": "chitchat:perfect", "kind": "plain+variant", "split": "train"}
+{"text": "ok", "label": "chitchat", "group": "chitchat:ok", "kind": "plain", "split": "train"}
+{"text": "okay", "label": "chitchat", "group": "chitchat:okay", "kind": "plain", "split": "test"}
+{"text": "got it", "label": "chitchat", "group": "chitchat:got it", "kind": "plain", "split": "train"}
+{"text": "nice", "label": "chitchat", "group": "chitchat:nice", "kind": "plain", "split": "train"}
+{"text": "cool", "label": "chitchat", "group": "chitchat:cool", "kind": "plain", "split": "train"}
+{"text": "goodbye", "label": "chitchat", "group": "chitchat:goodbye", "kind": "plain", "split": "train"}
+{"text": "see you", "label": "chitchat", "group": "chitchat:see you", "kind": "plain", "split": "test"}
+{"text": "see ya", "label": "chitchat", "group": "chitchat:see ya", "kind": "plain", "split": "train"}
+{"text": "lol", "label": "chitchat", "group": "chitchat:lol", "kind": "plain", "split": "val"}
+{"text": "haha", "label": "chitchat", "group": "chitchat:haha", "kind": "plain", "split": "test"}
+{"text": "hmm", "label": "chitchat", "group": "chitchat:hmm", "kind": "plain", "split": "val"}
+{"text": "test", "label": "chitchat", "group": "chitchat:test", "kind": "plain", "split": "test"}
+{"text": "testing 123", "label": "chitchat", "group": "chitchat:testing 123", "kind": "plain", "split": "test"}
+{"text": "testnig 123", "label": "chitchat", "group": "chitchat:testing 123", "kind": "plain+variant", "split": "test"}
+{"text": "hello?? anyone there", "label": "chitchat", "group": "chitchat:hello anyone there", "kind": "plain", "split": "train"}
+{"text": "hello?? anoyne there", "label": "chitchat", "group": "chitchat:hello anyone there", "kind": "plain+variant", "split": "train"}
+{"text": "qwerty", "label": "chitchat", "group": "chitchat:qwerty", "kind": "plain", "split": "train"}
+{"text": "qwrety", "label": "chitchat", "group": "chitchat:qwerty", "kind": "plain+variant", "split": "train"}
+{"text": "good afternoon", "label": "chitchat", "group": "chitchat:good afternoon", "kind": "plain", "split": "test"}
+{"text": "good aftenroon", "label": "chitchat", "group": "chitchat:good afternoon", "kind": "plain+variant", "split": "test"}
+{"text": "greetings", "label": "chitchat", "group": "chitchat:greetings", "kind": "plain", "split": "train"}
+{"text": "geretings", "label": "chitchat", "group": "chitchat:greetings", "kind": "plain+variant", "split": "train"}
+{"text": "thanks a lot, bye", "label": "chitchat", "group": "chitchat:thanks a lot bye", "kind": "plain", "split": "test"}
+{"text": "tahnks a lot, bye", "label": "chitchat", "group": "chitchat:thanks a lot bye", "kind": "plain+variant", "split": "test"}
+{"text": "kjhgf", "label": "chitchat", "group": "chitchat:kjhgf", "kind": "plain", "split": "val"}
+{"text": "khjgf", "label": "chitchat", "group": "chitchat:kjhgf", "kind": "plain+variant", "split": "val"}
+{"text": "zzzz", "label": "chitchat", "group": "chitchat:zzzz", "kind": "plain", "split": "test"}
+{"text": "uhh", "label": "chitchat", "group": "chitchat:uhh", "kind": "plain", "split": "test"}
+{"text": "aaaa", "label": "chitchat", "group": "chitchat:aaaa", "kind": "plain", "split": "val"}
+{"text": "blah blah", "label": "chitchat", "group": "chitchat:blah blah", "kind": "plain", "split": "train"}
+{"text": "hola", "label": "chitchat", "group": "chitchat:hola", "kind": "plain", "split": "test"}
+{"text": "namaste", "label": "chitchat", "group": "chitchat:namaste", "kind": "plain", "split": "train"}
+{"text": "namatse", "label": "chitchat", "group": "chitchat:namaste", "kind": "plain+variant", "split": "train"}
+{"text": "wassup", "label": "chitchat", "group": "chitchat:wassup", "kind": "plain", "split": "test"}
+{"text": "wasusp", "label": "chitchat", "group": "chitchat:wassup", "kind": "plain+variant", "split": "test"}
+{"text": "what's new", "label": "chitchat", "group": "chitchat:what s new", "kind": "plain", "split": "test"}
+{"text": "you there?", "label": "chitchat", "group": "chitchat:you there", "kind": "plain", "split": "test"}
+{"text": "you there", "label": "chitchat", "group": "chitchat:you there", "kind": "plain+variant", "split": "test"}
+{"text": "are you open source", "label": "about_bot", "group": "about_bot:are you open source", "kind": "plain", "split": "train"}
+{"text": "are you open suorce", "label": "about_bot", "group": "about_bot:are you open source", "kind": "plain+variant", "split": "train"}
+{"text": "what sources do you use", "label": "about_bot", "group": "about_bot:what sources do you use", "kind": "plain", "split": "train"}
+{"text": "what soucres do you use", "label": "about_bot", "group": "about_bot:what sources do you use", "kind": "plain+variant", "split": "train"}
+{"text": "which embedding model do you use", "label": "about_bot", "group": "about_bot:which embedding model do you use", "kind": "plain", "split": "test"}
+{"text": "which ebmedding model do you use", "label": "about_bot", "group": "about_bot:which embedding model do you use", "kind": "plain+variant", "split": "test"}
+{"text": "how do you find answers", "label": "about_bot", "group": "about_bot:how do you find answers", "kind": "plain", "split": "train"}
+{"text": "how do you find answres", "label": "about_bot", "group": "about_bot:how do you find answers", "kind": "plain+variant", "split": "train"}
+{"text": "what's your name", "label": "about_bot", "group": "about_bot:what s your name", "kind": "plain", "split": "test"}
+{"text": "do you remember previous questions", "label": "about_bot", "group": "about_bot:do you remember previous questions", "kind": "plain", "split": "train"}
+{"text": "do you remember previous qusetions", "label": "about_bot", "group": "about_bot:do you remember previous questions", "kind": "plain+variant", "split": "train"}
+{"text": "can you browse the internet", "label": "about_bot", "group": "about_bot:can you browse the internet", "kind": "plain", "split": "test"}
+{"text": "can you broswe the internet", "label": "about_bot", "group": "about_bot:can you browse the internet", "kind": "plain+variant", "split": "test"}
+{"text": "what version are you", "label": "about_bot", "group": "about_bot:what version are you", "kind": "plain", "split": "train"}
+{"text": "what verison are you", "label": "about_bot", "group": "about_bot:what version are you", "kind": "plain+variant", "split": "train"}
+{"text": "are you an ai", "label": "about_bot", "group": "about_bot:are you an ai", "kind": "plain", "split": "test"}
+{"text": "how accurate are you", "label": "about_bot", "group": "about_bot:how accurate are you", "kind": "plain", "split": "test"}
+{"text": "how acucrate are you", "label": "about_bot", "group": "about_bot:how accurate are you", "kind": "plain+variant", "split": "test"}
+{"text": "what is OpsRAG", "label": "about_bot", "group": "about_bot:what is opsrag", "kind": "plain", "split": "test"}
+{"text": "what is opsrag", "label": "about_bot", "group": "about_bot:what is opsrag", "kind": "plain+variant", "split": "test"}
+{"text": "what is OpsARG", "label": "about_bot", "group": "about_bot:what is opsrag", "kind": "plain+variant", "split": "test"}
+{"text": "do you use GPT", "label": "about_bot", "group": "about_bot:do you use gpt", "kind": "plain", "split": "train"}
+{"text": "do you use gpt", "label": "about_bot", "group": "about_bot:do you use gpt", "kind": "plain+variant", "split": "train"}
+{"text": "what is your knowledge cutoff", "label": "about_bot", "group": "about_bot:what is your knowledge cutoff", "kind": "plain", "split": "train"}
+{"text": "what is your knowledge cutfof", "label": "about_bot", "group": "about_bot:what is your knowledge cutoff", "kind": "plain+variant", "split": "train"}
+{"text": "how are you built", "label": "about_bot", "group": "about_bot:how are you built", "kind": "plain", "split": "train"}
+{"text": "how are you bulit", "label": "about_bot", "group": "about_bot:how are you built", "kind": "plain+variant", "split": "train"}
+{"text": "tell me about yourself", "label": "about_bot", "group": "about_bot:tell me about yourself", "kind": "plain", "split": "test"}
+{"text": "tell me abuot yourself", "label": "about_bot", "group": "about_bot:tell me about yourself", "kind": "plain+variant", "split": "test"}
+{"text": "what are you", "label": "about_bot", "group": "about_bot:what are you", "kind": "plain", "split": "train"}
+{"text": "what topics can you answer", "label": "about_bot", "group": "about_bot:what topics can you answer", "kind": "plain", "split": "train"}
+{"text": "what topics can you anwser", "label": "about_bot", "group": "about_bot:what topics can you answer", "kind": "plain+variant", "split": "train"}
+{"text": "what's your tech stack", "label": "about_bot", "group": "about_bot:what s your tech stack", "kind": "plain", "split": "test"}
+{"text": "what's your tech stcak", "label": "about_bot", "group": "about_bot:what s your tech stack", "kind": "plain+variant", "split": "test"}
+{"text": "where do your answers come from", "label": "about_bot", "group": "about_bot:where do your answers come from", "kind": "plain", "split": "train"}
+{"text": "where do your answres come from", "label": "about_bot", "group": "about_bot:where do your answers come from", "kind": "plain+variant", "split": "train"}
+{"text": "are your answers cited", "label": "about_bot", "group": "about_bot:are your answers cited", "kind": "plain", "split": "train"}
+{"text": "are your answers ctied", "label": "about_bot", "group": "about_bot:are your answers cited", "kind": "plain+variant", "split": "train"}
+{"text": "what is your purpose", "label": "about_bot", "group": "about_bot:what is your purpose", "kind": "plain", "split": "train"}
+{"text": "what is your purpsoe", "label": "about_bot", "group": "about_bot:what is your purpose", "kind": "plain+variant", "split": "train"}
+{"text": "which reranker do you use", "label": "about_bot", "group": "about_bot:which reranker do you use", "kind": "plain", "split": "train"}
+{"text": "wihch reranker do you use", "label": "about_bot", "group": "about_bot:which reranker do you use", "kind": "plain+variant", "split": "train"}
+{"text": "do you use RAG", "label": "about_bot", "group": "about_bot:do you use rag", "kind": "plain", "split": "train"}
+{"text": "do you use rag", "label": "about_bot", "group": "about_bot:do you use rag", "kind": "plain+variant", "split": "train"}
+{"text": "are you running locally", "label": "about_bot", "group": "about_bot:are you running locally", "kind": "plain", "split": "train"}
+{"text": "are you runnnig locally", "label": "about_bot", "group": "about_bot:are you running locally", "kind": "plain+variant", "split": "train"}
+{"text": "do you hallucinate", "label": "about_bot", "group": "about_bot:do you hallucinate", "kind": "plain", "split": "val"}
+{"text": "how do you cite sources", "label": "about_bot", "group": "about_bot:how do you cite sources", "kind": "plain", "split": "test"}
+{"text": "how do you cite soruces", "label": "about_bot", "group": "about_bot:how do you cite sources", "kind": "plain+variant", "split": "test"}
+{"text": "is this tool free", "label": "about_bot", "group": "about_bot:is this tool free", "kind": "plain", "split": "test"}
+{"text": "what hosting do you run on", "label": "about_bot", "group": "about_bot:what hosting do you run on", "kind": "plain", "split": "val"}
+{"text": "what hotsing do you run on", "label": "about_bot", "group": "about_bot:what hosting do you run on", "kind": "plain+variant", "split": "val"}
+{"text": "which cloud are you on", "label": "about_bot", "group": "about_bot:which cloud are you on", "kind": "plain", "split": "train"}
+{"text": "which cluod are you on", "label": "about_bot", "group": "about_bot:which cloud are you on", "kind": "plain+variant", "split": "train"}
+{"text": "what's the model behind you", "label": "about_bot", "group": "about_bot:what s the model behind you", "kind": "plain", "split": "train"}
+{"text": "what's the moedl behind you", "label": "about_bot", "group": "about_bot:what s the model behind you", "kind": "plain+variant", "split": "train"}
+{"text": "how were you trained", "label": "about_bot", "group": "about_bot:how were you trained", "kind": "plain", "split": "val"}
+{"text": "how were you trianed", "label": "about_bot", "group": "about_bot:how were you trained", "kind": "plain+variant", "split": "val"}
+{"text": "which LLM are you", "label": "about_bot", "group": "about_bot:which llm are you", "kind": "plain", "split": "test"}
+{"text": "which llm are you", "label": "about_bot", "group": "about_bot:which llm are you", "kind": "plain+variant", "split": "test"}
+{"text": "whcih LLM are you", "label": "about_bot", "group": "about_bot:which llm are you", "kind": "plain+variant", "split": "test"}
+{"text": "what language model is this", "label": "about_bot", "group": "about_bot:what language model is this", "kind": "plain", "split": "train"}
+{"text": "what lnaguage model is this", "label": "about_bot", "group": "about_bot:what language model is this", "kind": "plain+variant", "split": "train"}
+{"text": "who built this", "label": "about_bot", "group": "about_bot:who built this", "kind": "plain", "split": "train"}
+{"text": "who bulit this", "label": "about_bot", "group": "about_bot:who built this", "kind": "plain+variant", "split": "train"}
+{"text": "what data do you have", "label": "about_bot", "group": "about_bot:what data do you have", "kind": "plain", "split": "val"}
+{"text": "are you connected to the internet", "label": "about_bot", "group": "about_bot:are you connected to the internet", "kind": "plain", "split": "train"}
+{"text": "are you connetced to the internet", "label": "about_bot", "group": "about_bot:are you connected to the internet", "kind": "plain+variant", "split": "train"}
+{"text": "can you remember me", "label": "about_bot", "group": "about_bot:can you remember me", "kind": "plain", "split": "train"}
+{"text": "can you rememebr me", "label": "about_bot", "group": "about_bot:can you remember me", "kind": "plain+variant", "split": "train"}
+{"text": "what are your limitations", "label": "about_bot", "group": "about_bot:what are your limitations", "kind": "plain", "split": "val"}
+{"text": "what are your limitaitons", "label": "about_bot", "group": "about_bot:what are your limitations", "kind": "plain+variant", "split": "val"}
+{"text": "which documentation do you cover", "label": "about_bot", "group": "about_bot:which documentation do you cover", "kind": "plain", "split": "train"}
+{"text": "whcih documentation do you cover", "label": "about_bot", "group": "about_bot:which documentation do you cover", "kind": "plain+variant", "split": "train"}
+{"text": "what's your context window", "label": "about_bot", "group": "about_bot:what s your context window", "kind": "plain", "split": "val"}
+{"text": "what's your context widnow", "label": "about_bot", "group": "about_bot:what s your context window", "kind": "plain+variant", "split": "val"}
+{"text": "how do you rank results", "label": "about_bot", "group": "about_bot:how do you rank results", "kind": "plain", "split": "train"}
+{"text": "how do you rank reuslts", "label": "about_bot", "group": "about_bot:how do you rank results", "kind": "plain+variant", "split": "train"}
+{"text": "are you better than chatgpt", "label": "about_bot", "group": "about_bot:are you better than chatgpt", "kind": "plain", "split": "train"}
+{"text": "are you bteter than chatgpt", "label": "about_bot", "group": "about_bot:are you better than chatgpt", "kind": "plain+variant", "split": "train"}
+{"text": "what are you good at", "label": "about_bot", "group": "about_bot:what are you good at", "kind": "plain", "split": "val"}
+{"text": "what can I ask you", "label": "about_bot", "group": "about_bot:what can i ask you", "kind": "plain", "split": "val"}
+{"text": "what can i ask you", "label": "about_bot", "group": "about_bot:what can i ask you", "kind": "plain+variant", "split": "val"}
+{"text": "how can you help me", "label": "about_bot", "group": "about_bot:how can you help me", "kind": "plain", "split": "train"}
+{"text": "what are your capabilities", "label": "about_bot", "group": "about_bot:what are your capabilities", "kind": "plain", "split": "train"}
+{"text": "what are your capabiilties", "label": "about_bot", "group": "about_bot:what are your capabilities", "kind": "plain+variant", "split": "train"}
+{"text": "do you have access to my aws account", "label": "about_bot", "group": "about_bot:do you have access to my aws account", "kind": "plain", "split": "test"}
+{"text": "do you have acecss to my aws account", "label": "about_bot", "group": "about_bot:do you have access to my aws account", "kind": "plain+variant", "split": "test"}
+{"text": "can you run commands for me", "label": "about_bot", "group": "about_bot:can you run commands for me", "kind": "plain", "split": "train"}
+{"text": "can you run cmomands for me", "label": "about_bot", "group": "about_bot:can you run commands for me", "kind": "plain+variant", "split": "train"}
+{"text": "do you learn from my questions", "label": "about_bot", "group": "about_bot:do you learn from my questions", "kind": "plain", "split": "train"}
+{"text": "do you laern from my questions", "label": "about_bot", "group": "about_bot:do you learn from my questions", "kind": "plain+variant", "split": "train"}
+{"text": "what are you trained on", "label": "about_bot", "group": "about_bot:what are you trained on", "kind": "plain", "split": "train"}
+{"text": "what are you traiend on", "label": "about_bot", "group": "about_bot:what are you trained on", "kind": "plain+variant", "split": "train"}
+{"text": "is this an official aws tool", "label": "about_bot", "group": "about_bot:is this an official aws tool", "kind": "plain", "split": "val"}
+{"text": "is this an offciial aws tool", "label": "about_bot", "group": "about_bot:is this an official aws tool", "kind": "plain+variant", "split": "val"}
+{"text": "which company built you", "label": "about_bot", "group": "about_bot:which company built you", "kind": "plain", "split": "val"}
+{"text": "whcih company built you", "label": "about_bot", "group": "about_bot:which company built you", "kind": "plain+variant", "split": "val"}
+{"text": "what do you know about", "label": "about_bot", "group": "about_bot:what do you know about", "kind": "plain", "split": "train"}
+{"text": "what do you know abuot", "label": "about_bot", "group": "about_bot:what do you know about", "kind": "plain+variant", "split": "train"}
+{"text": "what is the capital of australia", "label": "out_of_scope", "group": "out_of_scope:what is the capital of australia", "kind": "plain", "split": "test"}
+{"text": "what is the cpaital of australia", "label": "out_of_scope", "group": "out_of_scope:what is the capital of australia", "kind": "plain+variant", "split": "test"}
+{"text": "recommend a good movie", "label": "out_of_scope", "group": "out_of_scope:recommend a good movie", "kind": "plain", "split": "val"}
+{"text": "recommend a good moive", "label": "out_of_scope", "group": "out_of_scope:recommend a good movie", "kind": "plain+variant", "split": "val"}
+{"text": "tell me a joke", "label": "out_of_scope", "group": "out_of_scope:tell me a joke", "kind": "plain", "split": "test"}
+{"text": "what time is it in tokyo", "label": "out_of_scope", "group": "out_of_scope:what time is it in tokyo", "kind": "plain", "split": "train"}
+{"text": "what time is it in toyko", "label": "out_of_scope", "group": "out_of_scope:what time is it in tokyo", "kind": "plain+variant", "split": "train"}
+{"text": "translate hello to french", "label": "out_of_scope", "group": "out_of_scope:translate hello to french", "kind": "plain", "split": "val"}
+{"text": "translate hello to frnech", "label": "out_of_scope", "group": "out_of_scope:translate hello to french", "kind": "plain+variant", "split": "val"}
+{"text": "how many calories in a banana", "label": "out_of_scope", "group": "out_of_scope:how many calories in a banana", "kind": "plain", "split": "val"}
+{"text": "how many caloires in a banana", "label": "out_of_scope", "group": "out_of_scope:how many calories in a banana", "kind": "plain+variant", "split": "val"}
+{"text": "who is the president of france", "label": "out_of_scope", "group": "out_of_scope:who is the president of france", "kind": "plain", "split": "train"}
+{"text": "who is the president of fracne", "label": "out_of_scope", "group": "out_of_scope:who is the president of france", "kind": "plain+variant", "split": "train"}
+{"text": "what is 15 times 23", "label": "out_of_scope", "group": "out_of_scope:what is 15 times 23", "kind": "plain", "split": "train"}
+{"text": "what is 15 tiems 23", "label": "out_of_scope", "group": "out_of_scope:what is 15 times 23", "kind": "plain+variant", "split": "train"}
+{"text": "how do I lose weight", "label": "out_of_scope", "group": "out_of_scope:how do i lose weight", "kind": "plain", "split": "train"}
+{"text": "how do i lose weight", "label": "out_of_scope", "group": "out_of_scope:how do i lose weight", "kind": "plain+variant", "split": "train"}
+{"text": "how do I lose wieght", "label": "out_of_scope", "group": "out_of_scope:how do i lose weight", "kind": "plain+variant", "split": "train"}
+{"text": "explain quantum physics", "label": "out_of_scope", "group": "out_of_scope:explain quantum physics", "kind": "plain", "split": "train"}
+{"text": "expalin quantum physics", "label": "out_of_scope", "group": "out_of_scope:explain quantum physics", "kind": "plain+variant", "split": "train"}
+{"text": "what is the meaning of life", "label": "out_of_scope", "group": "out_of_scope:what is the meaning of life", "kind": "plain", "split": "train"}
+{"text": "what is the menaing of life", "label": "out_of_scope", "group": "out_of_scope:what is the meaning of life", "kind": "plain+variant", "split": "train"}
+{"text": "write a cover letter for me", "label": "out_of_scope", "group": "out_of_scope:write a cover letter for me", "kind": "plain", "split": "val"}
+{"text": "write a coevr letter for me", "label": "out_of_scope", "group": "out_of_scope:write a cover letter for me", "kind": "plain+variant", "split": "val"}
+{"text": "how do I fix my bike chain", "label": "out_of_scope", "group": "out_of_scope:how do i fix my bike chain", "kind": "plain", "split": "test"}
+{"text": "how do i fix my bike chain", "label": "out_of_scope", "group": "out_of_scope:how do i fix my bike chain", "kind": "plain+variant", "split": "test"}
+{"text": "how do I fix my bike cahin", "label": "out_of_scope", "group": "out_of_scope:how do i fix my bike chain", "kind": "plain+variant", "split": "test"}
+{"text": "best laptop under 1000 dollars", "label": "out_of_scope", "group": "out_of_scope:best laptop under 1000 dollars", "kind": "plain", "split": "val"}
+{"text": "best laptop unedr 1000 dollars", "label": "out_of_scope", "group": "out_of_scope:best laptop under 1000 dollars", "kind": "plain+variant", "split": "val"}
+{"text": "who is taylor swift", "label": "out_of_scope", "group": "out_of_scope:who is taylor swift", "kind": "plain", "split": "train"}
+{"text": "who is talyor swift", "label": "out_of_scope", "group": "out_of_scope:who is taylor swift", "kind": "plain+variant", "split": "train"}
+{"text": "how do I learn guitar", "label": "out_of_scope", "group": "out_of_scope:how do i learn guitar", "kind": "plain", "split": "train"}
+{"text": "how do i learn guitar", "label": "out_of_scope", "group": "out_of_scope:how do i learn guitar", "kind": "plain+variant", "split": "train"}
+{"text": "how do I leran guitar", "label": "out_of_scope", "group": "out_of_scope:how do i learn guitar", "kind": "plain+variant", "split": "train"}
+{"text": "what is the speed of light", "label": "out_of_scope", "group": "out_of_scope:what is the speed of light", "kind": "plain", "split": "train"}
+{"text": "what is the speed of lihgt", "label": "out_of_scope", "group": "out_of_scope:what is the speed of light", "kind": "plain+variant", "split": "train"}
+{"text": "sort an array in javascript", "label": "out_of_scope", "group": "out_of_scope:sort an array in javascript", "kind": "plain", "split": "train"}
+{"text": "sort an array in javascirpt", "label": "out_of_scope", "group": "out_of_scope:sort an array in javascript", "kind": "plain+variant", "split": "train"}
+{"text": "how do I center a div in css", "label": "out_of_scope", "group": "out_of_scope:how do i center a div in css", "kind": "plain", "split": "train"}
+{"text": "how do i center a div in css", "label": "out_of_scope", "group": "out_of_scope:how do i center a div in css", "kind": "plain+variant", "split": "train"}
+{"text": "how do I cneter a div in css", "label": "out_of_scope", "group": "out_of_scope:how do i center a div in css", "kind": "plain+variant", "split": "train"}
+{"text": "how do I train a neural network", "label": "out_of_scope", "group": "out_of_scope:how do i train a neural network", "kind": "plain", "split": "train"}
+{"text": "how do i train a neural network", "label": "out_of_scope", "group": "out_of_scope:how do i train a neural network", "kind": "plain+variant", "split": "train"}
+{"text": "how do I tarin a neural network", "label": "out_of_scope", "group": "out_of_scope:how do i train a neural network", "kind": "plain+variant", "split": "train"}
+{"text": "how do I invest in bitcoin", "label": "out_of_scope", "group": "out_of_scope:how do i invest in bitcoin", "kind": "plain", "split": "train"}
+{"text": "how do i invest in bitcoin", "label": "out_of_scope", "group": "out_of_scope:how do i invest in bitcoin", "kind": "plain+variant", "split": "train"}
+{"text": "how do I invest in bticoin", "label": "out_of_scope", "group": "out_of_scope:how do i invest in bitcoin", "kind": "plain+variant", "split": "train"}
+{"text": "latest iphone release date", "label": "out_of_scope", "group": "out_of_scope:latest iphone release date", "kind": "plain", "split": "train"}
+{"text": "laetst iphone release date", "label": "out_of_scope", "group": "out_of_scope:latest iphone release date", "kind": "plain+variant", "split": "train"}
+{"text": "can you play chess", "label": "out_of_scope", "group": "out_of_scope:can you play chess", "kind": "plain", "split": "test"}
+{"text": "can you play chses", "label": "out_of_scope", "group": "out_of_scope:can you play chess", "kind": "plain+variant", "split": "test"}
+{"text": "what's a good name for my dog", "label": "out_of_scope", "group": "out_of_scope:what s a good name for my dog", "kind": "plain", "split": "train"}
+{"text": "how do I get a visa for canada", "label": "out_of_scope", "group": "out_of_scope:how do i get a visa for canada", "kind": "plain", "split": "train"}
+{"text": "how do i get a visa for canada", "label": "out_of_scope", "group": "out_of_scope:how do i get a visa for canada", "kind": "plain+variant", "split": "train"}
+{"text": "how do I get a visa for cnaada", "label": "out_of_scope", "group": "out_of_scope:how do i get a visa for canada", "kind": "plain+variant", "split": "train"}
+{"text": "help me with my homework on photosynthesis", "label": "out_of_scope", "group": "out_of_scope:help me with my homework on photosynthesis", "kind": "plain", "split": "train"}
+{"text": "help me with my homweork on photosynthesis", "label": "out_of_scope", "group": "out_of_scope:help me with my homework on photosynthesis", "kind": "plain+variant", "split": "train"}
+{"text": "give me a workout plan", "label": "out_of_scope", "group": "out_of_scope:give me a workout plan", "kind": "plain", "split": "train"}
+{"text": "give me a wrokout plan", "label": "out_of_scope", "group": "out_of_scope:give me a workout plan", "kind": "plain+variant", "split": "train"}
+{"text": "what is the stock price of tesla", "label": "out_of_scope", "group": "out_of_scope:what is the stock price of tesla", "kind": "plain", "split": "val"}
+{"text": "what is the stock pirce of tesla", "label": "out_of_scope", "group": "out_of_scope:what is the stock price of tesla", "kind": "plain+variant", "split": "val"}
+{"text": "who invented the telephone", "label": "out_of_scope", "group": "out_of_scope:who invented the telephone", "kind": "plain", "split": "test"}
+{"text": "who invetned the telephone", "label": "out_of_scope", "group": "out_of_scope:who invented the telephone", "kind": "plain+variant", "split": "test"}
+{"text": "how do I cook rice", "label": "out_of_scope", "group": "out_of_scope:how do i cook rice", "kind": "plain", "split": "test"}
+{"text": "how do i cook rice", "label": "out_of_scope", "group": "out_of_scope:how do i cook rice", "kind": "plain+variant", "split": "test"}
+{"text": "is it going to rain tomorrow", "label": "out_of_scope", "group": "out_of_scope:is it going to rain tomorrow", "kind": "plain", "split": "train"}
+{"text": "is it gonig to rain tomorrow", "label": "out_of_scope", "group": "out_of_scope:is it going to rain tomorrow", "kind": "plain+variant", "split": "train"}
+{"text": "what is the population of india", "label": "out_of_scope", "group": "out_of_scope:what is the population of india", "kind": "plain", "split": "train"}
+{"text": "what is the populatoin of india", "label": "out_of_scope", "group": "out_of_scope:what is the population of india", "kind": "plain+variant", "split": "train"}
+{"text": "fix this python error: IndexError: list index out of range", "label": "out_of_scope", "group": "out_of_scope:fix this python error indexerror list index out of range", "kind": "plain", "split": "test"}
+{"text": "fix this python error: indexerror: list index out of range", "label": "out_of_scope", "group": "out_of_scope:fix this python error indexerror list index out of range", "kind": "plain+variant", "split": "test"}
+{"text": "fix this python error: IndexError: list index out of ragne", "label": "out_of_scope", "group": "out_of_scope:fix this python error indexerror list index out of range", "kind": "plain+variant", "split": "test"}
+{"text": "write a haiku", "label": "out_of_scope", "group": "out_of_scope:write a haiku", "kind": "plain", "split": "train"}
+{"text": "write a hakiu", "label": "out_of_scope", "group": "out_of_scope:write a haiku", "kind": "plain+variant", "split": "train"}
+{"text": "what is blockchain", "label": "out_of_scope", "group": "out_of_scope:what is blockchain", "kind": "plain", "split": "train"}
+{"text": "what is bolckchain", "label": "out_of_scope", "group": "out_of_scope:what is blockchain", "kind": "plain+variant", "split": "train"}
+{"text": "how do I bake a cake", "label": "out_of_scope", "group": "out_of_scope:how do i bake a cake", "kind": "plain", "split": "train"}
+{"text": "how do i bake a cake", "label": "out_of_scope", "group": "out_of_scope:how do i bake a cake", "kind": "plain+variant", "split": "train"}
+{"text": "which football team is the best", "label": "out_of_scope", "group": "out_of_scope:which football team is the best", "kind": "plain", "split": "val"}
+{"text": "which fotoball team is the best", "label": "out_of_scope", "group": "out_of_scope:which football team is the best", "kind": "plain+variant", "split": "val"}
+{"text": "what's the weather today", "label": "out_of_scope", "group": "out_of_scope:what s the weather today", "kind": "plain", "split": "val"}
+{"text": "what's the weather toady", "label": "out_of_scope", "group": "out_of_scope:what s the weather today", "kind": "plain+variant", "split": "val"}
+{"text": "what is the best pizza topping", "label": "out_of_scope", "group": "out_of_scope:what is the best pizza topping", "kind": "plain", "split": "train"}
+{"text": "how do I write a resume", "label": "out_of_scope", "group": "out_of_scope:how do i write a resume", "kind": "plain", "split": "train"}
+{"text": "how do i write a resume", "label": "out_of_scope", "group": "out_of_scope:how do i write a resume", "kind": "plain+variant", "split": "train"}
+{"text": "how do I wrtie a resume", "label": "out_of_scope", "group": "out_of_scope:how do i write a resume", "kind": "plain+variant", "split": "train"}
+{"text": "summarize the plot of hamlet", "label": "out_of_scope", "group": "out_of_scope:summarize the plot of hamlet", "kind": "plain", "split": "train"}
+{"text": "smumarize the plot of hamlet", "label": "out_of_scope", "group": "out_of_scope:summarize the plot of hamlet", "kind": "plain+variant", "split": "train"}
+{"text": "what is the tallest mountain", "label": "out_of_scope", "group": "out_of_scope:what is the tallest mountain", "kind": "plain", "split": "test"}
+{"text": "what is the tallest muontain", "label": "out_of_scope", "group": "out_of_scope:what is the tallest mountain", "kind": "plain+variant", "split": "test"}
+{"text": "how do I meditate", "label": "out_of_scope", "group": "out_of_scope:how do i meditate", "kind": "plain", "split": "train"}
+{"text": "how do i meditate", "label": "out_of_scope", "group": "out_of_scope:how do i meditate", "kind": "plain+variant", "split": "train"}
+{"text": "how do I medittae", "label": "out_of_scope", "group": "out_of_scope:how do i meditate", "kind": "plain+variant", "split": "train"}
+{"text": "who won the ipl this year", "label": "out_of_scope", "group": "out_of_scope:who won the ipl this year", "kind": "plain", "split": "train"}
+{"text": "how do I start a youtube channel", "label": "out_of_scope", "group": "out_of_scope:how do i start a youtube channel", "kind": "plain", "split": "train"}
+{"text": "how do i start a youtube channel", "label": "out_of_scope", "group": "out_of_scope:how do i start a youtube channel", "kind": "plain+variant", "split": "train"}
+{"text": "how do I satrt a youtube channel", "label": "out_of_scope", "group": "out_of_scope:how do i start a youtube channel", "kind": "plain+variant", "split": "train"}
+{"text": "what is inflation", "label": "out_of_scope", "group": "out_of_scope:what is inflation", "kind": "plain", "split": "val"}
+{"text": "what is inflatoin", "label": "out_of_scope", "group": "out_of_scope:what is inflation", "kind": "plain+variant", "split": "val"}
+{"text": "write a python function to check for palindromes", "label": "out_of_scope", "group": "out_of_scope:write a python function to check for palindromes", "kind": "plain", "split": "train"}
+{"text": "write a pytohn function to check for palindromes", "label": "out_of_scope", "group": "out_of_scope:write a python function to check for palindromes", "kind": "plain+variant", "split": "train"}
+{"text": "how long does it take to fly to london", "label": "out_of_scope", "group": "out_of_scope:how long does it take to fly to london", "kind": "plain", "split": "train"}
+{"text": "how long does it take to fly to lodnon", "label": "out_of_scope", "group": "out_of_scope:how long does it take to fly to london", "kind": "plain+variant", "split": "train"}
+{"text": "what's the temperature in delhi", "label": "out_of_scope", "group": "out_of_scope:what s the temperature in delhi", "kind": "plain", "split": "train"}
+{"text": "what's the temperature in dlehi", "label": "out_of_scope", "group": "out_of_scope:what s the temperature in delhi", "kind": "plain+variant", "split": "train"}
+{"text": "explain the french revolution", "label": "out_of_scope", "group": "out_of_scope:explain the french revolution", "kind": "plain", "split": "train"}
+{"text": "expalin the french revolution", "label": "out_of_scope", "group": "out_of_scope:explain the french revolution", "kind": "plain+variant", "split": "train"}
+{"text": "how to tie a tie", "label": "out_of_scope", "group": "out_of_scope:how to tie a tie", "kind": "plain", "split": "val"}
+{"text": "best way to learn spanish", "label": "out_of_scope", "group": "out_of_scope:best way to learn spanish", "kind": "plain", "split": "val"}
+{"text": "best way to laern spanish", "label": "out_of_scope", "group": "out_of_scope:best way to learn spanish", "kind": "plain+variant", "split": "val"}
+{"text": "write a java class for a bank account", "label": "out_of_scope", "group": "out_of_scope:write a java class for a bank account", "kind": "plain", "split": "val"}
+{"text": "how do I use pandas to read a csv", "label": "out_of_scope", "group": "out_of_scope:how do i use pandas to read a csv", "kind": "plain", "split": "train"}
+{"text": "how do i use pandas to read a csv", "label": "out_of_scope", "group": "out_of_scope:how do i use pandas to read a csv", "kind": "plain+variant", "split": "train"}
+{"text": "how do I use pnadas to read a csv", "label": "out_of_scope", "group": "out_of_scope:how do i use pandas to read a csv", "kind": "plain+variant", "split": "train"}
+{"text": "what is the difference between a list and a tuple in python", "label": "out_of_scope", "group": "out_of_scope:what is the difference between a list and a tuple in python", "kind": "plain", "split": "val"}
+{"text": "what is the differnece between a list and a tuple in python", "label": "out_of_scope", "group": "out_of_scope:what is the difference between a list and a tuple in python", "kind": "plain+variant", "split": "val"}
+{"text": "who is the richest person in the world", "label": "out_of_scope", "group": "out_of_scope:who is the richest person in the world", "kind": "plain", "split": "val"}
+{"text": "who is the ricehst person in the world", "label": "out_of_scope", "group": "out_of_scope:who is the richest person in the world", "kind": "plain+variant", "split": "val"}
+{"text": "how do I plant tomatoes", "label": "out_of_scope", "group": "out_of_scope:how do i plant tomatoes", "kind": "plain", "split": "train"}
+{"text": "how do i plant tomatoes", "label": "out_of_scope", "group": "out_of_scope:how do i plant tomatoes", "kind": "plain+variant", "split": "train"}
+{"text": "how do I palnt tomatoes", "label": "out_of_scope", "group": "out_of_scope:how do i plant tomatoes", "kind": "plain+variant", "split": "train"}
+{"text": "recommend a podcast", "label": "out_of_scope", "group": "out_of_scope:recommend a podcast", "kind": "plain", "split": "train"}
+{"text": "recmomend a podcast", "label": "out_of_scope", "group": "out_of_scope:recommend a podcast", "kind": "plain+variant", "split": "train"}
+{"text": "what is a good birthday gift for my mom", "label": "out_of_scope", "group": "out_of_scope:what is a good birthday gift for my mom", "kind": "plain", "split": "train"}
+{"text": "what is a good birthady gift for my mom", "label": "out_of_scope", "group": "out_of_scope:what is a good birthday gift for my mom", "kind": "plain+variant", "split": "train"}
+{"text": "when is the next full moon", "label": "out_of_scope", "group": "out_of_scope:when is the next full moon", "kind": "plain", "split": "val"}
+{"text": "how does a car engine work", "label": "out_of_scope", "group": "out_of_scope:how does a car engine work", "kind": "plain", "split": "train"}
+{"text": "how does a car enigne work", "label": "out_of_scope", "group": "out_of_scope:how does a car engine work", "kind": "plain+variant", "split": "train"}
+{"text": "what causes headaches", "label": "out_of_scope", "group": "out_of_scope:what causes headaches", "kind": "plain", "split": "train"}
+{"text": "what causes hedaaches", "label": "out_of_scope", "group": "out_of_scope:what causes headaches", "kind": "plain+variant", "split": "train"}
+{"text": "how do I write a for loop in c++", "label": "out_of_scope", "group": "out_of_scope:how do i write a for loop in c", "kind": "plain", "split": "train"}
+{"text": "how do i write a for loop in c++", "label": "out_of_scope", "group": "out_of_scope:how do i write a for loop in c", "kind": "plain+variant", "split": "train"}
+{"text": "how do I wrtie a for loop in c++", "label": "out_of_scope", "group": "out_of_scope:how do i write a for loop in c", "kind": "plain+variant", "split": "train"}
+{"text": "who wrote pride and prejudice", "label": "out_of_scope", "group": "out_of_scope:who wrote pride and prejudice", "kind": "plain", "split": "train"}
+{"text": "who wrtoe pride and prejudice", "label": "out_of_scope", "group": "out_of_scope:who wrote pride and prejudice", "kind": "plain+variant", "split": "train"}
+{"text": "convert 100 fahrenheit to celsius", "label": "out_of_scope", "group": "out_of_scope:convert 100 fahrenheit to celsius", "kind": "plain", "split": "test"}
+{"text": "convert 100 fahernheit to celsius", "label": "out_of_scope", "group": "out_of_scope:convert 100 fahrenheit to celsius", "kind": "plain+variant", "split": "test"}
+{"text": "best restaurants in mumbai", "label": "out_of_scope", "group": "out_of_scope:best restaurants in mumbai", "kind": "plain", "split": "train"}
+{"text": "best restaruants in mumbai", "label": "out_of_scope", "group": "out_of_scope:best restaurants in mumbai", "kind": "plain+variant", "split": "train"}
+{"text": "how do I train for a marathon", "label": "out_of_scope", "group": "out_of_scope:how do i train for a marathon", "kind": "plain", "split": "val"}
+{"text": "how do i train for a marathon", "label": "out_of_scope", "group": "out_of_scope:how do i train for a marathon", "kind": "plain+variant", "split": "val"}
+{"text": "how do I tarin for a marathon", "label": "out_of_scope", "group": "out_of_scope:how do i train for a marathon", "kind": "plain+variant", "split": "val"}
