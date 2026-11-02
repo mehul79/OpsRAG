@@ -155,21 +155,22 @@ def generate(question, hits, weak):
             yield chunk.content
 
 
-@observe(name="ask")
+@observe(name="ask", capture_input=False, capture_output=False)  # input/output set by hand: small and readable on the dashboard
 def ask(question):
     """Yields ("sources", [...]), then ("token", str) pieces, then ("done", {"cached", "weak", "route"})."""
+    get_client().update_current_span(input=question)
     label, conf = route(question)  # chitchat / about_bot / out_of_scope get a fixed reply: no embedding, cache, LLM or search
     if label != "retrieve":
         yield "sources", []
         yield "token", reply(label)
-        get_client().update_current_span(metadata={"route": label, "cached": False, "weak": False})
+        get_client().update_current_span(output=reply(label), metadata={"route": label, "cached": False, "weak": False})
         yield "done", {"cached": False, "weak": False, "route": label, "route_confidence": round(conf, 3)}
         return  # never cached: returns before cache_put
     qvec = embed_query(question)
     if hit := cache_get(qvec):
         yield "sources", hit["sources"]
         yield "token", hit["answer"]
-        get_client().update_current_span(metadata={"route": "retrieve", "cached": True, "weak": False})
+        get_client().update_current_span(output=hit["answer"], metadata={"route": "retrieve", "cached": True, "weak": False})
         yield "done", {"cached": True, "weak": False, "route": "retrieve"}
         return
     queries = [question] if os.getenv("QUERY_TRANSFORM") == "off" else transform(question)
@@ -183,7 +184,7 @@ def ask(question):
         yield "token", token
     if not weak:  # never cache an answer we weren't confident in
         cache_put(qvec, question, answer, sources)
-    get_client().update_current_span(metadata={"route": "retrieve", "cached": False, "weak": weak, "top_score": sources[0]["score"]})
+    get_client().update_current_span(output=answer, metadata={"route": "retrieve", "cached": False, "weak": weak, "top_score": sources[0]["score"]})
     yield "done", {"cached": False, "weak": weak, "route": "retrieve", "top_score": sources[0]["score"]}
 
 

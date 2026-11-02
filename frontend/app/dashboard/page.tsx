@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 
 const API = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
-const WINDOWS = ["1h", "24h", "7d", "all"] as const;
+const WINDOWS = ["1h", "24h", "7d", "30d"] as const;
 
 type Metrics = {
   total: number;
@@ -15,6 +15,8 @@ type Metrics = {
   scores: { faithfulness: number | null; answer_relevancy: number | null; context_relevancy: number | null };
   judged: number;
   thumbs: { up: number; down: number };
+  tokens: { total: number; per_answer: number | null };
+  cost_usd: number | null;
   queue_open: number;
 };
 type Item = {
@@ -45,10 +47,11 @@ export default function Dashboard() {
   const [m, setM] = useState<Metrics | null>(null);
   const [queue, setQueue] = useState<Item[]>([]);
   const [error, setError] = useState("");
+  const [resolved, setResolved] = useState<Set<string>>(new Set()); // Langfuse ingests the resolve mark a few seconds late, so hide it locally meanwhile
 
   const load = useCallback(async () => {
     try {
-      const [a, b] = await Promise.all([fetch(`${API}/metrics?window=${win}`), fetch(`${API}/queue`)]);
+      const [a, b] = await Promise.all([fetch(`${API}/metrics?window=${win}`), fetch(`${API}/queue?window=${win}`)]);
       if (!a.ok || !b.ok) throw new Error(`Request failed (${a.status}/${b.status})`);
       setM(await a.json());
       setQueue(await b.json());
@@ -64,9 +67,11 @@ export default function Dashboard() {
     return () => clearInterval(t);
   }, [load]);
 
+  const shown = queue.filter((x) => !resolved.has(x.id));
+
   async function resolve(id: string) {
-    const r = await fetch(`${API}/resolve`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id }) });
-    if (r.ok) setQueue((q) => q.filter((x) => x.id !== id));
+    const r = await fetch(`${API}/resolve`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ trace_id: id }) });
+    if (r.ok) setResolved((s) => new Set(s).add(id));
     else setError("Couldn't resolve that item.");
   }
 
@@ -102,17 +107,19 @@ export default function Dashboard() {
             <Stat label="Answer relevancy" value={pct(m.scores.answer_relevancy)} />
             <Stat label="Context relevancy" value={pct(m.scores.context_relevancy)} />
             <Stat label="Feedback" value={`${m.thumbs.up} up · ${m.thumbs.down} down`} />
+            <Stat label="Tokens" value={m.tokens.total.toLocaleString()} hint={m.tokens.per_answer ? `${m.tokens.per_answer.toLocaleString()} per answer` : undefined} />
+            <Stat label="Cost" value={m.cost_usd === null ? "–" : `$${m.cost_usd.toFixed(4)}`} hint={m.cost_usd === null ? "Langfuse has no price for this model" : undefined} />
           </section>
-          <p className="mt-2 text-xs text-neutral-500">Cost and token usage per call are in Langfuse: open any trace below.</p>
+          <p className="mt-2 text-xs text-neutral-500">All numbers come from Langfuse and lag a few seconds behind. Open a trace for per-stage latency and calls.</p>
         </>
       )}
 
       <section aria-label="Bad-answer queue" className="mt-8">
-        <h2 className="text-sm font-semibold">Bad-answer queue {m ? `(${m.queue_open})` : ""}</h2>
+        <h2 className="text-sm font-semibold">Bad-answer queue {m ? `(${Math.max(0, m.queue_open - resolved.size)})` : ""}</h2>
         <p className="text-xs text-neutral-500">Thumbs-down, weak retrieval, or low judge scores. Open the trace to see which stage failed.</p>
-        {queue.length === 0 && m && <p className="mt-4 text-sm text-neutral-500">Nothing to review.</p>}
+        {shown.length === 0 && m && <p className="mt-4 text-sm text-neutral-500">Nothing to review.</p>}
         <ul className="mt-3 space-y-3">
-          {queue.map((q) => (
+          {shown.map((q) => (
             <li key={q.id} className="rounded-lg border border-black/10 p-4 text-sm dark:border-white/15">
               <div className="flex flex-wrap items-start justify-between gap-2">
                 <p className="font-medium">{q.question}</p>

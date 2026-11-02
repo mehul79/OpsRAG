@@ -14,7 +14,7 @@ type Source = {
   score: number;
   text: string;
 };
-type Done = { cached: boolean; weak: boolean; route?: string; route_confidence?: number; id?: string; trace_id?: string };
+type Done = { cached: boolean; weak: boolean; route?: string; route_confidence?: number; trace_id?: string };
 const ROUTE_LABEL: Record<string, string> = { chitchat: "small talk", about_bot: "about this assistant", out_of_scope: "outside the docs" };
 
 // Reranker logits run roughly -11..+11 (local); Cohere scores are already 0..1.
@@ -71,10 +71,10 @@ export default function Home() {
   }
 
   async function sendFeedback(good: boolean) {
-    if (!done?.id || vote) return;
+    if (!done?.trace_id || vote) return;
     setVote(good ? "up" : "down");
     try {
-      const r = await fetch(`${API}/feedback`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: done.id, good }) });
+      const r = await fetch(`${API}/feedback`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ trace_id: done.trace_id, good }) });
       if (!r.ok) throw new Error();
     } catch {
       setVote(null);
@@ -138,7 +138,7 @@ export default function Home() {
                 >{withCites}</ReactMarkdown>
               </div>
               {done?.cached && <p className="mt-4 text-xs text-neutral-500">Answered from the semantic cache.</p>}
-              {done?.id && !busy && (
+              {done?.trace_id && !busy && (
                 <div className="mt-4 flex items-center gap-2 text-xs text-neutral-500">
                   {vote ? <span role="status">Thanks, {vote === "down" ? "this answer was added to the review queue." : "noted."}</span> : (
                     <>

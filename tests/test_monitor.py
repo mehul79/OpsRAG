@@ -6,58 +6,120 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "backend"))
 import monitor
 
-
-@pytest.fixture(autouse=True)
-def db(tmp_path, monkeypatch):
-    monkeypatch.setattr(monitor, "DB", tmp_path / "t.db")
-    monkeypatch.setattr(monitor, "_langfuse_score", lambda *a, **k: None)
+T = lambda n: f"{n:032x}"  # trace ids
+NOW = time.time()
+ts = lambda off=0: monitor.iso(NOW + off)
 
 
-def add(question="q", route="retrieve", cached=False, weak=False, ms=1000, trace="t" * 32):
-    return monitor.log_query(question, "a", route, cached, weak, ms, 3.0, trace)
+class FakeLangfuse:
+    """Stands in for Langfuse's v2 observations and v3 scores endpoints."""
+    def __init__(self):
+        self.asks, self.gens, self.scores = [], [], []
+
+    def ask(self, n, q="q", route="retrieve", cached=False, weak=False, ms=1000, top=3.0, off=-60):
+        self.asks.append({"traceId": T(n), "startTime": ts(off), "input": q, "output": f"answer {n}", "latency": ms / 1000,
+                          "metadata": {"route": route, "cached": cached, "weak": weak, "top_score": top}})
+
+    def score(self, n, name, value, off=0, comment=None):
+        self.scores.append({"name": name, "value": value, "dataType": "NUMERIC", "timestamp": ts(off), "comment": comment,
+                            "subject": {"kind": "trace", "id": T(n)}})
+
+    def __call__(self, path, **params):
+        if path.endswith("/observations"):
+            data = self.asks if params.get("name") == "ask" else self.gens
+        else:
+            data = self.scores
+        return {"data": data, "meta": {}}
 
 
-def test_queue_rules_and_reasons():
-    ok, weak, bad_faith, bad_rel, down = add("ok"), add("weak", weak=True), add("faith"), add("rel"), add("down")
-    monitor.set_scores(ok, faithfulness=0.9, answer_relevancy=1.0)
-    monitor.set_scores(bad_faith, faithfulness=0.4, answer_relevancy=1.0)
-    monitor.set_scores(bad_rel, faithfulness=1.0, answer_relevancy=0.0)
-    monitor.feedback(down, good=False, comment="wrong flag")
-    queued = {r["question"]: r["reasons"] for r in monitor.queue()}
-    assert set(queued) == {"weak", "faith", "rel", "down"}  # the good answer is not queued
-    assert queued["weak"] == ["weak retrieval"] and "thumbs down" in queued["down"]
-    assert "low faithfulness (0.40)" in queued["faith"]
+@pytest.fixture
+def lf(monkeypatch):
+    fake = FakeLangfuse()
+    monkeypatch.setattr(monitor, "lf", fake)
+    monitor._cache.clear()
+    return fake
 
 
-def test_unjudged_answer_is_not_queued_and_resolve_removes():
-    add("plain")
-    assert monitor.queue() == []  # NULL scores must not count as failures
-    w = add("weak", weak=True)
-    monitor.resolve(w)
-    assert monitor.queue() == []
-    monitor.feedback(w, good=False)  # a new thumbs-down reopens it
-    assert len(monitor.queue()) == 1
+SINCE = NOW - 3600
 
 
-def test_feedback_unknown_id_and_thumbs_up():
-    assert monitor.feedback("0" * 32, True) is False
-    i = add("fine")
-    assert monitor.feedback(i, True) is True
-    assert monitor.queue() == [] and monitor.stats()["thumbs"] == {"up": 1, "down": 0}
+def test_queue_rules_and_reasons(lf):
+    for n, q, w in [(1, "ok", False), (2, "weak", True), (3, "faith", False), (4, "rel", False), (5, "down", False), (6, "unjudged", False)]:
+        lf.ask(n, q, weak=w)
+    lf.score(1, "faithfulness", 0.9); lf.score(1, "answer_relevancy", 1.0)
+    lf.score(3, "faithfulness", 0.4); lf.score(3, "answer_relevancy", 1.0)
+    lf.score(4, "faithfulness", 1.0); lf.score(4, "answer_relevancy", 0.0)
+    lf.score(5, "user_feedback", 0, comment="wrong flag")
+    queued = {r["question"]: r["reasons"] for r in monitor.queue(SINCE)}
+    assert set(queued) == {"weak", "faith", "rel", "down"}  # good and not-yet-judged answers are not queued
+    assert queued["weak"] == ["weak retrieval"] and queued["down"] == ["thumbs down"]
+    assert queued["faith"] == ["low faithfulness (0.40)"]
+    assert next(r for r in monitor.fetch(SINCE) if r["question"] == "down")["comment"] == "wrong flag"
 
 
-def test_stats_aggregation():
-    for ms in (100, 200, 300, 400):
-        add(ms=ms)
-    add(cached=True, ms=5)
-    add(weak=True, ms=500)
-    add(route="chitchat", ms=2)
-    s = monitor.stats()
+def test_resolve_and_reopen(lf):
+    lf.ask(1, weak=True)
+    lf.score(1, "resolved", 1, off=-10)
+    assert monitor.queue(SINCE) == []
+    lf.score(1, "user_feedback", 0, off=-5)  # a thumbs-down newer than the resolve reopens it
+    monitor._cache.clear()
+    assert len(monitor.queue(SINCE)) == 1
+
+
+def test_latest_score_per_name_wins(lf):
+    lf.ask(1)
+    lf.score(1, "faithfulness", 0.2, off=-30)
+    lf.score(1, "faithfulness", 0.9, off=-10)
+    assert monitor.fetch(SINCE)[0]["faithfulness"] == 0.9
+
+
+def test_stats_aggregation(lf):
+    for i, ms in enumerate((100, 200, 300, 400), 1):
+        lf.ask(i, ms=ms)
+    lf.ask(5, cached=True, ms=5)
+    lf.ask(6, weak=True, ms=500)
+    lf.ask(7, route="chitchat", ms=2)
+    lf.gens += [{"traceId": T(1), "totalUsage": 1000, "totalCost": 0.001}, {"traceId": T(1), "totalUsage": 500, "totalCost": None},
+                {"traceId": T(2), "totalUsage": 500, "totalCost": 0.002}]
+    lf.score(5, "user_feedback", 1)
+    s = monitor.stats(SINCE)
     assert s["total"] == 7 and s["routes"] == {"retrieve": 6, "chitchat": 1}
     assert s["cache_hit_rate"] == round(1 / 6, 3) and s["weak_rate"] == round(1 / 6, 3)
-    assert s["latency_ms"]["p50"] == 300 and s["latency_ms"]["p95"] == 500  # fresh retrievals only; cached and routed excluded
+    assert s["latency_ms"]["p50"] == 300 and s["latency_ms"]["p95"] == 500  # fresh retrievals only
     assert s["latency_ms"]["cached_p50"] == 5
-    assert monitor.stats(since=time.time() + 10)["total"] == 0
+    assert s["tokens"] == {"total": 2000, "per_answer": 1000} and s["cost_usd"] == 0.003
+    assert s["thumbs"] == {"up": 1, "down": 0}
+
+
+def test_stats_without_cost_or_data(lf):
+    assert monitor.stats(SINCE)["total"] == 0
+    lf.ask(1)
+    monitor._cache.clear()
+    assert monitor.stats(SINCE)["cost_usd"] is None  # unpriced model: show nothing, not $0
+
+
+def test_legacy_span_format_is_unwrapped():
+    raw_in = '{"args": ["why?"], "kwargs": {}}'
+    raw_out = json.dumps([["sources", []], ["token", "Hello "], ["token", "there"], ["done", {}]])
+    assert monitor.plain(raw_in, raw_out) == ("why?", "Hello there")
+    assert monitor.plain("plain q", "plain a") == ("plain q", "plain a")
+    assert monitor.plain('{"args": ', "[[") == ('{"args": ', "[[")  # malformed: left alone, never raises
+
+
+def test_paged_follows_cursor(monkeypatch):
+    pages = {None: {"data": [1] * monitor.PAGE, "meta": {"cursor": "c1"}}, "c1": {"data": [2], "meta": {}}}
+    monkeypatch.setattr(monitor, "lf", lambda path, **p: pages[p.get("cursor")])
+    assert monitor.paged("/x") == [1] * monitor.PAGE + [2]
+
+
+def test_feedback_and_resolve_write_scores(monkeypatch):
+    calls = []
+    monkeypatch.setattr(monitor, "score", lambda *a, **k: calls.append((a, k)))
+    monitor.feedback(T(1), False, "bad")
+    monitor.feedback(T(2), True)
+    monitor.resolve(T(3))
+    assert calls[0][0] == (T(1), "user_feedback", 0, "bad") and calls[1][0] == (T(2), "user_feedback", 1, None)
+    assert calls[2][0] == (T(3), "resolved", 1)
 
 
 class FakeLLM:
@@ -76,25 +138,28 @@ def test_judge_scores_and_tolerates_wrapped_json():
     assert r == {"context_relevancy": 0.5, "faithfulness": 0.5, "answer_relevancy": 0.5}
 
 
-def test_judge_async_failure_is_swallowed_and_success_is_stored():
-    i = add()
+def test_judge_async_failure_is_swallowed_and_success_is_scored(monkeypatch):
+    written = []
+    monkeypatch.setattr(monitor, "score", lambda t, n, v, c=None: written.append((t, n, v)))
     def boom():
         raise RuntimeError("judge down")
-    monitor.judge_async(i, "q", [], "a", boom)
+    monitor.judge_async(T(1), "q", [], "a", boom)
     llm = FakeLLM(['{"relevant": [1]}', '{"claims": [{"claim": "a", "supported": true}]}', '{"score": 1}'])
-    monitor.judge_async(i, "q", [{"text": "x"}], "a", lambda: llm)
+    monitor.judge_async(T(2), "q", [{"text": "x"}], "a", lambda: llm)
     for _ in range(50):
-        if monitor.stats()["judged"]:
+        if len(written) == 3:
             break
         time.sleep(0.1)
-    assert monitor.stats()["scores"]["faithfulness"] == 1.0
+    assert sorted(written) == [(T(2), "answer_relevancy", 1.0), (T(2), "context_relevancy", 1.0), (T(2), "faithfulness", 1.0)]
 
 
-def test_api_endpoints(monkeypatch):
+def test_api_endpoints(monkeypatch, lf):
     from fastapi.testclient import TestClient
     import app as appmod
     monkeypatch.setattr(appmod, "online_eval_on", lambda: False)
     monkeypatch.setattr(appmod, "trace_url", lambda t: f"https://lf/{t}")
+    sent = []
+    monkeypatch.setattr(monitor, "score", lambda *a, **k: sent.append(a))
 
     def fake_ask(q, **kw):
         yield "sources", [{"text": "x", "score": 4.2}]
@@ -105,13 +170,25 @@ def test_api_endpoints(monkeypatch):
     c = TestClient(appmod.app)
     body = c.post("/ask", json={"question": "why?"}).text
     done = json.loads(body.split("event: done\ndata: ")[1].split("\n")[0])
-    assert done["weak"] and len(done["id"]) == 32 and len(done["trace_id"]) == 32
+    assert done["weak"] and len(done["trace_id"]) == 32 and "id" not in done
+    lf.ask(9, "weak one", weak=True)
     q = c.get("/queue").json()
-    assert q[0]["answer"] == "hello world" and q[0]["reasons"] == ["weak retrieval"] and q[0]["trace_url"].startswith("https://lf/")
-    assert c.post("/feedback", json={"id": "nothex", "good": False}).status_code == 422  # id is validated
-    assert c.post("/feedback", json={"id": "0" * 32, "good": False}).status_code == 404
-    assert c.post("/feedback", json={"id": done["id"], "good": True}).json() == {"ok": True}
+    assert q[0]["id"] == T(9) and q[0]["reasons"] == ["weak retrieval"] and q[0]["trace_url"] == f"https://lf/{T(9)}"
+    assert c.post("/feedback", json={"trace_id": "nothex", "good": False}).status_code == 422  # id is validated
+    assert c.post("/feedback", json={"trace_id": T(9), "good": False, "comment": "x"}).json() == {"ok": True}
+    assert c.post("/resolve", json={"trace_id": T(9)}).json() == {"ok": True}
+    assert sent == [(T(9), "user_feedback", 0, "x"), (T(9), "resolved", 1)]
     assert c.get("/metrics?window=nope").status_code == 422
     assert c.get("/metrics?window=1h").json()["total"] == 1
-    assert c.post("/resolve", json={"id": done["id"]}).json() == {"ok": True}
-    assert c.get("/queue").json() == []
+
+
+def test_langfuse_outage_is_a_502_not_a_crash(monkeypatch):
+    import httpx
+    from fastapi.testclient import TestClient
+    import app as appmod
+    def down(*a, **k):
+        raise httpx.ConnectError("no network")
+    monkeypatch.setattr(monitor, "lf", down)
+    monitor._cache.clear()
+    c = TestClient(appmod.app)
+    assert c.get("/metrics").status_code == 502 and c.get("/queue").status_code == 502
