@@ -126,7 +126,7 @@ Built and tested: ingestion, the pipeline stages above, the prompt router (on by
 
 Known gaps:
 - **No web-search fallback.** Weak retrieval is flagged and the answer says the docs may not cover it.
-- **Queue thresholds** (faithfulness < 0.7, answer relevancy < 0.5) are uncalibrated, and the LLM judge is noisy on "the docs don't cover this" answers. Cost per call is only in Langfuse, not on the dashboard.
+- **Queue thresholds** (faithfulness < 0.7, answer relevancy < 0.5) are uncalibrated, and the LLM judge is noisy on "the docs don't cover this" answers. The dashboard reads everything from Langfuse, so it lags a few seconds and shows cost only if Langfuse has a price for the model (otherwise tokens only).
 - **Latency** is about 10 s for an uncached answer on a 4-core laptop, most of it the two LLM calls and CPU reranking. Cached answers return in well under a second.
 - **Retrieval misses** are known: for example the Docker volumes reference page ranks 11th before reranking and the reranker drops it.
 - **Cache threshold** (0.95 cosine) is calibrated for zero wrong hits (`evals/cache_calibrate.py`) but only 57% of paraphrases hit; bge-small separates near-duplicate questions poorly.

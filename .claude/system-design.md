@@ -24,7 +24,7 @@ flowchart TB
     index -.-> retrieval
     response -. write .-> cache
 
-    subgraph obs["Observability (Langfuse + SQLite)"]
+    subgraph obs["Observability (Langfuse)"]
         direction TB
         traces["Traces<br/>span per stage"]
         metrics["Metrics<br/>latency, cost, hits"]

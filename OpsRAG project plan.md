@@ -80,4 +80,4 @@ These are the tools shown in the system design diagram.
 | Semantic cache | Second Qdrant collection (`opsrag_cache`) |
 | Fusion | Reciprocal rank fusion |
 | Reranker | Cross-encoder |
-| Observability | Langfuse Cloud (traces, scores) plus a local SQLite store for the dashboard |
+| Observability | Langfuse Cloud (traces, scores, and the dashboard's data) |
