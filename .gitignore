@@ -1,0 +1,12 @@
+data/
+.venv/
+logs/
+embeddings/
+colab/
+*.zip
+.env
+models/
+__pycache__/
+.pytest_cache/
+evals/results/
+.claude/settings.local.json
