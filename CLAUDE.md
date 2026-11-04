@@ -2,7 +2,7 @@
 
 A RAG copilot that answers questions about infrastructure docs and traces every answer, so a weak answer can be tied to the stage that caused it. It is a portfolio project: the focus is retrieval quality and observability, not document parsing.
 
-Built: data scripts, ingestion, the online pipeline (`backend/pipeline.py`), a FastAPI streaming endpoint (`backend/app.py`), a retrieval eval (`evals/`), the prompt router (`backend/router.py`), the observability layer (`backend/monitor.py`: online evals, feedback, bad-answer queue, metrics) and the Next.js frontend with a `/dashboard` page (`frontend/`). Dropped from the plan: CRAG web search and the CI eval gate. Full plan: `OpsRAG project plan.md`. Architecture diagram: `.claude/system-design.md`.
+Built: data scripts, ingestion, the online pipeline (`backend/pipeline.py`), a FastAPI streaming endpoint (`backend/app.py`), a retrieval eval (`evals/`), the prompt router (`backend/router.py`), the observability layer (`backend/monitor.py`: online evals, feedback, bad-answer queue, metrics) and the Next.js frontend with a `/dashboard` page (`frontend/`). Dropped from the plan: CRAG web search and the CI eval gate. Diagrams: `docs/system-design.png`, `docs/observability.png`; benchmark write-up: `docs/BENCHMARK.md`.
 
 ## Scope
 
