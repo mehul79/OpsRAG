@@ -2,7 +2,7 @@
 
 A RAG copilot for Kubernetes, Docker, Terraform and AWS docs. Every answer is traced, so a bad one can be pinned to the stage that broke.
 
-[![OpsRAG demo video (20 s): click to play](docs/demo.jpg)](docs/demo.mp4)
+https://github.com/user-attachments/assets/62ec7d00-2d04-4624-be4c-af5e0aa0baa3
 
 **Problem.** When a RAG answer is wrong, you usually can't tell why. Retrieval may have missed, the reranker may have dropped the right chunk, or the LLM may have made it up. Infra questions make it harder, because they mix exact names like `aws_iam_role_policy_attachment` with vague ones like "my pod keeps restarting".
 
