@@ -20,9 +20,9 @@ Kubernetes, Terraform, Docker and AWS docs. All public markdown, so no PDF or im
 | Docker | `docker/docs`, `content/` (sparse clone) | `data/docker` |
 | Terraform core | `hashicorp/web-unified-docs`, `content/terraform/v1.17.x` (latest only) | `data/terraform/core` |
 | Terraform AWS provider | `hashicorp/terraform-provider-aws`, `website/docs` (`.markdown`) | `data/terraform/aws` |
-| AWS services | `docs.aws.amazon.com` `.md` pages via each guide's `llms.txt` (EC2, ECS, EKS, IAM, CloudFront, RDS trimmed to operational sections, ELB) | `data/aws/<service>` |
+| AWS services | `docs.aws.amazon.com` `.md` pages via each guide's `llms.txt` (EC2, ECS, EKS, IAM, CloudFront, RDS trimmed to operational sections, ELB, Billing, Support; `aws-support-plans.md` was fetched by hand because the Support `llms.txt` omits it) | `data/aws/<service>` |
 
-Cleanup status: done. All sources are pruned (no `auto_generated` pages, Hugo fragments, partials or repo-root junk; `tf-aws` keeps only core-service `r/` pages) and ingested: 48,598 chunks in `embeddings/chunks.jsonl` across k8s, docker, terraform-core, terraform-aws and the seven AWS services. `data/aws` files start with a `<!-- source: URL -->` line, usable as the citation.
+Cleanup status: done. All sources are pruned (no `auto_generated` pages, Hugo fragments, partials or repo-root junk; `tf-aws` keeps only core-service `r/` pages) and ingested: 51,082 points in Qdrant Cloud (48,572 original + 2,510 from Billing and Support) across k8s, docker, terraform-core, terraform-aws and the nine AWS guides. `data/aws` files start with a `<!-- source: URL -->` line, usable as the citation.
 
 Heads up when ingesting: strip front matter and Hugo `{{< >}}` shortcodes, don't split on `#` inside code fences, and tag each chunk with its source (and `doc_type` for Terraform core vs AWS resources).
 
@@ -61,9 +61,9 @@ How it is built (Langfuse only, no local store): `app.py` mints a Langfuse trace
 
 ## Running things
 
-- `docker compose up -d qdrant` starts Qdrant (6333).
-- `python scripts/download_aws.py [service ...]` downloads the AWS docs into `data/aws`. Re-runs skip existing files.
-- Ingestion is two steps. `python backend/embed.py [source ...]` chunks and embeds with bge-small (slow on CPU, about 2 chunks/s on the dev laptop; run `notebooks/embed_colab.ipynb` on a Colab GPU instead, bundle in `colab/`). It writes `embeddings/chunks.jsonl` + `vectors.npy`. Then `python backend/load.py` adds BM25 vectors and loads Qdrant in seconds. `backend/chunking.py` is the shared stdlib-only chunker (`python backend/chunking.py` self-checks it). Sources: `k8s`, `docker`, `terraform-core`, `terraform-aws`, `aws-<service>`.
+- `docker compose up -d qdrant` starts Qdrant (6333) for local dev. The live index is on Qdrant Cloud (`QDRANT_URL` + `QDRANT_API_KEY`); free clusters suspend after a week idle and are deleted after four.
+- `python util_scripts/download_aws.py [service ...]` downloads the AWS docs into `data/aws`. Re-runs skip existing files. `util_scripts/clean_corpus.py` is the one-off pruning that built `data/`.
+- Ingestion is two steps. `python backend/embed.py [source ...]` chunks and embeds with bge-small (slow on CPU, about 2 chunks/s; on a Colab T4 about 135 chunks/s: zip `backend/chunking.py`, `backend/embed.py` and the `data/` folders you need, run embed.py there). It overwrites `embeddings/chunks.jsonl` + `vectors.npy`, so embed new sources into a separate folder. Then `python backend/load.py [dir]` adds BM25 vectors and upserts into Qdrant (idempotent, content-hash ids). The local `embeddings/` was deleted after the cloud load; rebuilding means re-embedding from `data/` (~7 min on a T4 for all 51k chunks). `backend/chunking.py` is the shared stdlib-only chunker (`python backend/chunking.py` self-checks it). Sources: `k8s`, `docker`, `terraform-core`, `terraform-aws`, `aws-<service>`.
 - Dependencies are managed with `uv` (Python 3.14, `pyproject.toml` + `uv.lock`): `uv sync`, `uv add <pkg>`, `uv run ...`.
 - Secrets go in `.env` (gitignored); copy `.env.example`. Optional switches: `QUERY_TRANSFORM=off` skips the LLM rewrite (saves ~2s), `LLM_REASONING=on` re-enables the model's hidden reasoning (off by default on OpenRouter: it cost ~10s per call), `RERANKER=cohere`, `ROUTER=on|off` (default on; see Prompt router), `ONLINE_EVAL=on|off` (default on), `ONLINE_EVAL_RATE`.
 - Frontend: `cd frontend && npm run dev -- --port 3001` (port 3000 is taken on the dev machine; the API allows any `localhost` origin). Set `NEXT_PUBLIC_API_URL` if the API isn't on `localhost:8000`.

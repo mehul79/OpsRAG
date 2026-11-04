@@ -20,6 +20,8 @@ GUIDES = {
     "iam": ["IAM/latest/UserGuide"],
     "cloudfront": ["AmazonCloudFront/latest/DeveloperGuide"],
     "rds": ["AmazonRDS/latest/UserGuide"],
+    "billing": ["awsaccountbilling/latest/aboutv2"],
+    "support": ["awssupport/latest/user"],
     "elb": ["elasticloadbalancing/latest/application", "elasticloadbalancing/latest/network",
             "elasticloadbalancing/latest/gateway", "elasticloadbalancing/latest/classic"],
 }
