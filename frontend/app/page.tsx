@@ -21,29 +21,27 @@ const FAILURES = [
   {
     tag: "Retrieval missed",
     title: "The right page never came back",
-    body: (
-      <>BM25 and dense search run side by side and are fused with RRF, so exact names like <code>aws_iam_role_policy_attachment</code> and vague questions both land.</>
-    ),
+    body: <>BM25 and dense search, fused with RRF, catch exact names like <code>aws_iam_role_policy_attachment</code> and vague questions alike.</>,
     stat: ["recall@20", "1.000"],
   },
   {
     tag: "Ranking buried it",
-    title: "It came back, then fell out of the top five",
-    body: <>A cross encoder rescores 20 candidates down to 5, and the top score is written onto the trace for every answer.</>,
+    title: "It fell out of the top five",
+    body: <>A cross encoder keeps the best 5 of 20, and logs the top score.</>,
     stat: ["recall@5", "0.971"],
   },
   {
     tag: "The model guessed",
-    title: "The docs had no answer, so it made one up",
-    body: <>When every reranker score is below 0.0 the answer is flagged weak, says the docs may not cover it, and is never cached.</>,
+    title: "The docs had no answer",
+    body: <>Low reranker scores flag the answer as weak. It says so and is never cached.</>,
     stat: ["weak flag accuracy", "1.000"],
   },
 ];
 
 const STEPS = [
-  ["Ask", "A router answers small talk without a search, and the semantic cache returns repeat questions. Everything else goes through hybrid search, a reranker and a grounded answer with numbered citations."],
-  ["Trace", "Each stage is a span on one Langfuse trace. A judge model adds faithfulness and relevancy scores after the answer streams, and your Yes or No adds feedback."],
-  ["Fix", "Weak, low scoring and thumbs down answers land in the bad answer queue on the dashboard. Each item opens the trace that shows which stage failed."],
+  ["Ask", "Small talk skips search and repeats hit the cache. The rest get hybrid search, a reranker and a cited answer."],
+  ["Trace", "Every stage is a Langfuse span. A judge scores the answer and your Yes or No adds feedback."],
+  ["Fix", "Bad answers land in the dashboard queue, each linked to the trace that shows the failing stage."],
 ];
 
 const EVALS = [
