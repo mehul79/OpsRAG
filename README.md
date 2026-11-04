@@ -1,6 +1,6 @@
 # OpsRAG
 
-A RAG copilot for Kubernetes, Docker, Terraform and AWS docs. Every answer is traced, so a bad one can be pinned to the stage that broke.
+A RAG copilot for Kubernetes, Docker, Terraform and AWS docs (51,082 chunks in the index). Every answer is traced, so a bad one can be pinned to the stage that broke.
 
 https://github.com/user-attachments/assets/62ec7d00-2d04-4624-be4c-af5e0aa0baa3
 
