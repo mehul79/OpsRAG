@@ -1,8 +1,16 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Follow the OS colour scheme: no toggle, no .dark class. */
+@custom-variant dark (@media (prefers-color-scheme: dark));
+/* Hover only on devices that really hover (touch fires :hover on tap). */
+@custom-variant hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @slot;
+    }
+  }
 }
 
 @theme inline {
@@ -10,17 +18,203 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-geist-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-signal: var(--signal);
+  --color-warn: var(--warn);
+  --color-warn-foreground: var(--warn-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.5);
+  --radius-2xl: calc(var(--radius) * 2);
+  --radius-3xl: calc(var(--radius) * 2.5);
+  --radius-4xl: calc(var(--radius) * 3);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+:root {
+  --radius: 0.5rem;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --background: #fbfbfa;
+  --foreground: #1f2023;
+  --card: #ffffff;
+  --card-foreground: #1f2023;
+  --popover: #ffffff;
+  --popover-foreground: #1f2023;
+  --primary: #1f2023;
+  --primary-foreground: #fbfbfa;
+  --secondary: #f2f1ee;
+  --secondary-foreground: #1f2023;
+  --muted: #f2f1ee;
+  /* #73726E is 4.7:1 on the page but 4.3:1 on muted; this darker value clears AA on both */
+  --muted-foreground: #6b6a66;
+  --accent: #f2f1ee;
+  --accent-foreground: #1f2023;
+  --destructive: #9f2f2d;
+  --destructive-foreground: #fdebec;
+  --border: rgba(0, 0, 0, 0.07);
+  --input: rgba(0, 0, 0, 0.12);
+  --ring: #2f5bd3;
+  --signal: #2f5bd3;
+  --warn: #fbf3db;
+  --warn-foreground: #956400;
+  --success: #edf3ec;
+  --success-foreground: #346538;
+  --sidebar: #fbfbfa;
+  --sidebar-foreground: #1f2023;
+  --sidebar-primary: #1f2023;
+  --sidebar-primary-foreground: #fbfbfa;
+  --sidebar-accent: #f2f1ee;
+  --sidebar-accent-foreground: #1f2023;
+  --sidebar-border: rgba(0, 0, 0, 0.07);
+  --sidebar-ring: #2f5bd3;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #111110;
+    --foreground: #ededec;
+    --card: #191918;
+    --card-foreground: #ededec;
+    --popover: #191918;
+    --popover-foreground: #ededec;
+    --primary: #ededec;
+    --primary-foreground: #111110;
+    --secondary: #222221;
+    --secondary-foreground: #ededec;
+    --muted: #222221;
+    --muted-foreground: #8f8f8b;
+    --accent: #222221;
+    --accent-foreground: #ededec;
+    --destructive: #f08a87;
+    --destructive-foreground: #2a1515;
+    --border: rgba(255, 255, 255, 0.08);
+    --input: rgba(255, 255, 255, 0.14);
+    --ring: #7c9bf0;
+    --signal: #7c9bf0;
+    --warn: #2a2410;
+    --warn-foreground: #e0b34a;
+    --success: #1b2a1c;
+    --success-foreground: #8fc793;
+    --sidebar: #111110;
+    --sidebar-foreground: #ededec;
+    --sidebar-primary: #ededec;
+    --sidebar-primary-foreground: #111110;
+    --sidebar-accent: #222221;
+    --sidebar-accent-foreground: #ededec;
+    --sidebar-border: rgba(255, 255, 255, 0.08);
+    --sidebar-ring: #7c9bf0;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans text-[13px];
+  }
+  html {
+    @apply font-sans;
+  }
+  :focus-visible {
+    outline: 2px solid var(--signal);
+    outline-offset: 2px;
+  }
+  /* slim, quiet scrollbars that follow the theme (standard properties: Chrome ignores ::-webkit-scrollbar once these are set, e.g. by Tailwind's scrollbar-thin) */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, var(--foreground) 18%, transparent) transparent;
+  }
+  /* press feedback on anything clickable */
+  button:not(:disabled),
+  [role="button"],
+  [role="tab"] {
+    transition-property: transform, background-color, color, border-color, opacity;
+    transition-duration: 120ms, 150ms, 150ms, 150ms, 150ms;
+    transition-timing-function: var(--ease-out);
+  }
+  button:not(:disabled):active,
+  [role="button"]:active {
+    transform: scale(0.97);
+  }
+}
+
+/* Waterfall bars wipe in left to right, staggered by --i. */
+.reveal-bar {
+  clip-path: inset(0);
+  transition: clip-path 320ms var(--ease-out) calc(var(--i, 0) * 30ms);
+  @starting-style {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+
+/* Small enters: 200ms fade and 4px rise. */
+.enter {
+  opacity: 1;
+  transform: none;
+  transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out);
+  @starting-style {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}
+
+/* Done check pops from .9 to 1. */
+.pop {
+  transform: scale(1);
+  transition: transform 160ms var(--ease-out), opacity 160ms var(--ease-out);
+  @starting-style {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+/* Text shimmer, only on the stage that is running right now. */
+.shimmer {
+  color: transparent;
+  background: linear-gradient(90deg, var(--signal) 35%, color-mix(in oklab, var(--signal) 35%, transparent) 50%, var(--signal) 65%) 100% 0 / 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 1.2s linear infinite;
+}
+@keyframes shimmer {
+  to {
+    background-position: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-bar { clip-path: inset(0); transition: none; @starting-style { clip-path: inset(0); } }
+  .enter, .pop { transition: opacity 200ms linear; @starting-style { opacity: 0; transform: none; } }
+  .shimmer { animation: none; color: var(--signal); background: none; }
+  button:not(:disabled):active, [role="button"]:active { transform: none; }
+  *, ::before, ::after { scroll-behavior: auto !important; }
 }
