@@ -2,8 +2,9 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-/* Follow the OS colour scheme: no toggle, no .dark class. */
-@custom-variant dark (@media (prefers-color-scheme: dark));
+/* Theme lives on <html data-theme="light|dark">, set before paint by the script in app/layout.tsx
+   (stored choice, or the OS scheme when the choice is "system"). */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 /* Hover only on devices that really hover (touch fires :hover on tap). */
 @custom-variant hover {
   @media (hover: hover) and (pointer: fine) {
@@ -60,78 +61,78 @@
 }
 
 :root {
+  /* warm monochrome, one orange signal: the landing page's scheme */
   --radius: 0.5rem;
-  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
-  --background: #fbfbfa;
-  --foreground: #1f2023;
-  --card: #ffffff;
-  --card-foreground: #1f2023;
-  --popover: #ffffff;
-  --popover-foreground: #1f2023;
-  --primary: #1f2023;
-  --primary-foreground: #fbfbfa;
-  --secondary: #f2f1ee;
-  --secondary-foreground: #1f2023;
-  --muted: #f2f1ee;
-  /* #73726E is 4.7:1 on the page but 4.3:1 on muted; this darker value clears AA on both */
-  --muted-foreground: #6b6a66;
-  --accent: #f2f1ee;
-  --accent-foreground: #1f2023;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --background: #f7f6f3;
+  --foreground: #111111;
+  --card: #fbfbfa;
+  --card-foreground: #111111;
+  --popover: #fbfbfa;
+  --popover-foreground: #111111;
+  --primary: #111111;
+  --primary-foreground: #ffffff;
+  --secondary: #efeeea;
+  --secondary-foreground: #111111;
+  --muted: #efeeea;
+  /* 4.9:1 on the page and 4.5:1 on muted */
+  --muted-foreground: #64635f;
+  --accent: #efeeea;
+  --accent-foreground: #111111;
   --destructive: #9f2f2d;
   --destructive-foreground: #fdebec;
-  --border: rgba(0, 0, 0, 0.07);
+  --border: #eaeaea;
   --input: rgba(0, 0, 0, 0.12);
-  --ring: #2f5bd3;
-  --signal: #2f5bd3;
+  /* the landing orange, darkened to 5.4:1 so it works as link and focus colour */
+  --ring: #c2410c;
+  --signal: #c2410c;
   --warn: #fbf3db;
   --warn-foreground: #956400;
   --success: #edf3ec;
   --success-foreground: #346538;
   --sidebar: #fbfbfa;
-  --sidebar-foreground: #1f2023;
-  --sidebar-primary: #1f2023;
-  --sidebar-primary-foreground: #fbfbfa;
-  --sidebar-accent: #f2f1ee;
-  --sidebar-accent-foreground: #1f2023;
-  --sidebar-border: rgba(0, 0, 0, 0.07);
-  --sidebar-ring: #2f5bd3;
+  --sidebar-foreground: #111111;
+  --sidebar-primary: #111111;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #efeeea;
+  --sidebar-accent-foreground: #111111;
+  --sidebar-border: #eaeaea;
+  --sidebar-ring: #c2410c;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #111110;
-    --foreground: #ededec;
-    --card: #191918;
-    --card-foreground: #ededec;
-    --popover: #191918;
-    --popover-foreground: #ededec;
-    --primary: #ededec;
-    --primary-foreground: #111110;
-    --secondary: #222221;
-    --secondary-foreground: #ededec;
-    --muted: #222221;
-    --muted-foreground: #8f8f8b;
-    --accent: #222221;
-    --accent-foreground: #ededec;
-    --destructive: #f08a87;
-    --destructive-foreground: #2a1515;
-    --border: rgba(255, 255, 255, 0.08);
-    --input: rgba(255, 255, 255, 0.14);
-    --ring: #7c9bf0;
-    --signal: #7c9bf0;
-    --warn: #2a2410;
-    --warn-foreground: #e0b34a;
-    --success: #1b2a1c;
-    --success-foreground: #8fc793;
-    --sidebar: #111110;
-    --sidebar-foreground: #ededec;
-    --sidebar-primary: #ededec;
-    --sidebar-primary-foreground: #111110;
-    --sidebar-accent: #222221;
-    --sidebar-accent-foreground: #ededec;
-    --sidebar-border: rgba(255, 255, 255, 0.08);
-    --sidebar-ring: #7c9bf0;
-  }
+:root[data-theme="dark"] {
+  --background: #181818;
+  --foreground: #ededec;
+  --card: #1f1f1f;
+  --card-foreground: #ededec;
+  --popover: #1f1f1f;
+  --popover-foreground: #ededec;
+  --primary: #ededec;
+  --primary-foreground: #111111;
+  --secondary: #272727;
+  --secondary-foreground: #ededec;
+  --muted: #272727;
+  --muted-foreground: #9b9a96;
+  --accent: #272727;
+  --accent-foreground: #ededec;
+  --destructive: #f08a87;
+  --destructive-foreground: #2a1515;
+  --border: #313131;
+  --input: rgba(255, 255, 255, 0.14);
+  --ring: #f0784f;
+  --signal: #f0784f;
+  --warn: #2a2410;
+  --warn-foreground: #e0b34a;
+  --success: #1b2a1c;
+  --success-foreground: #8fc793;
+  --sidebar: #131313;
+  --sidebar-foreground: #ededec;
+  --sidebar-primary: #ededec;
+  --sidebar-primary-foreground: #111111;
+  --sidebar-accent: #272727;
+  --sidebar-accent-foreground: #ededec;
+  --sidebar-border: #272727;
+  --sidebar-ring: #f0784f;
 }
 
 @layer base {

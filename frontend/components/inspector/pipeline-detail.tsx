@@ -60,7 +60,7 @@ export function PipelineDetail({ turn }: { turn: Turn }) {
                 <span className="ml-auto font-mono text-[12px] text-muted-foreground tabular-nums">{status === "skipped" ? "skipped" : fmtMs(s?.ms)}</span>
               </div>
               {s?.ms != null && (
-                <div className="ml-6 h-0.5 rounded-full bg-signal" style={{ width: `${Math.max(1, Math.round((s.ms / total) * 100))}%` }} aria-hidden />
+                <div className="ml-6 h-0.5 rounded-full bg-foreground/50" style={{ width: `${Math.max(1, Math.round((s.ms / total) * 100))}%` }} aria-hidden />
               )}
               {lines.map((l, i) => (
                 <p key={i} className={cn("ml-6 text-[12px] text-muted-foreground", s?.name === "grade" && s.meta?.weak === true && "text-warn-foreground")}>{l}</p>

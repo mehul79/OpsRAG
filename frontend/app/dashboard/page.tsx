@@ -1,5 +1,6 @@
 "use client";
 
+import { ThemeToggle } from "@/components/theme-toggle";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { ArrowLeftIcon, CircleCheckIcon, ExternalLinkIcon } from "lucide-react";
@@ -68,14 +69,15 @@ export default function Dashboard() {
 
   return (
     <main className="mx-auto w-full max-w-5xl px-4 py-6 sm:px-6">
-      <Link href="/" className="inline-flex items-center gap-1 text-[13px] text-muted-foreground hover:text-foreground">
+      <Link href="/chat" className="inline-flex items-center gap-1 text-[13px] text-muted-foreground hover:text-foreground">
         <ArrowLeftIcon className="size-3.5" aria-hidden /> Back to chat
       </Link>
       <header className="mt-3 flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h1 className="text-base font-semibold tracking-tight">Dashboard</h1>
+          <h1 className="text-2xl font-light tracking-tight">Dashboard</h1>
           <p className="text-[13px] text-muted-foreground">Flag a weak answer, open its trace, find the failing stage.</p>
         </div>
+        <div className="flex items-center gap-2">
         <ToggleGroup
           aria-label="Time window"
           value={[win]}
@@ -87,6 +89,8 @@ export default function Dashboard() {
             <ToggleGroupItem key={w} value={w} className="font-mono text-[12px]">{w}</ToggleGroupItem>
           ))}
         </ToggleGroup>
+        <ThemeToggle />
+        </div>
       </header>
 
       {error && (

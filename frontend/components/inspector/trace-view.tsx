@@ -53,7 +53,7 @@ function Waterfall({ trace }: { trace: Trace }) {
             </div>
             <div className="relative h-3" aria-hidden>
               <div
-                className="reveal-bar absolute inset-y-0.5 rounded-sm bg-signal"
+                className="reveal-bar absolute inset-y-0.5 rounded-sm bg-foreground/60"
                 style={{ left: `${(span.start_ms / total) * 100}%`, width: `max(2px, ${(span.duration_ms / total) * 100}%)`, ["--i" as string]: i }}
               />
             </div>

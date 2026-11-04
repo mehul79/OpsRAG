@@ -36,7 +36,7 @@ export function Composer({ onSend }: { onSend: (q: string) => void }) {
         aria-label="Question"
         className="max-h-[200px] min-h-9 resize-none bg-card text-[13px] [field-sizing:content]"
       />
-      <Button type="submit" size="icon" disabled={!q} aria-label="Send question">
+      <Button type="submit" size="icon" disabled={!q} aria-label="Send question" className="bg-[#e4572e] text-white hover:bg-[#cf4a23]">
         <ArrowUpIcon />
       </Button>
     </form>

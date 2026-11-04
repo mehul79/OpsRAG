@@ -38,7 +38,7 @@ export function SourcesList({ sources, active, onActive }: { sources: Source[]; 
                 <span className="rounded-sm bg-muted px-1.5 py-0.5 text-[12px] text-muted-foreground">{s.source}</span>
                 <span className="ml-auto font-mono text-[12px] tabular-nums">{s.score.toFixed(2)}</span>
               </div>
-              <div className="mt-2 h-0.5 rounded-full bg-signal" style={{ width: `${Math.round(relevance(s.score) * 100)}%` }} aria-hidden />
+              <div className="mt-2 h-0.5 rounded-full bg-foreground/50" style={{ width: `${Math.round(relevance(s.score) * 100)}%` }} aria-hidden />
               <p className="mt-2 leading-snug font-medium">{s.heading || s.path}</p>
               <p className="mt-0.5 font-mono text-[12px] break-all text-muted-foreground">{s.path}</p>
             </button>

@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import Link from "next/link";
+import { Mark } from "@/components/landing/client";
 import { ChartColumnIcon, EllipsisIcon, SquarePenIcon } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Empty, EmptyDescription, EmptyHeader, EmptyTitle } from "@/components/ui/empty";
@@ -91,7 +92,9 @@ export function HistorySidebar({
   return (
     <Sidebar>
       <SidebarHeader className="gap-3 p-3">
-        <span className="px-1 text-[13px] font-semibold tracking-tight">OpsRAG</span>
+        <Link href="/" className="flex items-center gap-2 rounded-md px-1 py-0.5 text-[13px] font-medium tracking-tight" aria-label="OpsRAG home">
+          <Mark /> OpsRAG
+        </Link>
         <Button variant="outline" className="w-full justify-start text-[13px]" onClick={() => { onNew(); setOpenMobile(false); }}>
           <SquarePenIcon data-icon="inline-start" />
           New chat

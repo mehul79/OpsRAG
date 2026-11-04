@@ -1,7 +1,6 @@
 "use client";
 
-import { MessagesSquareIcon } from "lucide-react";
-import { Empty, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle } from "@/components/ui/empty";
+import { ArrowRightIcon } from "lucide-react";
 import {
   MessageScroller,
   MessageScrollerButton,
@@ -41,22 +40,23 @@ export function Thread({
   if (!turns.length) {
     return (
       <div className="flex min-h-0 flex-1 items-center justify-center px-4">
-        <Empty className="max-w-[720px] border-0">
-          <EmptyHeader>
-            <EmptyMedia variant="icon"><MessagesSquareIcon /></EmptyMedia>
-            <EmptyTitle className="text-[15px]">Ask about your infrastructure</EmptyTitle>
-            <EmptyDescription>Kubernetes, Docker, Terraform and AWS. Each answer shows the stages that produced it.</EmptyDescription>
-          </EmptyHeader>
-          <ul className="flex w-full max-w-md flex-col gap-1 text-left">
+        <div className="w-full max-w-[640px]">
+          <p className="font-mono text-xs uppercase tracking-[0.06em] text-muted-foreground">OpsRAG / Ask the docs</p>
+          <h2 className="mt-3 text-3xl font-light tracking-tight text-balance text-foreground">Ask about your infrastructure</h2>
+          <p className="mt-3 text-sm text-pretty text-muted-foreground">
+            Kubernetes, Docker, Terraform and AWS, answered from the official docs. Every answer shows its sources and the stages that produced it.
+          </p>
+          <ul className="mt-8 border-t">
             {EXAMPLES.map((q) => (
-              <li key={q}>
-                <button type="button" onClick={() => onExample(q)} className="w-full rounded-md px-3 py-2 text-left text-[13px] text-muted-foreground hover:bg-muted hover:text-foreground">
+              <li key={q} className="border-b">
+                <button type="button" onClick={() => onExample(q)} className="group flex w-full items-center justify-between gap-4 py-3 text-left text-sm text-muted-foreground hover:text-foreground">
                   {q}
+                  <ArrowRightIcon className="size-3.5 shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-0.5" aria-hidden />
                 </button>
               </li>
             ))}
           </ul>
-        </Empty>
+        </div>
       </div>
     );
   }
