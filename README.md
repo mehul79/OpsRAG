@@ -2,6 +2,8 @@
 
 A RAG copilot for Kubernetes, Docker, Terraform and AWS docs. Every answer is traced, so a bad one can be pinned to the stage that broke.
 
+[![OpsRAG demo video (20 s): click to play](docs/demo.jpg)](docs/demo.mp4)
+
 **Problem.** When a RAG answer is wrong, you usually can't tell why. Retrieval may have missed, the reranker may have dropped the right chunk, or the LLM may have made it up. Infra questions make it harder, because they mix exact names like `aws_iam_role_policy_attachment` with vague ones like "my pod keeps restarting".
 
 **Solution.** BM25 and dense search fused with RRF, a cross-encoder reranker, a check that flags weak retrieval instead of guessing, and a semantic cache. Each stage is a Langfuse span. A background judge grades every fresh answer, and bad answers land in a review queue linked to their trace.
