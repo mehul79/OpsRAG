@@ -1392,8 +1392,12 @@ dependencies = [
     { name = "pytest" },
     { name = "python-dotenv" },
     { name = "qdrant-client", extra = ["fastembed"] },
-    { name = "sentence-transformers" },
     { name = "uvicorn", extra = ["standard"] },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "sentence-transformers" },
 ]
 
 [package.metadata]
@@ -1406,9 +1410,11 @@ requires-dist = [
     { name = "pytest", specifier = ">=9.2.0" },
     { name = "python-dotenv", specifier = ">=1.2.4" },
     { name = "qdrant-client", extras = ["fastembed"], specifier = ">=1.20.0" },
-    { name = "sentence-transformers", specifier = ">=6.2.0" },
     { name = "uvicorn", extras = ["standard"], specifier = ">=0.54.0" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "sentence-transformers", specifier = ">=6.2.0" }]
 
 [[package]]
 name = "orjson"

@@ -13,6 +13,8 @@ dependencies = [
     "pytest>=9.2.0",
     "python-dotenv>=1.2.4",
     "qdrant-client[fastembed]>=1.20.0",
-    "sentence-transformers>=6.2.0",
     "uvicorn[standard]>=0.54.0",
 ]
+
+[dependency-groups]
+dev = ["sentence-transformers>=6.2.0"]  # offline embed.py only (pulls torch)

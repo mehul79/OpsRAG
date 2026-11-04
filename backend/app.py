@@ -15,7 +15,7 @@ import monitor
 from pipeline import ask, judge_llm
 
 app = FastAPI(title="OpsRAG")
-app.add_middleware(CORSMiddleware, allow_origin_regex=r"http://localhost:\d+", allow_methods=["GET", "POST"], allow_headers=["Content-Type"])
+app.add_middleware(CORSMiddleware, allow_origin_regex=r"http://localhost:\d+", allow_origins=[o for o in os.getenv("CORS_ORIGINS", "").split(",") if o], allow_methods=["GET", "POST"], allow_headers=["Content-Type"])
 log = logging.getLogger("opsrag")
 ID = r"^[0-9a-f]{32}$"
 WINDOWS = {"1h": 3600, "24h": 86400, "7d": 7 * 86400, "30d": 30 * 86400}

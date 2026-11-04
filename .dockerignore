@@ -1,0 +1,14 @@
+.git
+.venv
+data
+embeddings
+models
+frontend
+docs
+evals
+tests
+util_scripts
+brag-output
+.env
+__pycache__
+*.zip
