@@ -75,7 +75,6 @@ def _cache_collection():
         qdrant.create_payload_index(CACHE, "at", models.PayloadSchemaType.FLOAT)  # Qdrant Cloud (strict mode) rejects filters on unindexed fields
 
 
-@observe(name="semantic-cache")
 def cache_get(qvec):
     _cache_collection()
     fresh = models.Filter(must=[models.FieldCondition(key="at", range=models.Range(gte=time.time() - CACHE_TTL))])
@@ -83,6 +82,18 @@ def cache_get(qvec):
     return hits[0].payload if hits else None
 
 
+@observe(name="semantic-cache")
+def cache_lookup(question):
+    qvec = embed_query(question)  # embedding is part of the cache span: it is the cost of the lookup
+    return qvec, cache_get(qvec)
+
+
+@observe(name="route")
+def route_prompt(question):
+    return route(question)
+
+
+@observe(name="cache-write")
 def cache_put(qvec, question, answer, sources):
     qdrant.upsert(CACHE, [models.PointStruct(id=str(uuid.uuid4()), vector=qvec, payload={
         "question": question, "answer": answer, "sources": sources, "at": time.time()})])
@@ -156,35 +167,73 @@ def generate(question, hits, weak):
             yield chunk.content
 
 
+def _done(name, t0, **meta):
+    return {"name": name, "status": "done", "ms": round((time.perf_counter() - t0) * 1000), "meta": meta}
+
+
+def _start(name):
+    return "stage", {"name": name, "status": "start"}
+
+
 @observe(name="ask", capture_input=False, capture_output=False)  # input/output set by hand: small and readable on the dashboard
 def ask(question):
-    """Yields ("sources", [...]), then ("token", str) pieces, then ("done", {"cached", "weak", "route"})."""
+    """Yields ("stage", {...}) progress events, ("sources", [...]), ("token", str) pieces, then ("done", {...})."""
     get_client().update_current_span(input=question)
-    label, conf = route(question)  # chitchat / about_bot / out_of_scope get a fixed reply: no embedding, cache, LLM or search
+    yield _start("route")
+    t0 = time.perf_counter()
+    label, conf = route_prompt(question)  # chitchat / about_bot / out_of_scope get a fixed reply: no embedding, cache, LLM or search
+    yield "stage", _done("route", t0, label=label, confidence=round(conf, 3))
     if label != "retrieve":
         yield "sources", []
         yield "token", reply(label)
         get_client().update_current_span(output=reply(label), metadata={"route": label, "cached": False, "weak": False})
         yield "done", {"cached": False, "weak": False, "route": label, "route_confidence": round(conf, 3)}
         return  # never cached: returns before cache_put
-    qvec = embed_query(question)
-    if hit := cache_get(qvec):
+    yield _start("cache")
+    t0 = time.perf_counter()
+    qvec, hit = cache_lookup(question)
+    yield "stage", _done("cache", t0, hit=bool(hit))
+    if hit:
         yield "sources", hit["sources"]
         yield "token", hit["answer"]
         get_client().update_current_span(output=hit["answer"], metadata={"route": "retrieve", "cached": True, "weak": False})
         yield "done", {"cached": True, "weak": False, "route": "retrieve"}
         return
-    queries = [question] if os.getenv("QUERY_TRANSFORM") == "off" else transform(question)
-    hits, weak = grade(rerank(question, retrieve(queries)))
+    queries = [question]
+    if os.getenv("QUERY_TRANSFORM") != "off":
+        yield _start("transform")
+        t0 = time.perf_counter()
+        queries = transform(question)
+        yield "stage", _done("transform", t0, queries=queries)
+    yield _start("retrieve")
+    t0 = time.perf_counter()
+    cands = retrieve(queries)
+    yield "stage", _done("retrieve", t0, candidates=len(cands), queries=len(queries))
+    yield _start("rerank")
+    t0 = time.perf_counter()
+    ranked = rerank(question, cands)
+    yield "stage", _done("rerank", t0, kept=len(ranked), top_score=ranked[0]["score"] if ranked else None)
+    yield _start("grade")
+    t0 = time.perf_counter()
+    hits, weak = grade(ranked)
+    yield "stage", _done("grade", t0, weak=weak, kept=len(hits))
     # sources[i] is citation [i+1]; the frontend sidebar shows each chunk with its relevance score
     sources = [{k: h.get(k) for k in ("source", "heading", "path", "url", "position", "score", "text")} for h in hits]
     yield "sources", sources
-    answer = ""
+    yield _start("generate")
+    t0 = time.perf_counter()
+    answer, ttft = "", None
     for token in generate(question, hits, weak):
+        if ttft is None:
+            ttft = round((time.perf_counter() - t0) * 1000)
         answer += token
         yield "token", token
+    yield "stage", _done("generate", t0, ttft_ms=ttft)
     if not weak:  # never cache an answer we weren't confident in
+        yield _start("cache_write")
+        t0 = time.perf_counter()
         cache_put(qvec, question, answer, sources)
+        yield "stage", _done("cache_write", t0)
     get_client().update_current_span(output=answer, metadata={"route": "retrieve", "cached": False, "weak": weak, "top_score": sources[0]["score"]})
     yield "done", {"cached": False, "weak": weak, "route": "retrieve", "top_score": sources[0]["score"]}
 
@@ -197,6 +246,9 @@ if __name__ == "__main__":
             print()
         elif kind == "token":
             print(value, end="", flush=True)
+        elif kind == "stage":
+            if value["status"] == "done":
+                print(f"  [stage] {value['name']} {value['ms']}ms {value['meta']}", flush=True)
         else:
             print(f"\n\n{value}")
     get_client().flush()
