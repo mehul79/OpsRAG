@@ -58,6 +58,17 @@ def plain(inp, out):
     return inp, out
 
 
+def latest_scores(scores):
+    """{trace_id: {name: score}}, keeping the newest numeric trace score per (trace, name)."""
+    by_trace = {}
+    for s in scores:
+        if s.get("subject", {}).get("kind") == "trace" and s.get("dataType") == "NUMERIC":
+            cur = by_trace.setdefault(s["subject"]["id"], {}).get(s["name"])
+            if not cur or s["timestamp"] > cur["timestamp"]:
+                by_trace[s["subject"]["id"]][s["name"]] = s
+    return by_trace
+
+
 def fetch(since):
     """One dict per answer in the window, newest first: the ask span joined with its generation tokens and its scores."""
     key = int(since // 60)
@@ -73,12 +84,7 @@ def fetch(since):
         tokens[g["traceId"]] = tokens.get(g["traceId"], 0) + (g.get("totalUsage") or 0)
         if g.get("totalCost") is not None:
             cost[g["traceId"]] = cost.get(g["traceId"], 0) + g["totalCost"]
-    by_trace = {}
-    for s in scores:  # latest score per (trace, name) wins
-        if s.get("subject", {}).get("kind") == "trace" and s.get("dataType") == "NUMERIC":
-            cur = by_trace.setdefault(s["subject"]["id"], {}).get(s["name"])
-            if not cur or s["timestamp"] > cur["timestamp"]:
-                by_trace[s["subject"]["id"]][s["name"]] = s
+    by_trace = latest_scores(scores)
     rows = []
     for a in asks:
         t, sc, md = a["traceId"], by_trace.get(a["traceId"], {}), a.get("metadata") or {}
@@ -96,6 +102,32 @@ def fetch(since):
     rows.sort(key=lambda r: -r["ts"])
     _cache[key] = (time.time(), rows)
     return rows
+
+
+def trace(trace_id):
+    """One answer's span tree (offsets from the root `ask` span), token/cost totals and scores. None if not ingested yet. Not cached."""
+    obs = paged("/api/public/v2/observations", traceId=trace_id, fields="core,basic,model,usage")
+    if not obs:
+        return None
+    scores = latest_scores(paged("/api/public/v3/scores", traceId=trace_id, fields="details,subject")).get(trace_id, {})
+    root = next((o for o in obs if o.get("name") == "ask"), None) or min(obs, key=lambda o: o["startTime"])
+    t0, end = epoch(root["startTime"]), epoch(root["endTime"]) if root.get("endTime") else None
+    spans, tokens, cost = [], 0, None
+    for o in sorted(obs, key=lambda o: o["startTime"]):
+        start = epoch(o["startTime"])
+        dur = (epoch(o["endTime"]) - start) if o.get("endTime") else (o.get("latency") or 0)
+        u = o.get("usageDetails") or {}
+        tok = u.get("total") or ((u.get("input") or 0) + (u.get("output") or 0)) or None
+        if o.get("type") == "GENERATION":
+            tokens += tok or 0
+            if o.get("calculatedTotalCost") is not None:
+                cost = (cost or 0) + o["calculatedTotalCost"]
+        spans.append({"id": o["id"], "parent_id": o.get("parentObservationId"), "name": o.get("name"), "type": o.get("type"),
+                      "start_ms": round((start - t0) * 1000), "duration_ms": round(dur * 1000), "model": o.get("model"),
+                      "tokens": tok, "level": o.get("level")})
+    latency = (end - t0) if end else (root.get("latency") or 0)
+    return {"trace_id": trace_id, "latency_ms": round(latency * 1000), "spans": spans, "tokens": tokens or None, "cost": cost,
+            "scores": {k: v["value"] for k, v in scores.items() if k != "resolved"}}
 
 
 def reasons(r):

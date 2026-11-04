@@ -14,7 +14,7 @@ ts = lambda off=0: monitor.iso(NOW + off)
 class FakeLangfuse:
     """Stands in for Langfuse's v2 observations and v3 scores endpoints."""
     def __init__(self):
-        self.asks, self.gens, self.scores = [], [], []
+        self.asks, self.gens, self.scores, self.spans = [], [], [], []
 
     def ask(self, n, q="q", route="retrieve", cached=False, weak=False, ms=1000, top=3.0, off=-60):
         self.asks.append({"traceId": T(n), "startTime": ts(off), "input": q, "output": f"answer {n}", "latency": ms / 1000,
@@ -27,8 +27,12 @@ class FakeLangfuse:
     def __call__(self, path, **params):
         if path.endswith("/observations"):
             data = self.asks if params.get("name") == "ask" else self.gens
+            if "traceId" in params:
+                data = [o for o in self.asks + self.gens + self.spans if o["traceId"] == params["traceId"]]
         else:
             data = self.scores
+            if "traceId" in params:
+                data = [x for x in data if x["subject"]["id"] == params["traceId"]]
         return {"data": data, "meta": {}}
 
 
@@ -192,3 +196,36 @@ def test_langfuse_outage_is_a_502_not_a_crash(monkeypatch):
     monitor._cache.clear()
     c = TestClient(appmod.app)
     assert c.get("/metrics").status_code == 502 and c.get("/queue").status_code == 502
+
+
+def test_trace(lf):
+    base = NOW - 30
+    at = lambda off: monitor.iso(base + off)
+    lf.asks.append({"id": "root", "traceId": T(1), "name": "ask", "type": "SPAN", "startTime": at(0), "endTime": at(8)})
+    lf.spans += [
+        {"id": "a", "traceId": T(1), "parentObservationId": "root", "name": "rerank", "type": "SPAN", "startTime": at(1), "endTime": at(2)},
+        {"id": "g", "traceId": T(1), "parentObservationId": "root", "name": "ChatOpenAI", "type": "GENERATION", "model": "m",
+         "startTime": at(3), "endTime": at(4), "usageDetails": {"input": 100, "output": 20, "total": 120}, "calculatedTotalCost": 0.01},
+        {"id": "g2", "traceId": T(1), "parentObservationId": "root", "name": "ChatOpenAI", "type": "GENERATION",
+         "startTime": at(5), "endTime": at(6), "usageDetails": {"input": 5, "output": 5}},
+    ]
+    lf.score(1, "faithfulness", 0.2, off=-20); lf.score(1, "faithfulness", 0.9, off=-10)
+    lf.score(1, "resolved", 1); lf.score(2, "faithfulness", 0.1)
+    t = monitor.trace(T(1))
+    assert t["latency_ms"] == 8000 and t["tokens"] == 130 and t["cost"] == 0.01
+    assert t["scores"] == {"faithfulness": 0.9}  # latest wins, resolved hidden, other traces ignored
+    by = {s["id"]: s for s in t["spans"]}
+    assert by["a"]["start_ms"] == 1000 and by["a"]["duration_ms"] == 1000 and by["a"]["parent_id"] == "root"
+    assert by["g"]["model"] == "m" and by["g"]["tokens"] == 120 and by["g2"]["tokens"] == 10
+    assert monitor.trace(T(3)) is None
+
+
+def test_trace_endpoint(monkeypatch, lf):
+    from fastapi.testclient import TestClient
+    import app as appmod
+    monkeypatch.setattr(appmod, "trace_url", lambda t: "https://lf/x")
+    c = TestClient(appmod.app)
+    assert c.get(f"/trace/{T(5)}").status_code == 404
+    assert c.get("/trace/nothex").status_code == 422
+    lf.asks.append({"id": "r", "traceId": T(5), "name": "ask", "type": "SPAN", "startTime": ts(), "endTime": ts(1)})
+    assert c.get(f"/trace/{T(5)}").json()["url"] == "https://lf/x"

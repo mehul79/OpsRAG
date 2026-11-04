@@ -1,12 +1,12 @@
 """FastAPI: POST /ask streams the answer as server-sent events (sources, token..., done | error).
-Observability endpoints (all read from or write to Langfuse): GET /metrics, GET /queue, POST /feedback, POST /resolve.
+Observability endpoints (all read from or write to Langfuse): GET /metrics, GET /queue, GET /trace/{id}, POST /feedback, POST /resolve.
 
 Run: uv run uvicorn app:app --app-dir backend --reload
 ONLINE_EVAL=on|off (default on) grades each fresh answer with JUDGE_MODEL in the background; ONLINE_EVAL_RATE samples (0..1).
 """
 import json, logging, os, random, time
 import httpx
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Path
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from langfuse import get_client
@@ -93,6 +93,17 @@ def queue(window: str = "7d"):
         return [{**r, "trace_url": trace_url(r["id"])} for r in monitor.queue(since(window))]
     except httpx.HTTPError as e:
         raise langfuse_down(e)
+
+
+@app.get("/trace/{trace_id}")
+def trace(trace_id: str = Path(pattern=ID)):
+    try:
+        t = monitor.trace(trace_id)
+    except httpx.HTTPError as e:
+        raise langfuse_down(e)
+    if t is None:
+        raise HTTPException(404, "Trace not ingested yet.")
+    return {**t, "url": trace_url(trace_id)}
 
 
 @app.post("/feedback")
