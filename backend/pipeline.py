@@ -30,7 +30,7 @@ RELEVANCE_MIN = 0.0 if RERANKER == "local" else 0.1
 CACHE_MIN = 0.95     # cosine cut-off for a cache hit; evals/cache_calibrate.py: lowest value with zero false hits on hard negatives (max 0.941)
 CACHE_TTL = 7 * 24 * 3600
 
-qdrant = QdrantClient(url=os.getenv("QDRANT_URL", "http://localhost:6333"))
+qdrant = QdrantClient(url=os.getenv("QDRANT_URL", "http://localhost:6333"), api_key=os.getenv("QDRANT_API_KEY") or None)
 dense = TextEmbedding("BAAI/bge-small-en-v1.5")
 sparse = SparseTextEmbedding("Qdrant/bm25")
 
@@ -43,12 +43,12 @@ def local_reranker():
 
 @cache
 def llm(model):
-    # Any OpenAI-compatible endpoint: set OPENAI_BASE_URL, OPENAI_API_KEY, LLM_MODEL in .env
-    base = os.getenv("OPENAI_BASE_URL") or ""
+    # Any OpenAI-compatible endpoint: set LLM_BASE_URL, LLM_API_KEY, LLM_MODEL in .env
+    base = os.getenv("LLM_BASE_URL") or ""
     # DeepSeek et al. spend most of their output on hidden "thinking" tokens (slow and costly for RAG).
     # OpenRouter lets us switch that off; LLM_REASONING=on re-enables it.
     extra = {"reasoning": {"enabled": False}} if "openrouter" in base and os.getenv("LLM_REASONING") != "on" else {}
-    return ChatOpenAI(model=model, base_url=base or None, api_key=os.getenv("OPENAI_API_KEY"),
+    return ChatOpenAI(model=model, base_url=base or None, api_key=os.getenv("LLM_API_KEY"),
                       temperature=0, extra_body=extra, stream_usage=True)  # stream_usage: token counts reach Langfuse
 
 
@@ -72,6 +72,7 @@ def embed_query(q):
 def _cache_collection():
     if not qdrant.collection_exists(CACHE):
         qdrant.create_collection(CACHE, vectors_config=models.VectorParams(size=384, distance=models.Distance.COSINE))
+        qdrant.create_payload_index(CACHE, "at", models.PayloadSchemaType.FLOAT)  # Qdrant Cloud (strict mode) rejects filters on unindexed fields
 
 
 @observe(name="semantic-cache")

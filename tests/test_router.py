@@ -22,7 +22,7 @@ def test_route_fails_open(monkeypatch):
 
 
 def test_reply_never_leaks_env(monkeypatch):
-    monkeypatch.setenv("OPENAI_API_KEY", "sk-secret-123")
+    monkeypatch.setenv("LLM_API_KEY", "sk-secret-123")
     monkeypatch.setenv("LLM_MODEL", "some/model")
     for label in ("chitchat", "about_bot", "out_of_scope"):
         assert "sk-secret" not in router.reply(label)

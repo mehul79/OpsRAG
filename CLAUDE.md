@@ -36,7 +36,7 @@ Heads up when ingesting: strip front matter and Hugo `{{< >}}` shortcodes, don't
 | Fusion | Reciprocal rank fusion (RRF) |
 | Reranker | Local cross-encoder `Xenova/ms-marco-MiniLM-L-6-v2` via fastembed (default, `RERANKER=local`) or Cohere Rerank API (`RERANKER=cohere`), top 20 to 5 |
 | Embeddings | `BAAI/bge-small-en-v1.5` dense (384) + `Qdrant/bm25` sparse |
-| LLM | OpenRouter (OpenAI-compatible) via `langchain-openai`; default `deepseek/deepseek-v4.1-flash`. Config: `OPENAI_BASE_URL`, `OPENAI_API_KEY`, `LLM_MODEL` |
+| LLM | OpenRouter (OpenAI-compatible) via `langchain-openai`; default `deepseek/deepseek-v4.1-flash`. Config: `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL` |
 | Observability | Langfuse Cloud (`@observe` span per stage, LangChain callback for LLM calls) |
 
 ## Pipeline

@@ -6,7 +6,9 @@ Idempotent: point ids are content hashes, so re-running just overwrites.
 import json, logging, os, sys, time
 from pathlib import Path
 import numpy as np
+from dotenv import load_dotenv
 
+load_dotenv()
 os.environ.setdefault("FASTEMBED_CACHE_PATH", str(Path(__file__).resolve().parent.parent / "models"))
 from fastembed import SparseTextEmbedding
 from qdrant_client import QdrantClient, models
@@ -25,7 +27,7 @@ def main(src):
     cs = [json.loads(line) for line in open(src / "chunks.jsonl", encoding="utf-8")]
     vecs = np.load(src / "vectors.npy")
     assert len(cs) == len(vecs), f"{len(cs)} chunks vs {len(vecs)} vectors: re-run embed.py"
-    client = QdrantClient("localhost", port=6333)
+    client = QdrantClient(url=os.getenv("QDRANT_URL", "http://localhost:6333"), api_key=os.getenv("QDRANT_API_KEY") or None, timeout=60)
     if not client.collection_exists(COLLECTION):
         client.create_collection(
             COLLECTION,

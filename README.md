@@ -71,7 +71,7 @@ Prerequisites: [uv](https://docs.astral.sh/uv/) (installs the pinned Python 3.14
 
 ```bash
 uv sync
-cp .env.example .env            # fill in OPENAI_API_KEY, LLM_MODEL, and optionally the LANGFUSE_* keys
+cp .env.example .env            # fill in LLM_API_KEY, LLM_MODEL, and optionally the LANGFUSE_* keys
 docker compose up -d qdrant
 ```
 
@@ -96,7 +96,7 @@ cd frontend && npm install && npm run dev -- --port 3001                  # UI
 
 ### Configuration
 
-All in `.env` (see `.env.example`): `OPENAI_BASE_URL`, `OPENAI_API_KEY`, `LLM_MODEL`, `JUDGE_MODEL`, `RERANKER` (`local` or `cohere`), `ROUTER=off` to disable the prompt router, `ONLINE_EVAL=off` to skip background answer grading, `QUERY_TRANSFORM=off` to skip the query rewrite (about 2 s faster), `LLM_REASONING=on` to enable the model's hidden reasoning (off by default on OpenRouter, it added about 10 s per call), and the `LANGFUSE_*` keys. Tracing switches itself off when no Langfuse key is set.
+All in `.env` (see `.env.example`): `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL`, `JUDGE_MODEL`, `RERANKER` (`local` or `cohere`), `ROUTER=off` to disable the prompt router, `ONLINE_EVAL=off` to skip background answer grading, `QUERY_TRANSFORM=off` to skip the query rewrite (about 2 s faster), `LLM_REASONING=on` to enable the model's hidden reasoning (off by default on OpenRouter, it added about 10 s per call), and the `LANGFUSE_*` keys. Tracing switches itself off when no Langfuse key is set.
 
 ## Evals
 
