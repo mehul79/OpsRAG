@@ -57,8 +57,6 @@ Each answer is one Langfuse trace with a span per stage. After the answer stream
 
 ![OpsRAG landing page](docs/landing.png)
 
-The landing page at `/` has an interactive figure of one request moving through the pipeline. The chat is at `/chat` and the dashboard at `/dashboard`.
-
 ## Setup
 
 You need uv, Node.js, an OpenRouter key, Qdrant (Cloud or Docker) and optionally Langfuse keys.
