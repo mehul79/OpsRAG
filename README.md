@@ -53,6 +53,12 @@ uv run python evals/run.py --no-transform --judge   # adds LLM-graded answer qua
 
 Each answer is one Langfuse trace with a span per stage. After the answer streams, a background judge adds faithfulness and relevancy scores, and the Yes/No buttons add a feedback score. Answers with a thumbs-down, weak retrieval or low scores go to the bad-answer queue on `/dashboard`, and each one links to its trace. All of this lives in Langfuse, with no local database.
 
+## UI
+
+![OpsRAG landing page](docs/landing.png)
+
+The landing page at `/` has an interactive figure of one request moving through the pipeline. The chat is at `/chat` and the dashboard at `/dashboard`.
+
 ## Setup
 
 You need uv, Node.js, an OpenRouter key, Qdrant (Cloud or Docker) and optionally Langfuse keys.
